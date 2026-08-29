@@ -1,0 +1,8 @@
+---
+description: Use this project's requirement-id pattern
+alwaysApply: true
+---
+
+# Use this project's requirement-id pattern
+
+Put the ticket, AC, or requirement id where this project already puts it (tag, filename, describe title, or comment). Do not invent a traceability format the team does not use.

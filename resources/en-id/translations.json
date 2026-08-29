@@ -1,0 +1,239 @@
+{
+  "texts": {
+    "consent": {
+      "washingtonConsentBanner": "Online tracking technologies, such as cookies, are important for the correct functioning of our website. Based on regulatory changes in the state of Washington, we are excluding the use of nonessential third party cookies on webforms directed to residents within the state of Washington. You can see more information by clicking on the \"Cookie Settings\" link.Washington Privacy Notice",
+      "californiaConsentBanner": "Online tracking technologies, such as cookies, are important for the correct functioning of our website. By clicking \"Allow All\" you are also directing us to use the tracking technologies of other organizations. You can configure your preferences, and see a list of other organization's technologies, by clicking on the \"Cookie Settings\" link.California Privacy Notice",
+      "washingtonEmailConsent": "I consent to receive marketing texts and other communications by email from Anytime Fitness Franchisor LLC (“Anytime”). I further agree that Anytime may share my email information but not my phone or text information with its affiliates, franchisees and/or their authorized designees. I can withdraw my consent at any time.",
+      "washingtonTextConsent": "I'd like to receive promotional offers by text from Anytime, its affiliates, and/or franchisees and their authorized designees, which may be sent by an automated dialing system. Consent is not a condition of purchase. Message and data rates apply.",
+      "privacyNotice": "By clicking “Submit” below, I consent to receive marketing texts and other communications that may be automated and/or placed with artificial voice, placed by or on behalf of Anytime Fitness Franchisor LLC (“Anytime”) and/or Anytime-brand franchisees, even if my phone number is on a state or national Do Not Call list. Anytime will not share my phone or text information with other affiliates. Further, in clicking “Submit”, I agree to accept the Terms & Conditions, Privacy Notice, and Text Messaging Terms, and attest that I am 18 years of age or older. My consent to receive communications is not a condition of purchase, and I can withdraw my consent at any time. Recurring communications. Message and data rates apply. Text STOP to stop. Add Text HELP for assistance.",
+      "contactUsPrivacyNotice": "Please review if you are a California resident: For information regarding the categories of personal information collected about you, and the purposes for which your information will be used, please visit Anytime Fitness, LLC's Privacy Notice for California Residents.",
+      "localResidentDisclaimerText": "By clicking \"Submit\", you acknowledge that you have read and understood the Privacy Notice and agree to Anytime Fitness collecting, using and disclosing your personal data to assist you in locating a club, facilitate bookings (including club tours), process your membership application, and respond to your enquiry. Your personal data may be shared with our related entities and franchise entities for these purposes.",
+      "marketingConsentDisclaimerText": "I would like to receive marketing and promotional communications (including offers, events and updates) from Anytime Fitness and its franchisees via email, phone or text message. I understand that I can withdraw my consent at any time."
+    },
+    "bookingConfirmation": {
+      "tryUsFree": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "appleFitnessPlusFreeTrial": "Your visit has been scheduled, and your Apple Fitness+ trial subscription is ready. Check your email or redeem below. See you on the Anytime Fitness app and in the gym!",
+      "appleFitnessPlusSubscriber": "Your visit is scheduled and we're looking forward to showing you around your new workout home away from home.",
+      "bookATourStandalone": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "inviteAFriend": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "membershipInquiry": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFreeTrialPass": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsTrainForYourLife": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsPromo": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "localOffer": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFindYourFitphoria": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsBookATour": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "thankYouPage": "We've received your inquiry. A member of our team will reach out to you shortly.",
+      "corporateMembership": "Someone from our team will contact you to discuss next steps."
+    },
+    "corporateMembership": {
+      "corporateAuthorityCheckboxText": "I have the authority to act on behalf of my organisation in negotiating and activating a corporate membership with Anytime Fitness",
+      "corporateUnderstandingCheckboxText": "I understand Anytime Fitness does not offer company-subsidized memberships and invoicing. All employee reimbursement, if offered as part of your wellness program, will be managed via your organisation.",
+      "termsAndConditionsCheckboxText": "I have read all the Anytime Fitness Corporate Membership Terms and Conditions.",
+      "marketingOptInCheckboxText": "I agree to receive marketing communications via email and phone from Anytime Fitness Indonesia and Collective Wellness Group."
+    },
+    "bookATour": {
+      "weGotItHeading": "WE GOT IT",
+      "weGotItBody": "Thank you! A team member from ${city} will be in touch shortly. Schedule your first visit to try out your new gym.",
+      "pickATimeHeading": "BOOK YOUR VISIT",
+      "appointmentDetailsLabel": "YOUR SPOT IS SAVED",
+      "seeYouSoonBody": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals."
+    },
+    "inviteAFriend": {
+      "mainHeading": "INVITE A FRIEND",
+      "step1": "generate your referral link",
+      "step3": "claim their free trial to your gym",
+      "disclaimer": "Friend must visit during staffed hours"
+    },
+    "referralLanding": {
+      "hero": "CLAIM YOUR FREE TRIAL PASS",
+      "invitationHeading": "INVITED YOU TO TRY ANYTIME FITNESS",
+      "invitationDescription": "Workout buddies stick together",
+      "formHeading": "TELL US ABOUT YOU",
+      "formDescription": "Claim your trial pass and check in with club staff",
+      "benefits": {
+        "unlimitedAccess": "Unlimited 24/7 gym access",
+        "personalizedPlan": "Personalized plan & coach",
+        "community": "Supportive member community",
+        "gymAccess": "Access to 5,000+ gyms",
+        "training": "Personal & group training"
+      }
+    },
+    "headings": {
+      "locationSearch": {
+        "membershipInquiry": {
+          "mainHeading": "MEMBERSHIP INQUIRY",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "connectWithUs": "CONNECT WITH US",
+          "listTab": "LIST",
+          "mapTab": "MAP"
+        },
+        "appleFitnessOffer": {
+          "mainHeading": "TRY US FOR FREE",
+          "description": "Find your nearest Anytime Fitness location to get started.",
+          "findGymText": "FIND YOUR GYM"
+        },
+        "tryUsFree": {
+          "bannerTitle": "CLAIM YOUR FREE DAY PASS.",
+          "mainHeading": "TRY US FOR FREE",
+          "description": "Find your nearest Anytime Fitness location to get started.",
+          "findGymText": "FIND YOUR GYM",
+          "getStartedToday": "GET STARTED TODAY"
+        },
+        "bookATourStandalone": {
+          "bannerTitle": "PLAN YOUR VISIT.",
+          "findGymText": "FIND YOUR GYM",
+          "bannerSubTitle": "Enter your details below to save your spot. We'll show you around and make it easy to get started."
+        },
+        "contactUs": {
+          "mainHeading": "FIRST, FIND YOUR GYM",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "formHeading": "SEND US A MESSAGE",
+          "listTab": "LIST",
+          "mapTab": "MAP"
+        },
+        "eventsJoinOnline": {
+          "mainHeading": "Kickstart Your Fitness Goals Now",
+          "findGymText": "FIND YOUR GYM TO SIGN UP ONLINE",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location"
+        },
+        "eventsFindYourFitphoria": {
+          "mainHeading": "Find Your Fitphoria",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "readyToTakeTheNextStep": "READY TO TAKE THE NEXT STEP?",
+          "tellUsAboutYou": "TELL US ABOUT YOU"
+        },
+        "eventsFreeTrialPass": {
+          "mainHeading": "PERSONALIZED SUPPORT.ANYTIME, ANYWHERE.",
+          "description": "Try Anytime Fitness for free",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "tryUsForFree": "TRY US FOR FREE",
+          "tellUsAboutYou": "TELL US ABOUT YOU"
+        },
+        "eventsBookATour": {
+          "mainHeading": "EXPERT SUPPORT, ANYTIME ANYWHERE.",
+          "description": "Try Anytime Fitness and experience what it's like to get a plan, a coach, and a community that fits your life.",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "secondaryCtaHeading": "BOOK YOUR VISIT",
+          "tellUsAboutYou": "TELL US ABOUT YOU"
+        },
+        "eventsTrainForYourLife": {
+          "mainHeading": "All You need for a Stronger You",
+          "description": "With nearby locations",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "readyToGetStarted": "Ready to get started?",
+          "tellUsAboutYou": "TELL US ABOUT YOU"
+        },
+        "eventsPromo": {
+          "mainHeading": "Limited Time Offer",
+          "description": "Join for $1",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "getStartedNow": "GET STARTED NOW.",
+          "tellUsAboutYou": "TELL US ABOUT YOU",
+          "searchBoxPlaceholder": "Search by city & province or postal code"
+        },
+        "appleFitnessSubscriber": {
+          "mainHeading": "CLAIM YOUR FREE ACCESS",
+          "description": "Find your nearest Anytime Fitness location to get started.",
+          "findGymText": "FIND YOUR GYM"
+        },
+        "unitOfMeasurement": "miles"
+      },
+      "thankYouPage": "thank you"
+    }
+  },
+  "errors": {
+    "locationSearch": {
+      "noGymsNearby": "NO GYMS NEARBY.",
+      "noGymsNearbyDescription": "Looks like we're not in that area yet. Enter a different search above to explore options in a nearby city, or view all locations.",
+      "invalidLocation": "Invalid search. Please enter a valid zip code, city, country, or province/state. Ensure your input is correctly formatted and try again!",
+      "noNearbyLocations": "No locations found within 50 miles of ${location}. Please try searching a different city.",
+      "serverSide": "Whoops! Something went wrong processing the submission on our end. Please try again in a moment.",
+      "noLocation": "No locations found within",
+      "noGymsNearbyHeading": "NO GYMS NEARBY."
+    },
+    "userForm": {
+      "requiredField": {
+        "firstName": "This Field is required",
+        "lastName": "This Field is required",
+        "email": "This Field is required",
+        "phone": "This Field is required",
+        "zipCode": "This Field is required",
+        "localResident": "This Field is required",
+        "consent": "Consent is required",
+        "generic": "This Field is required"
+      },
+      "alphaOnly": "Only alphabets are allowed",
+      "invalidEmail": "Email is invalid",
+      "invalidPhone": "Phone is invalid",
+      "invalidZipCode": "Invalid Postal Code",
+      "invalidPostCode": "Invalid Postal Code",
+      "maxLength": "Maximum length is 30 characters",
+      "serverSide": "Whoops! Something went wrong processing the submission on our end. Please try again in a moment."
+    },
+    "BatAddon": {
+      "dateRequired": "This value is required.",
+      "timeRequired": "This value is required.",
+      "noTimeSlots": "Select a date to view available time slots.",
+      "slotConflict": "Dang! Somebody else snatched up that time slot. Please select another time to come in."
+    }
+  },
+  "buttons": {
+    "locationSearch": {
+      "selectGym": "SELECT GYM",
+      "gymDetails": "GYM DETAILS",
+      "freeTrialPass": "FREE TRIAL PASS",
+      "joinOnline": "JOIN ONLINE",
+      "joinInGym": "JOIN IN GYM",
+      "claimOffer": "CLAIM OFFER",
+      "bookATour": "BOOK YOUR VISIT"
+    },
+    "userForm": {
+      "submit": "SUBMIT",
+      "getStarted": "GET STARTED"
+    },
+    "localGymPage": {
+      "membershipInquiryBtn": "CUSTOM MEMBERSHIPS",
+      "contactUsBtn": "Contact Us"
+    },
+    "seeYouSoonPage": {
+      "sendTrialPass": "SEND TRIAL PASS"
+    },
+    "inviteAFriend": {
+      "shareReferral": "SHARE TRIAL PASS"
+    }
+  },
+  "labels": {
+    "locationSearch": {
+      "searchBoxPlaceholder": {
+        "cityOrZipCode": "Search by city & province or postal code",
+        "cityStateOrZipCode": "Search by city & province or postal code"
+      }
+    },
+    "userForm": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "zipCode": "Postal Code",
+      "termsAndConditions": "Terms of Use",
+      "privacyNotice": "Privacy Notice",
+      "textMessagingTerms": "SMS & MMS Terms of Service"
+    }
+  }
+}

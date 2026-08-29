@@ -1,0 +1,45 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Test",
+      "default1": "Test"
+    },
+    "gyms": {
+      "default": "Test",
+      "default1": "Test"
+    },
+    "clubId": "TH-0003",
+    "secondaryClubId": "TH-0003",
+    "localGym": "th-test-studio"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "12345",
+      "secondary": "45612"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "66948651518",
+      "secondary": "0812345678",
+      "member": "66948651518",
+      "nonMember": "0812345678",
+      "localFormat": "0891234567"
+    },
+    "invalid": "6694865151812345",
+    "countryCode": "+66"
+  },
+  "ownAGym": {
+    "investmentRange": "Under ฿5M",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Bangkok"
+  }
+}

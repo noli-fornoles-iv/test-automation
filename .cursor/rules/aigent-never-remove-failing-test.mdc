@@ -1,0 +1,8 @@
+---
+description: Never remove a failing test to make the suite green
+alwaysApply: true
+---
+
+# Never remove a failing test to make the suite green
+
+A failing test must be investigated and classified before it can be changed, skipped, or removed. Skipping or removing a test requires human approval.

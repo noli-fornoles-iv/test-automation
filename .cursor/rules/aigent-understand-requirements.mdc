@@ -1,0 +1,8 @@
+---
+description: Understand requirements before implementation
+alwaysApply: true
+---
+
+# Understand requirements before implementation
+
+Read available requirements, acceptance criteria, test specifications, and project documentation before creating or modifying automation. Knowledge-base check is mandatory: use injected .aigent/knowledge (INDEX.md and Data Resources), Guru/Google when present in that text, and repo docs. Understand the specific product coverage before restating scope. Do not invent process that contradicts them. If they conflict with the ticket, stop and ask.

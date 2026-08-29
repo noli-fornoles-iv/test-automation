@@ -1,0 +1,8 @@
+---
+description: Use this project's runner and config files
+alwaysApply: true
+---
+
+# Use this project's runner and config files
+
+Open this project's existing runner entrypoints before generating tests: package.json scripts, playwright.config.*, cucumber.js / wdio.conf, tsconfig paths. Execute and generate against those files. Do not add a second config, a second test script, or a different runner because it is easier to prompt.

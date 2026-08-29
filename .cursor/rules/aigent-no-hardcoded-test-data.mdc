@@ -1,0 +1,8 @@
+---
+description: No hardcoded test data
+alwaysApply: true
+---
+
+# No hardcoded test data
+
+Avoid hardcoding test data that should be configurable. Use approved fixtures, configuration, test-data files, APIs, or environment variables.

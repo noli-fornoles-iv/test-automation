@@ -1,0 +1,80 @@
+---
+description: Workflow — Generating a ticket-based testplan
+alwaysApply: true
+---
+
+# Generating a ticket-based testplan
+
+Create a client-change Testpad plan from a Jira ticket after analysis and discovery, then pause for human review. The plan is Gherkin Feature / Scenario / Given-When-Then for manual testers first. Never copy a regression template. Never implement automation until qa_automation_testplan_approved. Never silently overwrite a reviewed plan.
+
+Follow these steps in order. Do not skip a step, label transition, or human approval gate unless the ticket or user explicitly says to.
+
+1. **Read the ticket before writing cases**
+
+Pull the ticket title, description, labels, acceptance criteria, subtasks, linked work items, comments, attachments, images, and details from links inside the ticket. Understand the injected project knowledge for this specific coverage before writing cases. If the label is qa_automation_testplan_only, produce a plan only — do not implement automation. Do not begin coding. Do not stop the plan to ask for BASE_URL, environment, or live test pages — those go in AMBIGUOUS or later Execute Run. If nothing on the ticket is TESTABLE, record AMBIGUOUS items instead of inventing assertions.
+
+Knowledge-base check is required. Do not rely on the Jira ticket or flow name alone, and do not invent process from memory.
+Aigent already loaded project knowledge into this message (INDEX.md and Data Resources / Guru / Docs / Sheets that were synced). Treat that block as the product source of truth for this coverage. Do not pretend you opened sources that are not present in the text.
+
+Do this BEFORE restating scope or writing any scenario:
+1. Identify which injected files/tabs actually describe this ticket or named flow (page, feature, form, event, constraint).
+2. Understand that coverage fully: every listed entry URL/path, user role, fields and labels, buttons/CTAs, validation, success and error states, downstream events, property names/values, test data, locales, and documented exclusions. Enumerate all of them — do not sample two of four surfaces.
+3. Extract verbatim facts testers will assert: copy, labels, URLs/paths, event names, thank-you text, error messages, property names and documented values. Quoted or backticked names are exact.
+4. Map the request onto those facts. The plan must test the documented product behaviour — not a restated Jira summary.
+5. Record: knowledge sources used, what they confirmed, and any conflict with the ticket.
+
+If knowledge contradicts the ticket, stop and ask — do not pick a side silently. Put the conflict in ambiguous.
+If a required fact is missing from both the ticket and the injected knowledge, say so. Do not invent URLs, copy, events, or test data.
+Understand the requirement in that product context (business rule, environment, locale, test data, existing automation constraints) before discovery or test-plan writing.
+
+2. **Discover existing automation before planning**
+
+Inspect existing test cases, page objects, components, fixtures, utilities, API/network helpers, test data, locators, localization tests, regression tests, similar features, CI/CD, and Jenkins jobs. Produce: Existing Coverage, Reusable Components, Existing Test Data, Missing Coverage, Files Expected to Change, Potential Risks. Reuse existing automation. This is a client-change / ticket-based plan — do not duplicate the full regression suite.
+
+3. **Stop if blocked**
+
+If required data would make later execution impossible, note it on the plan as AMBIGUOUS or EXCLUDED. Do not refuse to generate the Testpad plan for missing BASE_URL, environment, Jenkins, or live experiment pages. Only label qa_automation_blocked when there is no TESTABLE requirement at all.
+
+4. **Generate the Testpad plan**
+
+When analysis and discovery are complete and there is no blocker: keep qa_automation_testplan_generation (or testplan_only). Return TicketPlanner JSON: nested Testpad sections and Verify checks with product-specific names from knowledge. Aigent writes the Testpad script. Never create a second script or copy the regression template.
+
+You are writing a Testpad script for Outliant QA (manual now, automation later).
+Read the injected knowledge first. Use documented URLs, labels, fields, events, messages, and test data verbatim.
+Write every TESTABLE case listed in the ticket, linked tickets, comments, knowledge, and existing QA Testpad. Do not sample a subset of surfaces.
+Every checkable row must be automatable later: named page/URL, named control, exact expected copy/event/property. No 'as expected', 'relevant page', 'not blank', or restated Jira summary.
+Output a Testpad checklist, not Gherkin. Do not write Feature:, Scenario:, Given, When, or Then.
+Shape:
+- Top-level section = product surface or flow (e.g. Local Offers, Group Offers, Member Offers, Events Promo).
+- Nested group = variant (Desktop/Mobile, locale, event name, Scenario 1 / Scenario 2) when the ticket or knowledge lists them.
+- setup rows = how to reach the state (URL, cookies, capture). Not pass/fail by themselves.
+- checks = checkable leaves. Prefer 'Verify …' with exact quoted copy, event name, property = value, or URL.
+- Nest related assertions under a parent (payload fields under the event; invalid inputs under the error-message scenario).
+- Separate top-level sections with an empty row.
+Coverage completeness (do not sample):
+- Enumerate EVERY distinct URL/path, offer type, form, locale, device, search method, cookie state, event, and property named in the ticket, linked work, comments, knowledge, or existing Testpad slice.
+- One top-level section per distinct product surface. If four offer URLs are listed (local, group, member, events/promo), write four sections — never two of four.
+- For each named analytics event, include the trigger AND a nested Verify for EACH named property. Write the documented value (offer_type = group_offer, form_id = local_offer_general). If the value is CMS/dynamic, write 'matches Webflow CMS for this offer' — never 'not blank', 'populated', or 'non-empty'.
+- Include sibling events on the same flows when the parent ticket or existing QA plan lists them with this ticket (e.g. Form Started and Lead Captured alongside Location Searched / Location Selected).
+- Preconditions once in setup: cookies, RudderStack/dataplane capture, environment (SIT vs UAT from comments).
+- Completeness over brevity. Ticket plans often need 4–12 sections and up to ~120 check rows when multiple surfaces are listed.
+- Existing Testpad is a coverage inventory for THIS ticket's slice. Expand every flow in that slice. Do not copy unrelated sibling tickets (e.g. Button Clicked, UTM, cookies-disabled) into a client-change plan.
+Regression packs: cover open, required fields, submit, success, and stated validation for every named flow — not a sample of one happy path.
+Quality gate: only write checks whose expected result is in the ticket, knowledge, or existing QA Testpad. Linked tickets are in scope when they state an observable result.
+If the title is 'Automate tests for X', plan X — the product behaviour.
+Do not duplicate a regression template. Do not write automation code.
+ambiguous/excluded/blocked: at most 2 short items total, and only if they block a whole TESTABLE area. Prefer writing the cases you can.
+Output ONLY this JSON:
+{ "feature": "short product title", "sections": [{ "title": "surface or flow", "setup": ["On https://… with …"], "checks": ["Verify …"], "children": [{ "title": "nested group", "setup": [], "checks": ["Verify …"], "children": [] }] }], "ambiguous": [], "excluded": [], "blocked": [] }
+
+5. **Recreate only with proposed changes and confirmation**
+
+If the user selects Recreate Test Plan, do not duplicate or silently replace the existing plan. Perform a second analysis for missing scenarios, negative/edge cases, regression, API, analytics, localization, duplicates, incorrect expected results, uncovered requirements, and cases that cannot be automated. Show proposed additions, removals, and edits. Wait for user confirmation, then regenerate. Preserve prior manual edits unless the user explicitly confirms they should be replaced.
+
+6. **Pause for human review — preserve edits**
+
+After generation, stop. The user may add, remove, or edit cases, expected results, priorities, test data, requirements, automation scope, and manual-only marks. Preserve those changes. Do not overwrite them. Do not start implementation, create a feature branch, or write Playwright/Selenium code until they click Approve Testplan.
+
+7. **Handoff until Approve Testplan**
+
+Leave a usable plan: ticket link, named after the ticket key, in-scope vs out-of-scope, automation candidates vs manual-only. Wait for Approve Testplan. That click re-reads the latest Testpad plan (including manual QA edits), re-checks Data Resources and project knowledge for new requirements, then labels qa_automation_testplan_approved and continues Automating a ticket. If this ticket is test-plan only, stop here.

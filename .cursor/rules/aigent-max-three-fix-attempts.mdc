@@ -1,0 +1,8 @@
+---
+description: No infinite fix-and-retry loops
+alwaysApply: true
+---
+
+# No infinite fix-and-retry loops
+
+Maximum 3 automated fix attempts for a confirmed AUTOMATION_BUG. After each attempt: analyze, apply a justified fix, re-run. After three unsuccessful attempts, stop with HUMAN_INTERVENTION_REQUIRED. Retries are for diagnosis, not to hide failures. A test that only passes after repeated retries must be investigated, not marked done.

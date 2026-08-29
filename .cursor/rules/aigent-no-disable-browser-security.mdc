@@ -1,0 +1,8 @@
+---
+description: Never disable browser or TLS security to pass tests
+alwaysApply: true
+---
+
+# Never disable browser or TLS security to pass tests
+
+Do not set ignoreHTTPSErrors, disable web security, ignore certificate errors, or otherwise weaken the browser security model just to make automation run. Treat those failures as environment or configuration defects.

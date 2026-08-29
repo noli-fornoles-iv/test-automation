@@ -1,0 +1,45 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Test",
+      "default1": "Test"
+    },
+    "gyms": {
+      "default": "Test",
+      "default1": "Test"
+    },
+    "clubId": "SG-0053",
+    "secondaryClubId": "SG-0053",
+    "localGym": "test-north-east-sg-0053"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "101010",
+      "secondary": "101011"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-100000"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "6581234567",
+      "secondary": "6581234567",
+      "member": "6581234567",
+      "nonMember": "6581234567",
+      "localFormat": "81234567"
+    },
+    "invalid": "6694865151812345",
+    "countryCode": "+65"
+  },
+  "ownAGym": {
+    "investmentRange": "Under $250K",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Singapore"
+  }
+}

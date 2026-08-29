@@ -1,0 +1,9 @@
+---
+description: No brittle selectors
+globs: **/{pages,page-objects,step-definitions,tests,features}/**
+alwaysApply: false
+---
+
+# No brittle selectors
+
+Avoid selectors based on DOM position, generated classes, styling, temporary IDs, or deeply nested XPath unless no stable alternative exists.

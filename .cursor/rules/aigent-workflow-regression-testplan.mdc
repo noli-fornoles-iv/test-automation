@@ -1,0 +1,56 @@
+---
+description: Workflow — Generating a regression testplan
+alwaysApply: true
+---
+
+# Generating a regression testplan
+
+Create a named regression pack in Testpad from the flows the user names. Route it to the Regression Test Template by default. Pause for human review. Do not duplicate the whole template blindly, and do not implement automation.
+
+Follow these steps in order. Do not skip a step, label transition, or human approval gate unless the ticket or user explicitly says to.
+
+1. **Read the named flows before writing cases**
+
+Aigent loads project knowledge for the named flows and prefers files that match those names.
+Read and understand
+- Named flows you entered
+- Synced Data Resources / .aigent/knowledge tab folders that describe those flows (pages, fields, labels, events, test data, success/error states)
+Do not
+- Search Guru or the whole repository in this step
+- Stop because a sheet was not opened
+- Write cases before the coverage in knowledge is understood
+
+2. **Discover existing regression coverage**
+
+List existing test files whose names match the flows. Do not copy the Regression Test Template.
+Report
+- Matching spec/test file paths, if any
+Do not
+- Open or summarise the whole repository
+- Spawn a second agent to invent coverage
+
+3. **Generate the regression Testpad plan**
+
+Return TicketPlanner JSON for the named flows only. Aigent writes the Testpad script.
+Read the injected knowledge first. Use documented URLs, labels, fields, events, messages, and test data verbatim.
+Write every TESTABLE case listed in the ticket, linked tickets, comments, knowledge, and existing QA Testpad. Do not sample a subset of surfaces.
+Every checkable row must be automatable later: named page/URL, named control, exact expected copy/event/property. No 'as expected', 'relevant page', 'not blank', or restated Jira summary.
+Cover
+- Nested Testpad sections (surface → variant → Verify rows) for every TESTABLE behaviour of the named flows
+- Documented critical path in depth: open, required fields, submit, success, and stated validation/negatives
+- Cover every named flow in depth (not one happy path) — sized to the named flows, not the entire product
+- Name the script after the flows
+- Write into the folder you chose (default: Regression Test Template)
+Do not
+- Add AMBIGUOUS / EXCLUDED / BLOCKED review rows — omit unknown edges instead
+- Copy every script in the Regression Test Template
+- Invent unrelated product areas or vague steps ('the relevant page', 'as expected')
+- POST a Testpad script yourself, or start implementation
+
+4. **Pause for human review — preserve edits**
+
+After generation, stop so you can review and edit the plan in Testpad.
+Then
+- Add, remove, or edit cases as needed
+- Those edits are preserved
+- This workflow does not implement automation

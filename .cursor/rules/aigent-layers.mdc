@@ -1,0 +1,22 @@
+---
+description: How Aigent general vs project rules combine
+alwaysApply: true
+---
+
+# Rule layers
+
+General rules are mandatory agent behavior. Project rules describe how this project implements that behavior (runner, folders, fixtures, CI). Workflows are ordered processes for a job such as automating a ticket or fixing a failure.
+
+A missing or disabled project rule does not disable a general rule. If a project rule is absent, still follow the general rule using this project's existing files. Do not invent a second framework, config, tag scheme, or data source.
+
+When a matching workflow is present, follow its steps in order. Do not skip a step unless the user explicitly says to.
+
+When automating a Jira ticket, follow the Automating a ticket workflow and keep ticket labels aligned with the real automation state. Git promotion (feature → SIT → UAT → PROD) and execution (NOT_RUN/PASSED/FAILED) are separate. Never start implementation before qa_automation_testplan_approved. After Automate, work on qa/<TICKET>-... and open a PR to sit. Never develop on sit, uat, or main. Never automatically merge uat or main. Execute Run is Local, Jenkins, or Both. Never skip a human approval gate.
+
+When a test fails, follow the Fixing automation errors workflow. A failing test is a signal to investigate, not an instruction to change automation. Diagnose and classify before modifying code. Fix only confirmed AUTOMATION_BUG.
+
+When generating a ticket-based test plan, follow the Generating a ticket-based testplan workflow. Pause for human review. Never silently overwrite manual Testpad edits. Never implement automation until qa_automation_testplan_approved.
+
+When executing tests for a ticket, follow the Executing tests for tickets workflow. Ask for environment and Local / Jenkins / Both. Pass pre-execution and production safety gates. Never invent results. Never auto-merge uat or main.
+
+Never report a test as Passed unless it was actually executed.

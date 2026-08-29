@@ -1,0 +1,8 @@
+---
+description: Keep tests focused
+alwaysApply: true
+---
+
+# Keep tests focused
+
+Tests should describe business behavior and expected outcomes. Reusable implementation details should remain inside the appropriate abstraction layer.

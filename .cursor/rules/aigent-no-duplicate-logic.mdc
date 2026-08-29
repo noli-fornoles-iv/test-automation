@@ -1,0 +1,8 @@
+---
+description: No duplicate automation logic
+alwaysApply: true
+---
+
+# No duplicate automation logic
+
+Do not create duplicate methods, selectors, utilities, or page objects when an existing implementation can be reused or extended.

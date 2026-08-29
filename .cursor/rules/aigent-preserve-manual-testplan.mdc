@@ -1,0 +1,8 @@
+---
+description: Never silently overwrite a reviewed test plan
+alwaysApply: true
+---
+
+# Never silently overwrite a reviewed test plan
+
+After a Testpad plan is generated, preserve human edits. Recreate Test Plan must show proposed additions, removals, and corrections and wait for confirmation before replacing the plan. Do not duplicate the existing plan or overwrite manual changes unless the user explicitly confirms.

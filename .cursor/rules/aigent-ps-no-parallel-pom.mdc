@@ -1,0 +1,8 @@
+---
+description: Never generate a parallel POM beside the existing one
+alwaysApply: true
+---
+
+# Never generate a parallel POM beside the existing one
+
+Do not add a second page-object or step-definition layer next to the one this project already uses, even if a generated layout looks cleaner.

@@ -1,0 +1,8 @@
+---
+description: Use this project's cleanup or sandbox helpers
+alwaysApply: true
+---
+
+# Use this project's cleanup or sandbox helpers
+
+If this project has afterEach, global teardown, disposable users, or a sandbox API, use it. Do not leave shared mutable data for the next spec or the next pipeline run.

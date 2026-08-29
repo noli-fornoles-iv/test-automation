@@ -1,0 +1,50 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Test",
+      "default1": "Test"
+    },
+    "gyms": {
+      "default": "Test",
+      "default1": "Test"
+    },
+    "clubId": "NZ-1042",
+    "secondaryClubId": "NZ-1042",
+    "localGym": "test-south-island-nz-1042"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "1234",
+      "secondary": "4321"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "6498876986",
+      "secondary": "6498876986",
+      "member": "6498876986",
+      "nonMember": "6498876986",
+      "localFormat": "98876986"
+    },
+    "invalid": "6694865151812345",
+    "countryCode": "+64"
+  },
+  "ownAGym": {
+    "investmentRange": "N/A",
+    "heardAboutUs": "Website",
+    "desiredMarket": "Auckland",
+    "address": "Auckland",
+    "city": "Auckland",
+    "state": "Auckland",
+    "country": "New Zealand",
+    "zip": "1234"
+  }
+}

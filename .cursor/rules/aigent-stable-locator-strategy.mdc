@@ -1,0 +1,9 @@
+---
+description: Stable locator strategy
+globs: **/{pages,page-objects,step-definitions,tests,features}/**
+alwaysApply: false
+---
+
+# Stable locator strategy
+
+Use the most stable locator available. Prefer semantic and test-specific selectors over implementation-dependent selectors. Recommended priority: Test ID → Role/Accessible Name → Label → Stable Attribute → CSS → XPath.

@@ -1,0 +1,8 @@
+---
+description: Never remove an assertion to make a test pass
+alwaysApply: true
+---
+
+# Never remove an assertion to make a test pass
+
+Assertions represent expected behavior and cannot be weakened to hide failures.

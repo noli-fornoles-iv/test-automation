@@ -1,0 +1,23 @@
+const testStudio: Record<string, string> = {
+  'EN-US': '9993999',
+  'EN-AU': 'AU-1538',
+  'EN-GB': 'UK-0527',
+  'AR-SA': 'SA-0001',
+  'EN-AE': 'AE-0005',
+  'EN-IN': 'IN-1106',
+  'EN-ZA': 'ZA-0001',
+  'EN-IE': 'UK-0568',
+  'EN-CA': '9993995',
+  'FR-CA': '9900101',
+  'DE-DE': 'DE-0004',
+  'DE-AT': 'AT-0003',
+  'IT-IT': 'IT-0021',
+  'TH-TH': 'TH-0003',
+  'EN-PH': 'PH-0083',
+  'EN-SG': 'SG-0053',
+  'EN-NZ': 'NZ-1042',
+  'EN-ID': 'ID-0001',
+  'ZH-HK': 'HK-0011',
+  'EN-MY': 'MY-0019',
+};
+export default testStudio;

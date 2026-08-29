@@ -1,0 +1,8 @@
+---
+description: Never invent users, secrets, or hosts for this project
+alwaysApply: true
+---
+
+# Never invent users, secrets, or hosts for this project
+
+Do not invent test accounts, tokens, or environment URLs. Use only values present in this project's fixtures, env examples, or secret manager wiring.

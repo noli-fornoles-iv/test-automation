@@ -1,0 +1,50 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Jakarta",
+      "default1": "Jakarta"
+    },
+    "gyms": {
+      "default": "Jakarta",
+      "default1": "Jakarta"
+    },
+    "clubId": "ID-0001",
+    "secondaryClubId": "ID-0001",
+    "localGym": "jakarta-java-id-0001"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "10110",
+      "secondary": "10110"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-100000"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+6281234567812",
+      "secondary": "+6281234567812",
+      "member": "+6281234567812",
+      "nonMember": "+6281234567812",
+      "localFormat": "81234567812"
+    },
+    "invalid": "+62812345678 12122222",
+    "countryCode": "+62"
+  },
+  "ownAGym": {
+    "investmentRange": "N/A",
+    "heardAboutUs": "Website",
+    "desiredMarket": "Jakarta",
+    "address": "Jakarta",
+    "city": "Jakarta",
+    "state": "Jakarta",
+    "country": "Indonesia",
+    "zip": "10110"
+  }
+}

@@ -1,0 +1,8 @@
+---
+description: Revalidate affected tests and regression after a fix
+alwaysApply: true
+---
+
+# Revalidate affected tests and regression after a fix
+
+Do not declare success from one passing retry. After a fix: re-run the affected test, then related tests. Scope regression: locator/small change → affected + related; page object change → feature tests using that POM; shared utility → all tests using it; framework/config → relevant full suite. Explain why that scope was chosen. Then review git diff, commit on the feature branch, and update the existing PR rather than opening a duplicate.

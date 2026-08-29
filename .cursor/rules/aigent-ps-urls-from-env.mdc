@@ -1,0 +1,8 @@
+---
+description: Read URLs and flags from this project's env
+alwaysApply: true
+---
+
+# Read URLs and flags from this project's env
+
+Base URLs, credentials, feature flags, and browser projects must come from .env, Playwright projects, Cucumber world, or config this project already ships. Never paste a teammate URL or a production host into a spec.

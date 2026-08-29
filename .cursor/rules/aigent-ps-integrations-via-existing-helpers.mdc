@@ -1,0 +1,8 @@
+---
+description: Cover integrations through existing helpers
+alwaysApply: true
+---
+
+# Cover integrations through existing helpers
+
+When this project's strategy includes CMS, CRM, analytics, auth, payment, or webhooks, use the helpers, mocks, or network assertions already in the project. Do not add a new integration harness the pipeline does not run.

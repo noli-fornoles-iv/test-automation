@@ -1,0 +1,8 @@
+---
+description: Never assume business behavior
+alwaysApply: true
+---
+
+# Never assume business behavior
+
+Do not invent expected behavior when requirements or application behavior are unclear. Flag ambiguity for human review.

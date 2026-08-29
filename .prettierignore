@@ -1,0 +1,16 @@
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.features-gen/
+reports/
+allure-results/
+allure-report/
+log/
+logs/
+.env*
+!.env.example
+dist/
+package-lock.json
+*.md

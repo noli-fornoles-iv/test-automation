@@ -1,0 +1,49 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Crows Nest",
+      "default1": "Crows Nest"
+    },
+    "gyms": {
+      "default": "Crows Nest",
+      "default1": "Crows Nest"
+    },
+    "clubId": "AU-1538",
+    "secondaryClubId": "AU-1538",
+    "localGym": "crows-nest-new-south-wales-au-1538"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "2065",
+      "secondary": "5512"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+61436399721",
+      "secondary": "+61212345777",
+      "member": "+61404000444",
+      "nonMember": "+61491570123"
+    },
+    "invalid": "+16515551234",
+    "countryCode": "+61"
+  },
+  "ownAGym": {
+    "investmentRange": "N/A",
+    "heardAboutUs": "Website",
+    "desiredMarket": "Crows Nest",
+    "address": "Crows Nest",
+    "city": "Crows Nest",
+    "state": "New South Wales",
+    "country": "Australia",
+    "zip": "2065"
+  }
+}

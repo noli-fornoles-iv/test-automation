@@ -1,0 +1,8 @@
+---
+description: Do not introduce a second framework
+alwaysApply: true
+---
+
+# Do not introduce a second framework
+
+Match the bound project's language and runner. Playwright projects stay Playwright. Selenium + Cucumber projects stay Gherkin + step definitions. Do not add Cypress, WebdriverIO, another BDD layer, a second playwright.config, or a parallel framework unless the user explicitly asks.

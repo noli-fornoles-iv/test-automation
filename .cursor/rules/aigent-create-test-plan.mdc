@@ -1,0 +1,8 @@
+---
+description: Create a Testpad plan before coding
+alwaysApply: true
+---
+
+# Create a Testpad plan before coding
+
+Follow the Generating a ticket-based testplan workflow. After analysis and discovery, understand project knowledge for this coverage and return TicketPlanner JSON: nested Testpad sections with Verify checks (exact copy, URLs, events). Aigent writes the checklist into Testpad — not Gherkin, not a regression-template copy. Cases must be ticket-scoped and specific enough to automate later. Do not invent expected behavior. Pause for human review. Do not write automation until qa_automation_testplan_approved.

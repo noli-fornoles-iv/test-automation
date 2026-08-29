@@ -1,0 +1,8 @@
+---
+description: Never change requirements without approval
+alwaysApply: true
+---
+
+# Never change requirements without approval
+
+The agent must not reinterpret or modify acceptance criteria to accommodate current application behavior.

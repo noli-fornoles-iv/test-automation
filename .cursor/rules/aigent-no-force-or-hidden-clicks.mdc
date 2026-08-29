@@ -1,0 +1,8 @@
+---
+description: Do not force-click or bypass the UI
+alwaysApply: true
+---
+
+# Do not force-click or bypass the UI
+
+Do not use force clicks, hidden-element clicks, JavaScript click injection, or skip-action flags merely to make a step pass. If the real user cannot interact with the control, the test should fail or be blocked for investigation.

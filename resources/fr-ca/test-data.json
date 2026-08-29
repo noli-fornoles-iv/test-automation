@@ -1,0 +1,51 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Montreal (Test)",
+      "default1": "Montreal (Test)"
+    },
+    "gyms": {
+      "default": "Montreal (Test)",
+      "default1": "Montreal (Test)"
+    },
+    "clubId": "9900101",
+    "preSaleClubId": "9900101",
+    "secondaryClubId": "9900101",
+    "localGym": "montreal-quebec-9900101"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "H3Z 2Y7",
+      "secondary": "H3Z 2Y7"
+    },
+    "invalid": {
+      "alpha": "Z1Z 1Z1",
+      "short": "1234",
+      "long": "H3Z 2Y711"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "16472125551",
+      "secondary": "16472125551",
+      "member": "16472125551",
+      "nonMember": "N/A",
+      "localFormat": "6472125551"
+    },
+    "invalid": "0165551234",
+    "countryCode": "1"
+  },
+  "ownAGym": {
+    "investmentRange": "N/A",
+    "heardAboutUs": "Website",
+    "desiredMarket": "Montreal",
+    "address": "Montreal",
+    "city": "Montreal",
+    "state": "Quebec",
+    "country": "Canada",
+    "zip": "H3Z 2Y7"
+  }
+}

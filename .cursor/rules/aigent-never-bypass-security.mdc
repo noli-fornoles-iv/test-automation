@@ -1,0 +1,8 @@
+---
+description: Never bypass security validations
+alwaysApply: true
+---
+
+# Never bypass security validations
+
+Do not disable authentication, authorization, consent, security checks, or other controls merely to make automation easier.

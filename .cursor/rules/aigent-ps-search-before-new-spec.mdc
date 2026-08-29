@@ -1,0 +1,8 @@
+---
+description: Search this project before adding a spec
+alwaysApply: true
+---
+
+# Search this project before adding a spec
+
+Grep tests, features, and page objects for the same flow, route, or requirement. If a spec already covers it, extend or repair that spec. Do not add a second file that asserts the same business behavior.

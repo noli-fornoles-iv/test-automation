@@ -1,0 +1,8 @@
+---
+description: A failing test is a signal to investigate
+alwaysApply: true
+---
+
+# A failing test is a signal to investigate
+
+A failing test is a signal to investigate, not an instruction to change the automation. The Agent must prove that the automation is the root cause before modifying it. Never go from Test Failed → change locator → pass. Required path: collect evidence → reproduce → analyze root cause → classify → determine ownership → fix only if AUTOMATION_BUG → re-run the failed test → run regression → verify root cause → document resolution.

@@ -1,0 +1,8 @@
+---
+description: Reuse before creating
+alwaysApply: true
+---
+
+# Reuse before creating
+
+Search for existing page objects, components, helpers, fixtures, utilities, and test data before creating new ones. Prefer import-and-extend over copy-paste generation.

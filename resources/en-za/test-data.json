@@ -1,0 +1,42 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Cape Town",
+      "default1": "Cape Town"
+    },
+    "gyms": {
+      "default": "Cape Town",
+      "default1": "Cape Town"
+    },
+    "clubId": "ZA-0001",
+    "secondaryClubId": "ZA-0001",
+    "localGym": "cape-town-western-cape-za-0001"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "8001",
+      "secondary": "2000"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+27821234567",
+      "secondary": "+27821234568"
+    },
+    "invalid": "+1651",
+    "countryCode": "+27"
+  },
+  "ownAGym": {
+    "investmentRange": "R2-4 million",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Western Cape"
+  }
+}

@@ -1,0 +1,8 @@
+---
+description: Do not claim unexecuted tests passed
+alwaysApply: true
+---
+
+# Do not claim unexecuted tests passed
+
+Never report a test as passed unless it was actually executed successfully.

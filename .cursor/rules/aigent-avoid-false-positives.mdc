@@ -1,0 +1,8 @@
+---
+description: Avoid false-positive tests
+alwaysApply: true
+---
+
+# Avoid false-positive tests
+
+A test must fail when the intended business behavior is broken. Do not create tests that can pass while the actual requirement is not satisfied.

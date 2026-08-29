@@ -1,0 +1,8 @@
+---
+description: Never add a second runner or config in this project
+alwaysApply: true
+---
+
+# Never add a second runner or config in this project
+
+Do not create another playwright.config, cucumber.js, wdio.conf, or test script that bypasses the one this project already runs in CI.

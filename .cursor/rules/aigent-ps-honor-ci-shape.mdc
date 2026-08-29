@@ -1,0 +1,8 @@
+---
+description: Honor this project's CI shape
+alwaysApply: true
+---
+
+# Honor this project's CI shape
+
+Workers, retries, timeouts, grep, and browser list must match playwright.config / CI workflow / package.json. Do not raise a timeout or disable a browser 'so it passes' without recording that as an environment or product issue. Do not add headed-only or absolute-path assumptions.

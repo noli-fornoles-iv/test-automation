@@ -1,0 +1,126 @@
+{
+  "texts": {
+    "consent": {
+      "bottomText": "Once you've submitted your details you can BOOK A TOUR on the next screen.",
+      "privacyNotice": "I agree to the Anytime Fitness - ${location} Terms and Conditions, including the use of my personal data as stated in the Privacy Policy."
+    },
+    "bookingConfirmation": {
+      "tryUsFree": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "appleFitnessPlusFreeTrial": "Your tour has been scheduled, and your Apple Fitness+ trial subscription is ready. Check your email or redeem below. See you on the Anytime Fitness app and in the gym!",
+      "appleFitnessPlusSubscriber": "Your tour is scheduled and we're looking forward to showing you around your new workout home away from home.",
+      "bookATourStandalone": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "inviteAFriend": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "membershipInquiry": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFreeTrialPass": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsTrainForYourLife": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsPromo": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "localOffer": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFindYourFitphoria": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsBookATour": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "thankYouPage": "We’ve received your inquiry. A member of our team will reach out to you shortly.",
+      "corporateMembership": "Someone from our team will contact you to discuss next steps."
+    },
+    "headings": {
+      "locationSearch": {
+        "membershipInquiry": {
+          "mainHeading": "MEMBERSHIP INQUIRY",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "connectWithUs": "CONNECT WITH US",
+          "listTab": "LIST",
+          "mapTab": "MAP"
+        },
+        "tryUsFree": {
+          "bannerTitle": "CLAIM YOUR FREE DAY PASS.",
+          "mainHeading": "TRY US FOR FREE",
+          "description": "Find your nearest Anytime Fitness location to get started.",
+          "findGymText": "FIND YOUR GYM",
+          "getStartedToday": "GET STARTED TODAY"
+        },
+        "contactUs": {
+          "mainHeading": "FIRST, FIND YOUR GYM",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "LET'S GET YOU TO THE RIGHT PLACE.",
+          "useCurrentLocation": "Use Current Location",
+          "formHeading": "SEND US A MESSAGE",
+          "listTab": "LIST",
+          "mapTab": "MAP"
+        },
+        "unitOfMeasurement": "km"
+      },
+      "thankYouPage": "thank you"
+    }
+  },
+  "errors": {
+    "locationSearch": {
+      "invalidLocation": "Invalid search. Please enter a valid city, country, or emirate. Ensure your input is correctly formatted and try again!",
+      "noNearbyLocations": "No locations found within 80 km of ${location}. Please try searching a different city.",
+      "serverSide": "Whoops! Something went wrong processing the submission on our end. Please try again in a moment.",
+      "noLocation": "No locations found within",
+      "noGymsNearbyHeading": "NO GYMS NEARBY.",
+      "noGymsNearby": "NO GYMS NEARBY.",
+      "noGymsNearbyDescription": "Looks like we're not in the area yet. Enter a different search above to explore options in a nearby city, or view all locations."
+    },
+    "userForm": {
+      "requiredField": {
+        "firstName": "This Field is required",
+        "lastName": "This Field is required",
+        "email": "This Field is required",
+        "phone": "This Field is required",
+        "generic": "This Field is required"
+      },
+      "alphaOnly": "Only alphabets are allowed",
+      "invalidEmail": "Email is invalid",
+      "invalidPhone": "Phone is invalid",
+      "invalidPostCode": "Invalid Postcode",
+      "maxLength": "Maximum length is 30 characters",
+      "serverSide": "Whoops! Something went wrong processing the submission on our end. Please try again in a moment."
+    },
+    "BatAddon": {
+      "dateRequired": "This value is required.",
+      "timeRequired": "This value is required.",
+      "noTimeSlots": "Select a date to view available time slots.",
+      "slotConflict": "Dang! Somebody else snatched up that time slot. Please select another time to come in."
+    }
+  },
+  "buttons": {
+    "locationSearch": {
+      "selectGym": "SELECT GYM",
+      "gymDetails": "GYM DETAILS",
+      "freeTrialPass": "FREE TRIAL PASS",
+      "joinOnline": "JOIN ONLINE",
+      "joinInGym": "JOIN IN GYM"
+    },
+    "userForm": {
+      "submit": "SUBMIT",
+      "membershipInquirySubmit": "Find Out More",
+      "getStarted": "GET STARTED"
+    },
+    "localGymPage": {
+      "membershipInquiryBtn": "MEMBERSHIP INQUIRY",
+      "contactUsBtn": "Contact Us"
+    },
+    "seeYouSoonPage": {
+      "sendTrialPass": "SEND TRIAL PASS"
+    }
+  },
+  "labels": {
+    "locationSearch": {
+      "searchBoxPlaceholder": {
+        "cityOrZipCode": "Search by city and emirate",
+        "cityStateOrZipCode": "Search by city and emirate"
+      }
+    },
+    "userForm": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "zipCode": "Zip Code",
+      "termsAndConditions": "Terms & Conditions",
+      "privacyNotice": "Privacy Notice",
+      "textMessagingTerms": "Text Messaging Terms"
+    }
+  }
+}

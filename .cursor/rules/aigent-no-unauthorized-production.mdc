@@ -1,0 +1,8 @@
+---
+description: No unauthorized production actions
+alwaysApply: true
+---
+
+# No unauthorized production actions
+
+Do not perform destructive or irreversible actions against production without explicit authorization.

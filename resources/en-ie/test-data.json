@@ -1,0 +1,45 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "Antique",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Kilnamanagh",
+      "default1": "Kilnamanagh"
+    },
+    "gyms": {
+      "default": "Kilnamanagh",
+      "default1": "Kilnamanagh"
+    },
+    "clubId": "UK-0568",
+    "secondaryClubId": "UK-0568",
+    "localGym": "kilnamanagh-dublin-uk-0568"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "D24 H5V9",
+      "secondary": "D24 H5V9"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+353871234567",
+      "secondary": "+353871234567",
+      "member": "+353871234567",
+      "nonMember": "N/A",
+      "localFormat": "0871234567"
+    },
+    "invalid": "+16515551234",
+    "countryCode": "+353"
+  },
+  "ownAGym": {
+    "investmentRange": "Under €200k",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Dublin"
+  }
+}

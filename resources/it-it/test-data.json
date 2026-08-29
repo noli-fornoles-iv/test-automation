@@ -1,0 +1,44 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Bergamo",
+      "default1": "Bergamo"
+    },
+    "gyms": {
+      "default": "Bergamo",
+      "default1": "Bergamo"
+    },
+    "clubId": "IT-0021",
+    "secondaryClubId": "IT-0021",
+    "localGym": "bergamo-bergamo-it-0009"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "00186",
+      "secondary": "00187"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+393471143872",
+      "secondary": "+390665738902",
+      "member": "+393471143872",
+      "nonMember": "+390665738902"
+    },
+    "invalid": "+1651",
+    "countryCode": "+39"
+  },
+  "ownAGym": {
+    "investmentRange": "€100.000 – €249.999",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Bergamo"
+  }
+}

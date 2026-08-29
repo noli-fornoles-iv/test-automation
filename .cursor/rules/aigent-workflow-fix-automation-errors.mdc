@@ -1,0 +1,42 @@
+---
+description: Workflow — Fixing automation errors
+alwaysApply: true
+---
+
+# Fixing automation errors
+
+A failing test is a signal to investigate, not an instruction to change automation. Diagnose, classify, and prove AUTOMATION_BUG before modifying code.
+
+Follow these steps in order. Do not skip a step, label transition, or human approval gate unless the ticket or user explicitly says to.
+
+1. **Collect evidence — do not edit yet**
+
+When a test fails, collect evidence before any code change: test name, test case ID, ticket ID, environment, locale, browser, branch, execution mode, execution ID, timestamp, error, stack, screenshot, trace, video if available, console logs, network/API logs, request/response, expected result, actual result. For Jenkins also collect job, build number, worker/node, build logs, artifacts, and environment variables. Internal state: INVESTIGATING. Do not change locators, assertions, waits, or skip the test.
+
+2. **Reproduce with the same conditions**
+
+Re-run the failed test on the same branch, environment, locale, browser, test data, and configuration. If the retry PASSes, do not conclude the automation is fixed — investigate timing, races, network, data contamination, environment instability, or third-party failures. Build a reproduction matrix when useful: original vs retry, Local vs Jenkins, different browser, different locale. Example: Local PASS + Jenkins FAIL + Jenkins retry FAIL → likely CI/environment; AUTOMATION_BUG not confirmed.
+
+3. **Analyze root cause outside-in**
+
+Investigate in this order and do not jump to locators: (1) application behavior vs approved test plan, (2) test data, (3) environment/deployment, (4) network/API, (5) timing/synchronization, (6) locator, (7) assertion, (8) setup/teardown, (9) framework/utilities, (10) infrastructure. Compare expected vs actual application behavior. Locator failures: check UI change, iframe, visibility, enabled, timing, wrong page, duplicates, then prefer data-testid → role/name → stable ID → semantic attribute → text → CSS → XPath. Assertion failures: verify expected value, actual value, and their sources against the approved plan before changing anything.
+
+4. **Classify and determine ownership**
+
+Assign exactly one: AUTOMATION_BUG — application is correct, test implementation is wrong (locator, selector, assertion, wait, page object, payload, env var, setup/cleanup); fix automation. APPLICATION_BUG — app does not match approved plan; preserve the test, capture evidence, document expected vs actual, recommend a defect ticket; never weaken the assertion. TEST_DATA_ISSUE — missing/invalid data (test_location_id, gym, locale); fix data, do not switch to live locations. ENVIRONMENT_ISSUE — feature not deployed or env unavailable; do not change automation. INFRASTRUCTURE_ISSUE — Jenkins worker, browser, network; retry/investigate. CONFIGURATION_ISSUE — wrong project/env config. THIRD_PARTY_ISSUE — escalate. FLAKY_TEST — only with nondeterministic evidence; stabilize the cause, do not just add retries. EXPECTED_PRODUCT_CHANGE — update requirements/test plan first. UNKNOWN — escalate, do not guess.
+
+5. **Fix only confirmed AUTOMATION_BUG with minimum safe change**
+
+Modify automation only after AUTOMATION_BUG is confirmed. Identify root cause, explain the proposed fix, change the minimum required code, preserve approved test intent, and avoid unrelated refactoring. Prefer one locator update over rewriting a page object. Prefer waits for element, state, URL, API, or network — never waitForTimeout/sleep to hide a race. Do not raise timeouts indefinitely, skip tests, remove assertions, change expected to match a broken app, disable validation, or ignore failures. Max 3 automated fix attempts (analyze → fix → validate each time). After 3, HUMAN_INTERVENTION_REQUIRED. Internal states: AUTOMATION_BUG_CONFIRMED → FIX_IN_PROGRESS → FIX_VALIDATING. Jira may stay qa_automation_in_progress or qa_automation_fix.
+
+6. **Re-run affected tests and scoped regression**
+
+Do not declare success from one passing retry. Re-run the affected test. If it passes, run related tests then regression: small locator change → affected + related; page object change → feature tests using that POM; shared utility → all tests using it; framework/config → relevant full suite. Explain why that scope was chosen. Check for new failures. State REGRESSION_VALIDATING then RESOLVED only if evidence supports it.
+
+7. **Review diff, commit, and update the existing PR**
+
+On the feature branch: review git diff, commit only the intended fix (example: AF-3914 Fix location search automation selector), push, and update the existing PR — do not open a duplicate PR. Never commit secrets. Never develop on sit, uat, or main.
+
+8. **Write the failure resolution report or escalate**
+
+Produce: Ticket, Test, Environment, Execution, Initial Result, Classification, Root Cause, Evidence, Fix (if any), Validation (affected / feature / regression), Fix Attempts (n/3), Final Status RESOLVED or HUMAN_REVIEW_REQUIRED. Stop and ask a human when requirements are ambiguous, the plan conflicts with requirements, application vs automation cannot be distinguished, production or destructive action is involved, test-data/environment ownership is unclear, expected behavior must change, a test must be skipped or removed, or a major architecture change is required.

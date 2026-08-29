@@ -1,0 +1,8 @@
+---
+description: Minimum safe change for confirmed automation bugs
+alwaysApply: true
+---
+
+# Minimum safe change for confirmed automation bugs
+
+After AUTOMATION_BUG is confirmed, explain the proposed fix, change the minimum required code, preserve approved test-plan intent, and avoid unrelated refactoring. Prefer updating one locator over rewriting a page object or framework. Investigate locator failures before replacing them. Locator priority: data-testid → accessible role/name → stable ID → stable semantic attribute → text → CSS → XPath. Prefer waits for element, state, URL, API, or network over hard sleeps.

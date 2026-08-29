@@ -1,0 +1,41 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "default": "Arjan",
+      "default1": "Arjan"
+    },
+    "gyms": {
+      "default": "Arjan",
+      "default1": "Arjan"
+    },
+    "clubId": "AE-0005",
+    "secondaryClubId": "AU-0005",
+    "localGym": "arjan-abu-dhabi-ae-0005"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "2065",
+      "secondary": "5512"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+971555553542",
+      "secondary": "+971555553542"
+    },
+    "invalid": "+97143434442333333",
+    "countryCode": "+971"
+  },
+  "ownAGym": {
+    "investmentRange": "$0 - $50,000",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Abu Dhabi"
+  }
+}

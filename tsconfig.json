@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "dist",
+    "paths": {
+      "@features/*": ["./features/*"],
+      "@config/*": ["./config/*"],
+      "@fixtures/*": ["./fixtures/*"],
+      "@pages/*": ["./pages/*"],
+      "@steps/*": ["./step-definitions/*"],
+      "@utils/*": ["./utils/*"],
+      "@resources/*": ["./resources/*"],
+      "@type/*": ["./types/*"]
+    },
+    "types": ["node", "playwright"],
+    "noUnusedLocals": false
+  },
+  "include": ["**/*.ts", "types/**/*.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

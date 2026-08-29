@@ -1,0 +1,8 @@
+---
+description: Environment-aware execution
+alwaysApply: true
+---
+
+# Environment-aware execution
+
+Always respect the configured environment and never assume that local, QA, SIT, UAT, staging, and production behave identically.

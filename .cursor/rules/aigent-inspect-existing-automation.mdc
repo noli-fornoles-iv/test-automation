@@ -1,0 +1,8 @@
+---
+description: Inspect existing automation first
+alwaysApply: true
+---
+
+# Inspect existing automation first
+
+Search the project for existing tests, page objects, fixtures, utilities, helpers, and components before creating new ones. If a file already owns that page or flow, extend it. Do not add a second page object or spec with the same responsibility.

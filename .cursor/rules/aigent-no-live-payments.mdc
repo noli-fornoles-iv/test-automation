@@ -1,0 +1,8 @@
+---
+description: Never complete live payments or irreversible commerce
+alwaysApply: true
+---
+
+# Never complete live payments or irreversible commerce
+
+Do not submit real payment instruments, capture live orders, cancel production bookings, or trigger irreversible commerce actions unless the environment is explicitly a designated test sandbox and the user authorized it.

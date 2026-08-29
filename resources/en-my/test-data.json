@@ -1,0 +1,50 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Kuala Lumpur",
+      "default1": "Kuala Lumpur"
+    },
+    "gyms": {
+      "default": "Kuala Lumpur",
+      "default1": "Kuala Lumpur"
+    },
+    "clubId": "MY-0019",
+    "secondaryClubId": "MY-0019",
+    "localGym": "my-test-location-21345"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "50000",
+      "secondary": "50000"
+    },
+    "invalid": {
+      "alpha": "asd123",
+      "short": "123",
+      "long": "999999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "60192210605",
+      "secondary": "60192210605",
+      "member": "60192210605",
+      "nonMember": "60192210605",
+      "localFormat": "192210605"
+    },
+    "invalid": "0165551234",
+    "countryCode": "60"
+  },
+  "ownAGym": {
+    "investmentRange": "N/A",
+    "heardAboutUs": "Website",
+    "desiredMarket": "Kuala Lumpur",
+    "address": "Kuala Lumpur",
+    "city": "Kuala Lumpur",
+    "state": "Wilayah Persekutuan",
+    "country": "Malaysia",
+    "zip": "50000"
+  }
+}

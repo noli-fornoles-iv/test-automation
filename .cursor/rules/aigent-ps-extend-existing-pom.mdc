@@ -1,0 +1,8 @@
+---
+description: Extend this project's POM and helpers
+alwaysApply: true
+---
+
+# Extend this project's POM and helpers
+
+If a page object, component, or step definition for the target already exists, add methods there and import it from the spec. Create a new file only when nothing in this project owns that page or flow.

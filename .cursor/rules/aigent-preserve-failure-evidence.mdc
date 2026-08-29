@@ -1,0 +1,8 @@
+---
+description: Preserve failure evidence
+alwaysApply: true
+---
+
+# Preserve failure evidence
+
+When a failure occurs, preserve screenshots, traces, videos, logs, network/API request and response, test data, environment, locale, browser, branch, execution mode, execution ID, timestamp, error, stack, expected vs actual, and for Jenkins the job, build number, worker, artifacts, and environment variables.

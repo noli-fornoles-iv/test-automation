@@ -1,0 +1,45 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "Antique",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Sai",
+      "default1": "Sai"
+    },
+    "gyms": {
+      "default": "Sai",
+      "default1": "Sai"
+    },
+    "clubId": "HK-0011",
+    "secondaryClubId": "HK-0011",
+    "localGym": "test-hong-kong-island-hk-0011"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "000000",
+      "secondary": "000000"
+    },
+    "invalid": {
+      "alpha": "123ABC",
+      "short": "1234",
+      "long": "1234567"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "852 61234567",
+      "secondary": "852 67654321",
+      "member": "852 61234567",
+      "nonMember": "852 67654321",
+      "localFormat": "61234567"
+    },
+    "invalid": "6123456",
+    "countryCode": "852"
+  },
+  "ownAGym": {
+    "investmentRange": "N/A",
+    "heardAboutUs": "N/A",
+    "desiredMarket": "Hong Kong"
+  }
+}

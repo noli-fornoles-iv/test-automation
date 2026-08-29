@@ -1,0 +1,45 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Test",
+      "default1": "Test"
+    },
+    "gyms": {
+      "default": "Test",
+      "default1": "Test"
+    },
+    "clubId": "PH-0083",
+    "secondaryClubId": "PH-0083",
+    "localGym": "test-metro-manila-ph-0083"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "1226",
+      "secondary": "1226"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+639469228302",
+      "secondary": "+639469228302",
+      "member": "+639469228302",
+      "nonMember": "09469228302",
+      "localFormat": "09469228302"
+    },
+    "invalid": "+6394692283028",
+    "countryCode": "+63"
+  },
+  "ownAGym": {
+    "investmentRange": "Under $250K",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Manila"
+  }
+}

@@ -1,0 +1,8 @@
+---
+description: Follow the existing automation architecture
+alwaysApply: true
+---
+
+# Follow the existing automation architecture
+
+Use the bound project's existing framework, folder structure, naming conventions, fixtures, utilities, configuration, and design patterns. Read neighboring files and copy their shape. Do not invent a cleaner architecture beside the one already in the project.

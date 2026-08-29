@@ -1,0 +1,8 @@
+---
+description: Analyze the target before generating automation
+alwaysApply: true
+---
+
+# Analyze the target before generating automation
+
+Before writing tests, inspect the live target (route, page, components) and this project: existing specs, page objects, fixtures, helpers, and the test runner config. Also search the project knowledge base (Guru, .aigent/knowledge, Data Resources) so analysis matches documented product behavior. Name what you will reuse. Do not generate a parallel suite until that inventory exists.

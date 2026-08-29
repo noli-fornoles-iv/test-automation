@@ -1,0 +1,8 @@
+---
+description: Load data from this project's fixtures
+alwaysApply: true
+---
+
+# Load data from this project's fixtures
+
+Users, products, content, and expected values must come from this project's fixtures, env, or test-data files. Do not invent emails like test123@gmail.com, do not scrape production, and do not embed one-off literals that belong in those files.

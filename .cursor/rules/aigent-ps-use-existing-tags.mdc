@@ -1,0 +1,8 @@
+---
+description: Use this project's suite tags and jobs
+alwaysApply: true
+---
+
+# Use this project's suite tags and jobs
+
+Read how this project already tags tests (@smoke, @regression, test.describe, grep, CI job names). Apply those tags. Do not invent a parallel tagging scheme the pipeline will not select.

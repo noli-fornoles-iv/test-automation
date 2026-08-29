@@ -1,0 +1,8 @@
+---
+description: Happy, validation, and negative paths
+alwaysApply: true
+---
+
+# Happy, validation, and negative paths
+
+When generating coverage for a flow, include happy, validation, and negative scenarios unless the user explicitly scopes the request differently.

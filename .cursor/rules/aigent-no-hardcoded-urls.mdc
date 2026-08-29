@@ -1,0 +1,8 @@
+---
+description: No hardcoded environment URLs
+alwaysApply: true
+---
+
+# No hardcoded environment URLs
+
+Do not hardcode environment URLs, credentials, locale prefixes, or environment-specific configuration in tests or page objects. Use project configuration, fixtures, and environment variables.

@@ -1,0 +1,8 @@
+---
+description: Do not leave debug-only test controls
+alwaysApply: true
+---
+
+# Do not leave debug-only test controls
+
+Do not commit page.pause, .only, .debug, focused/single-file runners, leftover console dumps of secrets, or temporary timeouts added for local debugging.

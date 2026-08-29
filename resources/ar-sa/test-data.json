@@ -1,0 +1,42 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Kharj",
+      "default1": "Kharj"
+    },
+    "gyms": {
+      "default": "Kharj",
+      "default1": "Kharj"
+    },
+    "clubId": "SA-0001",
+    "secondaryClubId": "SA-0001",
+    "localGym": "kharj-ar-riyadh-riyadh-sa-0001"  
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "21461",
+      "secondary": "21422"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+966555553542",
+      "secondary": "+966555123456"
+    },
+    "invalid": "+96643434442333333",
+    "countryCode": "+966"
+  },
+  "ownAGym": {
+    "investmentRange": "500,000 ريال - 1,000,000 ريال",
+    "heardAboutUs": "تطبيق لينكد إن",
+    "desiredMarket": "الرياض"
+  }
+}

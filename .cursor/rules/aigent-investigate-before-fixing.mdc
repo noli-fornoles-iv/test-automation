@@ -1,0 +1,8 @@
+---
+description: Diagnose before fixing
+alwaysApply: true
+---
+
+# Diagnose before fixing
+
+Never modify automation immediately after a test failure. First collect evidence (test name, case/ticket IDs, environment, locale, browser, branch, execution mode, error, stack, screenshot, trace, logs, network/API, expected vs actual; for Jenkins also job, build, worker, artifacts). Then reproduce, analyze root cause from the outside in (application → data → environment → network → timing → locator → assertion → setup → framework → infrastructure), classify, and determine ownership. Only then may automation be changed — and only if the classification is AUTOMATION_BUG.

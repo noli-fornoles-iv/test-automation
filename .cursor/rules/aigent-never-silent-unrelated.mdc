@@ -1,0 +1,8 @@
+---
+description: Never silently modify unrelated code
+alwaysApply: true
+---
+
+# Never silently modify unrelated code
+
+Changes outside the requested scope require justification and, where appropriate, human approval.

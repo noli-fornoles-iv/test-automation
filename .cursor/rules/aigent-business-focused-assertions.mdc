@@ -1,0 +1,8 @@
+---
+description: Business-focused assertions
+alwaysApply: true
+---
+
+# Business-focused assertions
+
+Assertions must validate expected business behavior rather than simply confirming that an element exists or a page loaded.

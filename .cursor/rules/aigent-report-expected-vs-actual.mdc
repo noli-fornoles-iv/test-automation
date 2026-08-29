@@ -1,0 +1,8 @@
+---
+description: Report expected vs actual
+alwaysApply: true
+---
+
+# Report expected vs actual
+
+For failures, report the expected behavior, actual behavior, failure location, evidence, and likely root cause.

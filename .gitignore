@@ -1,0 +1,43 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+.features-gen/
+test-results/
+playwright-report/
+reports/
+allure-results/
+allure-report/
+log/
+logs/
+.cache/
+
+# Ephemeral run / agent redirect artifacts (auto-cleaned after Playwright via globalTeardown)
+*.log
+tmp-*.log
+tmp-*.txt
+tmp-*.zip
+ftp-*.txt
+.debug-output.txt
+debug-output.txt
+.gitActions.zip
+gitActions.zip
+.tmp-*.txt
+
+# Ignore all .env files except .env.example
+.env*
+!.env.example
+
+# Ignore VS Code settings except settings.json
+.vscode/*
+!.vscode/settings.json
+
+# Local MCP secrets (copy from *.example; never commit)
+.cursor/mcp.env
+.cursor/mcp.json
+
+.env
+.env.local

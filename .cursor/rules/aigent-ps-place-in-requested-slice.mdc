@@ -1,0 +1,8 @@
+---
+description: Place new tests in the requested slice
+alwaysApply: true
+---
+
+# Place new tests in the requested slice
+
+If this project splits smoke, sanity, and regression, put new coverage in the slice the user asked for. Do not dump a full regression into smoke, and do not skip tags when CI uses tags to choose jobs.

@@ -1,0 +1,8 @@
+---
+description: Never hide failures
+alwaysApply: true
+---
+
+# Never hide failures
+
+Failures, retries, flaky behavior, skipped tests, and blocked tests must remain visible in execution results.

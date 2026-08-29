@@ -1,0 +1,38 @@
+---
+description: Workflow — Executing tests for tickets
+alwaysApply: true
+---
+
+# Executing tests for tickets
+
+Run approved ticket automation with Execute Run: collect environment and Local / Jenkins / Both, pass safety gates, execute, analyze results without changing tests to go green. Keep execution state separate from Jira labels and Git promotion.
+
+Follow these steps in order. Do not skip a step, label transition, or human approval gate unless the ticket or user explicitly says to.
+
+1. **Confirm the ticket is ready to execute**
+
+This workflow starts at qa_automation_ready_to_execute. Confirm the Testpad plan is approved, automation is implemented and validated, and there is no open blocker. Keep three independent states: ticket label, Git promotion (feature/SIT/UAT/PROD), and execution (NOT_RUN → QUEUED → RUNNING → PASSED / FAILED). Do not encode execution into Jira labels. Do not implement new coverage here — that is Automating a ticket.
+
+2. **Collect run parameters from the user**
+
+Ask for and confirm before running: Environment (only those the project allows: SIT, UAT, Staging, Production, Local), Execution mode (Local / Jenkins / Both), Locale(s), Browser, Test suite, Tags, Branch (usually the feature branch qa/<TICKET>-...). Do not assume Production. Do not start until the user has chosen environment and mode.
+
+3. **Run pre-execution safety checks**
+
+Verify: Test Plan approved, Automation implemented and validated, Code validated, Branch available, Test data available, Environment available, Blockers none. If a required dependency is missing, block execution and report Reason, Required, Status, Action — example: test_location_id not configured for the selected locale. Do not proceed, and do not change automation to work around missing data.
+
+4. **Environment and production safety**
+
+Compare current branch, current environment, feature deployment, and target environment. If the feature may not be deployed to the selected environment, warn and wait for Cancel or Continue. Production requires an extra explicit confirmation: test location, test data, no live customer data, no uncontrolled production submissions/leads/forms, no destructive tests, production execution approved. Never bypass production safety checks.
+
+5. **Execute Local, Jenkins, or Both**
+
+Set execution state QUEUED then RUNNING. Local: run this project's Playwright/test command locally and collect tests, passed, failed, skipped, duration, environment, locale, browser, branch. Jenkins: prepare TICKET_ID, ENVIRONMENT, LOCALE, BROWSER, TEST_SUITE, TAGS, BRANCH; trigger the job; monitor the build; collect results and artifacts. Both: run local and Jenkins, then compare pass/fail, duration, browser, environment, locale, branch, API/network, console, screenshots, and traces. Report Passed only if tests actually ran and passed. Never invent results.
+
+6. **Analyze results — do not change automation yet**
+
+Classify failures before any code change. A Jenkins failure is not automatically AUTOMATION_BUG. If Local PASS and Jenkins FAIL (or the reverse), OVERALL is INVESTIGATION_REQUIRED — follow the Fixing automation errors workflow. Classify APPLICATION_BUG, AUTOMATION_BUG, TEST_DATA_ISSUE, ENVIRONMENT_ISSUE, INFRASTRUCTURE_ISSUE, CONFIGURATION_ISSUE, THIRD_PARTY_ISSUE, FLAKY_TEST, EXPECTED_PRODUCT_CHANGE, or UNKNOWN. Do not immediately modify locators or assertions because Local and Jenkins differ.
+
+7. **Report execution and stop at human promotion gates**
+
+Deliver: Ticket, Environment, Mode (Local / Jenkins / Both), Branch, Locale, Browser, Suite/Tags, Execution state (PASSED/FAILED/INVESTIGATION_REQUIRED), counts, duration, Local vs Jenkins comparison when Both, classifications, evidence links. Do not automatically merge into uat or main. The agent may prepare sit→uat or uat→main PRs only if the user asks, then wait. Do not mark qa_automation_done until required environments have been executed and promotion is complete per the Automating a ticket workflow. If a confirmed AUTOMATION_BUG needs a code change, switch to Fixing automation errors.

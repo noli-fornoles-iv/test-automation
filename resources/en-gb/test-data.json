@@ -1,0 +1,44 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "London (TestDiff)",
+      "default1": "London (TestDiff)"
+    },
+    "gyms": {
+      "default": "London (TestDiff)",
+      "default1": "London (TestDiff)"
+    },
+    "clubId": "UK-0527",
+    "secondaryClubId": "UK-0527",
+    "localGym": "test-town-3-east-midlands-uk-0527"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "SW1A 1AA",
+      "secondary": "SW1P 3PA"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+447777777777",
+      "secondary": "+447777777777",
+      "member": "N/A",
+      "nonMember": "+447400123456"
+    },
+    "invalid": "+61436399721",
+    "countryCode": "+44"
+  },
+  "ownAGym": {
+    "investmentRange": "£170k - £250k",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "East Midlands"
+  }
+}

@@ -1,0 +1,8 @@
+---
+description: Namespace data so workers cannot collide
+alwaysApply: true
+---
+
+# Namespace data so workers cannot collide
+
+When a test creates records, use a unique prefix (spec name + timestamp or worker index) so parallel CI workers do not share the same account, cart, or order. Follow any factory this project already uses.

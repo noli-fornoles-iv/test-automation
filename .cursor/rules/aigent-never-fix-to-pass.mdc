@@ -1,0 +1,8 @@
+---
+description: Never fix tests just to make them pass
+alwaysApply: true
+---
+
+# Never fix tests just to make them pass
+
+Do not modify selectors, assertions, expected values, waits, or test logic solely to produce a passing result. Prohibited: removing a failing assertion, unbounded timeouts, arbitrary waitForTimeout/sleep, skipping a test without approval, changing expected behavior to match a broken app, using live data because test data failed, disabling validation, or ignoring failures.

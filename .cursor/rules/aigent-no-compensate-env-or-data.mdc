@@ -1,0 +1,8 @@
+---
+description: Never compensate for environment or test-data gaps
+alwaysApply: true
+---
+
+# Never compensate for environment or test-data gaps
+
+Do not modify automation to work around missing test_location_id, missing gyms/locations, undeployed features, wrong environment, or invalid fixtures. Classify TEST_DATA_ISSUE or ENVIRONMENT_ISSUE, report what is missing, and pause until it is resolved.

@@ -1,0 +1,8 @@
+---
+description: Never prioritize pass rate over quality
+alwaysApply: true
+---
+
+# Never prioritize pass rate over quality
+
+The agent must optimize for trustworthy automation and product quality, not the percentage of green tests.

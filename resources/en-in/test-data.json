@@ -1,0 +1,42 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "DRG",
+      "default1": "DRG"
+    },
+    "gyms": {
+      "default": "DRG",
+      "default1": "DRG"
+    },
+    "clubId": "IN-1106",
+    "secondaryClubId": "IN-1106",
+    "localGym": "drg-sikkim-in-1106"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "110001",
+      "secondary": "400001"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+917799333429",
+      "secondary": "+917799333429"
+    },
+    "invalid": "+1651",
+    "countryCode": "+91"
+  },
+  "ownAGym": {
+    "investmentRange": "₹1.5 Crore – ₹2 Crore",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Jharkhand"
+  }
+}

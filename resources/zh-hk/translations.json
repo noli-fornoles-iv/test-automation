@@ -1,0 +1,163 @@
+{
+  "texts": {
+    "consent": {
+      "bottomText": "提交資料後，你可於下一頁預約參觀。",
+      "privacyNotice": "按「提交」，即表示本人確認已閱讀並明白條款及細則、私隱政策及短訊條款。所收集的個人資料將用於處理閣下的會籍查詢。提供所要求的個人資料純屬自願。若未能提供有關資料，我們可能無法處理閣下的查詢。",
+      "localResidentDisclaimerText": "按「提交」，即表示本人確認已閱讀並明白條款及細則、私隱政策及短訊條款。所收集的個人資料將用於處理閣下的會籍查詢。提供所要求的個人資料純屬自願。若未能提供有關資料，我們可能無法處理閣下的查詢。",
+      "marketingConsentDisclaimerText": "本人同意 Anytime Fitness Limited 及／或其獲授權指定人士，透過電郵、短訊及／或電話，使用本人的個人資料進行與其提供或代其提供的產品、服務、推廣或活動有關的直接促銷通訊。詳情請參閱我們的短訊條款。本人明白可隨時撤回同意。"
+    },
+    "bookingConfirmation": {
+      "tryUsFree": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "appleFitnessPlusFreeTrial": "Your tour has been scheduled, and your Apple Fitness+ trial subscription is ready. Check your email or redeem below. See you on the Anytime Fitness app and in the gym!",
+      "appleFitnessPlusSubscriber": "Your tour is scheduled and we're looking forward to showing you around your new workout home away from home.",
+      "bookATourStandalone": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "inviteAFriend": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "membershipInquiry": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFreeTrialPass": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsTrainForYourLife": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsPromo": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "localOffer": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFindYourFitphoria": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsBookATour": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "thankYouPage": "我們已收到你的查詢。 我哋團隊嘅一位成員會好快聯絡你。",
+      "corporateMembership": "我們團隊嘅同事會聯絡您，討論下一步。"
+    },
+    "corporateMembership": {
+      "corporateAuthorityCheckboxText": "我有權代表我嘅機構，就企業會籍與 Anytime Fitness 進行洽談及啟用",
+      "corporateUnderstandingCheckboxText": "我明白 Anytime Fitness 不提供公司補貼會籍及發票。任何員工報銷（如作為你嘅健康計劃一部分而提供）將由你嘅機構處理。",
+      "termsAndConditionsCheckboxText": "我已閱讀所有 Anytime Fitness 企業會籍 條款及細則.",
+      "marketingOptInCheckboxText": "我同意接收來自 Anytime Fitness 香港 及 Collective Wellness Group 經電郵同電話發送嘅市場推廣通訊。"
+    },
+    "headings": {
+      "locationSearch": {
+        "membershipInquiry": {
+          "mainHeading": "會籍 查詢",
+          "findGymText": "搵到你嘅健身室",
+          "letsGetYouToTheRightPlace": "讓我哋帶你去正確嘅地方。",
+          "useCurrentLocation": "使用目前位置",
+          "connectWithUs": "聯絡我們",
+          "listTab": "列表",
+          "mapTab": "地圖"
+        },
+        "appleFitnessOffer": {
+          "mainHeading": "GET APPLE FITNESS+ ON US",
+          "description": "Find your nearest Anytime Fitness location to get started.",
+          "findGymText": "尋找你的健身室"
+        },
+        "bookATourStandalone": {
+          "bannerTitle": "BOOK A TOUR.",
+          "findGymText": "尋找你的健身室",
+          "bannerSubTitle": "Take your first step on our purple turf. We'll show you around, tour the equipment, amenities, and everything else you need to get started."
+        },
+        "contactUs": {
+          "mainHeading": "先尋找你的健身室",
+          "findGymText": "搵到你嘅健身室",
+          "letsGetYouToTheRightPlace": "讓我哋帶你去正確嘅地方。",
+          "useCurrentLocation": "使用目前位置",
+          "formHeading": "向我們發送訊息",
+          "listTab": "列表",
+          "mapTab": "地圖"
+        },
+        "tryUsFree": {
+          "bannerTitle": "領取你的 免費 一日 通行證。",
+          "mainHeading": "免費試用我哋",
+          "description": "搵到你附近最近嘅 Anytime Fitness 地點開始。",
+          "findGymText": "搵到你嘅健身室",
+          "getStartedToday": "開始使用",
+          "letsGetYouToTheRightPlace": "讓我哋帶你去正確嘅地方。",
+          "useCurrentLocation": "使用目前位置",
+          "listTab": "列表",
+          "mapTab": "地圖"
+        },
+        "eventsPromo": {
+          "mainHeading": "Limited Time Offer",
+          "description": "JOIN FOR $1",
+          "findGymText": "尋找你的健身室",
+          "letsGetYouToTheRightPlace": "帶你去對的地方",
+          "useCurrentLocation": "使用目前位置",
+          "getStartedNow": "立即開始",
+          "tellUsAboutYou": "告訴我們關於你",
+          "searchBoxPlaceholder": "按城市及州份或郵區編號搜尋"
+        },
+        "unitOfMeasurement": "km"
+      },
+      "thankYouPage": "感謝"
+    }
+  },
+  "errors": {
+    "locationSearch": {
+      "invalidLocation": "搜尋無效。請輸入有效的城市、地區或地點，然後再試一次！",
+      "noNearbyLocations": "在 ${location} 80 公里範圍內找不到分店。請嘗試搜尋其他地點。",
+      "serverSide": "哎呀！我哋一方處理提交時出咗問題。請稍後再試。",
+      "noGymsNearbyDescription": "睇嚟我哋仲未進駐嗰區。請在上方輸入其他搜尋內容，探索附近城市的選項，或查看所有位置。",
+      "noLocation": "找不到地點於",
+      "noGymsNearbyHeading": "附近沒有健身室。",
+      "noGymsNearby": "附近沒有健身室。"
+    },
+    "userForm": {
+      "requiredField": {
+        "firstName": "此欄位為必填",
+        "lastName": "此欄位為必填",
+        "email": "此欄位為必填",
+        "phone": "此欄位為必填",
+        "zipCode": "此欄位為必填",
+        "generic": "此欄位為必填"
+      },
+      "alphaOnly": "只允許英文字母",
+      "invalidEmail": "電郵無效",
+      "invalidPhone": "電話號碼無效",
+      "invalidZipCode": "郵遞區號無效",
+      "invalidPostCode": "郵遞區號無效",
+      "maxLength": "長度上限為 30 個字元",
+      "serverSide": "哎呀！我哋一方處理提交時出咗問題。請稍後再試。"
+    },
+    "BatAddon": {
+      "dateRequired": "This value is required.",
+      "timeRequired": "This value is required.",
+      "noTimeSlots": "Select a date to view available time slots.",
+      "slotConflict": "Dang! Somebody else snatched up that time slot. Please select another time to come in."
+    }
+  },
+  "buttons": {
+    "locationSearch": {
+      "selectGym": "選擇健身室",
+      "gymDetails": "健身室詳情",
+      "freeTrialPass": "免費試用通行證",
+      "joinOnline": "網上加入",
+      "joinInGym": "到店加入",
+      "enquireNow": "立即查詢",
+      "bookATour": "預約參觀",
+      "claimOffer": "領取優惠"
+    },
+    "userForm": {
+      "submit": "提交",
+      "membershipInquirySubmit": "提交",
+      "getStarted": "開始使用"
+    },
+    "localGymPage": {
+      "membershipInquiryBtn": "會籍查詢",
+      "contactUsBtn": "聯絡我們"
+    },
+    "seeYouSoonPage": {
+      "sendTrialPass": "發送邀請"
+    }
+  },
+  "labels": {
+    "locationSearch": {
+      "searchBoxPlaceholder": {
+        "cityOrZipCode": "按城市及州份或郵區編號搜尋",
+        "cityStateOrZipCode": "按城市及州份或郵區編號搜尋"
+      }
+    },
+    "userForm": {
+      "firstName": "名字",
+      "lastName": "姓氏",
+      "email": "電郵",
+      "phone": "電話號碼",
+      "zipCode": "郵遞區號",
+      "termsAndConditions": "條款和條件",
+      "privacyNotice": "隱私政策",
+      "textMessagingTerms": "短信服务条款"
+    }
+  }
+}

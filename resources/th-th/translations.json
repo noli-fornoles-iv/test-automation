@@ -1,0 +1,163 @@
+{
+  "texts": {
+    "consent": {
+      "bottomText": "Once you've submitted your details you can BOOK A TOUR on the next screen.",
+      "privacyNotice": "By submitting your contact details, you consent to receive communications from Anytime Fitness Thailand and its independently owned and operated franchisees via phone calls, SMS, WhatsApp, and email regarding memberships and promotional offers, in accordance with applicable regulations. You may opt out of such communications at any time. Membership rates, services, and offers may vary by location and are subject to club-specific terms and conditions. Further, in clicking \"Submit\", I agree to accept the Terms & Conditions, Privacy Notice, and Text Messaging Terms, and attest that I am 18 years of age or older.",
+      "localResidentDisclaimerText": "เมื่อคลิกปุ่ม \"ส่งข้อมูล\" ด้านล่าง ท่านรับทราบว่าข้อมูลส่วนบุคคลของท่านจะถูกเก็บรวบรวม ใช้ และเปิดเผยโดย Anytime Fitness และจะถูกเปิดเผยแก่ผู้รับสิทธิแฟรนไชส์และผู้ให้บริการที่เกี่ยวข้อง เพื่อวัตถุประสงค์เกี่ยวกับการเป็นสมาชิกและแฟรนไชส์ ท่านได้อ่าน เข้าใจ และยอมรับข้อกำหนดและเงื่อนไข นโยบายความเป็นส่วนตัว และข้อกำหนดการส่งข้อความ แล้ว และท่านยืนยันว่าท่านมีอายุอย่างน้อย 20 ปีบริบูรณ์ หรือได้รับความยินยอมจากบิดามารดาหรือผู้ปกครองตามกฎหมาย ในกรณีที่กฎหมายที่ใช้บังคับกำหนดให้ต้องได้รับความยินยอมดังกล่าว",
+      "marketingConsentDisclaimerText": "ข้าพเจ้าประสงค์จะรับข้อมูลข่าวสารด้านการตลาดและการส่งเสริมการขาย (รวมถึงข้อเสนอพิเศษ กิจกรรม และข้อมูลอัปเดตต่าง ๆ) จาก Anytime Fitness และผู้รับสิทธิแฟรนไชส์ที่เกี่ยวข้อง ผ่านทางอีเมล โทรศัพท์ ข้อความ SMS และช่องทางการสื่อสารทางอิเล็กทรอนิกส์อื่น ๆ ข้าพเจ้าเข้าใจว่าการให้ความยินยอมนี้เป็นไปโดยสมัครใจ ไม่ใช่เงื่อนไขในการรับบริการ และข้าพเจ้าสามารถเพิกถอนความยินยอมได้ทุกเมื่อ"
+    },
+    "bookingConfirmation": {
+      "tryUsFree": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "appleFitnessPlusFreeTrial": "Your tour has been scheduled, and your Apple Fitness+ trial subscription is ready. Check your email or redeem below. See you on the Anytime Fitness app and in the gym!",
+      "appleFitnessPlusSubscriber": "Your tour is scheduled and we're looking forward to showing you around your new workout home away from home.",
+      "bookATourStandalone": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "inviteAFriend": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "membershipInquiry": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFreeTrialPass": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsTrainForYourLife": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsPromo": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "localOffer": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFindYourFitphoria": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsBookATour": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "thankYouPage": "เราได้รับคำถามของคุณแล้ว. สมาชิกในทีมของเราจะติดต่อกลับหาคุณในเร็วๆ นี้.",
+      "corporateMembership": "มีคนจากทีมของเราจะติดต่อคุณเพื่อพูดคุยเกี่ยวกับขั้นตอนถัดไป."
+    },
+    "corporateMembership": {
+      "corporateAuthorityCheckboxText": "ฉันมีอำนาจในการดำเนินการในนามองค์กรของฉันในการเจรจาและเปิดใช้งานสมาชิกภาพองค์กรกับ Anytime Fitness",
+      "corporateUnderstandingCheckboxText": "ฉันเข้าใจว่า Anytime Fitness ไม่มีสมาชิกภาพที่บริษัทอุดหนุนหรือการออกใบแจ้งหนี้ให้บริษัท ค่าเบี้ยชดเชยพนักงานทั้งหมด หากมีให้เป็นส่วนหนึ่งของโปรแกรมสุขภาวะของคุณ จะจัดการผ่านองค์กรของคุณ",
+      "termsAndConditionsCheckboxText": "ฉันได้อ่านข้อกำหนดสมาชิกภาพองค์กรของ Anytime Fitness ทั้งหมดแล้ว ข้อกำหนดและเงื่อนไข.",
+      "marketingOptInCheckboxText": "ฉันยินยอมรับการสื่อสารทางการตลาดผ่านอีเมลและโทรศัพท์จาก Anytime Fitness ประเทศไทย และ Collective Wellness Group"
+    },
+    "headings": {
+      "locationSearch": {
+        "membershipInquiry": {
+          "mainHeading": "สมาชิกภาพ สอบถาม",
+          "findGymText": "ค้นหายิมของคุณ",
+          "letsGetYouToTheRightPlace": "มาพาคุณไปถูกที่กัน",
+          "useCurrentLocation": "ใช้ตำแหน่งปัจจุบัน",
+          "connectWithUs": "เชื่อมต่อกับเรา",
+          "listTab": "รายการ",
+          "mapTab": "แผนที่"
+        },
+        "appleFitnessOffer": {
+          "mainHeading": "GET APPLE FITNESS+ ON US",
+          "description": "Find your nearest Anytime Fitness location to get started.",
+          "findGymText": "ค้นหายิมของคุณ"
+        },
+        "bookATourStandalone": {
+          "bannerTitle": "BOOK A TOUR.",
+          "findGymText": "ค้นหายิมของคุณ",
+          "bannerSubTitle": "Take your first step on our purple turf. We'll show you around, tour the equipment, amenities, and everything else you need to get started."
+        },
+        "contactUs": {
+          "mainHeading": "เริ่มจากการค้นหายิมของคุณก่อน",
+          "findGymText": "ค้นหายิมของคุณ",
+          "letsGetYouToTheRightPlace": "มาพาคุณไปถูกที่กัน",
+          "useCurrentLocation": "ใช้ตำแหน่งปัจจุบัน",
+          "formHeading": "ส่งข้อความถึงเรา",
+          "listTab": "รายการ",
+          "mapTab": "แผนที่"
+        },
+        "tryUsFree": {
+          "bannerTitle": "ทดลองใช้ฟรีกับเรา",
+          "mainHeading": "ทดลองใช้ฟรีกับเรา",
+          "description": "ค้นหาสาขา Anytime Fitness ที่ใกล้คุณที่สุดเพื่อเริ่มต้น",
+          "findGymText": "ค้นหายิมของคุณ",
+          "getStartedToday": "เริ่มต้นวันนี้",
+          "letsGetYouToTheRightPlace": "มาหาคุณให้เจอในที่ที่ใช่กัน.",
+          "useCurrentLocation": "ใช้ตำแหน่งปัจจุบัน",
+          "listTab": "รายการ",
+          "mapTab": "แผนที่"
+        },
+        "eventsPromo": {
+          "mainHeading": "Limited Time Offer",
+          "description": "JOIN FOR $1",
+          "findGymText": "FIND YOUR GYM",
+          "letsGetYouToTheRightPlace": "มาพาคุณไปถูกที่กัน",
+          "useCurrentLocation": "ใช้ตำแหน่งปัจจุบัน",
+          "getStartedNow": "GET STARTED NOW.",
+          "tellUsAboutYou": "TELL US ABOUT YOU",
+          "searchBoxPlaceholder": "Search by city & state or zip code"
+        },
+        "unitOfMeasurement": "km"
+      },
+      "thankYouPage": "ขอบคุณ"
+    }
+  },
+  "errors": {
+    "locationSearch": {
+      "invalidLocation": "Invalid search. Please enter a valid postcode, city, country, or province/state. Ensure your input is correctly formatted and try again!",
+      "noNearbyLocations": "No locations found within 80 km of ${location}. Please try searching a different city.",
+      "serverSide": "Whoops! Something went wrong processing the submission on our end. Please try again in a moment.",
+      "noGymsNearbyDescription": "ดูเหมือนเรายังไม่มีสาขาในพื้นที่นั้น ลองค้นหาเมืองใกล้เคียงด้านบน หรือดูสถานที่ทั้งหมด",
+      "noLocation": "ไม่พบสถานที่ภายใน",
+      "noGymsNearbyHeading": "ไม่มียิมใกล้เคียง.",
+      "noGymsNearby": "ไม่มียิมใกล้เคียง."
+    },
+    "userForm": {
+      "requiredField": {
+        "firstName": "ช่องนี้จำเป็น",
+        "lastName": "ช่องนี้จำเป็น",
+        "email": "ช่องนี้จำเป็น",
+        "phone": "ช่องนี้จำเป็น",
+        "zipCode": "ช่องนี้จำเป็น",
+        "generic": "ช่องนี้จำเป็น"
+      },
+      "alphaOnly": "อนุญาตเฉพาะตัวอักษรเท่านั้น",
+      "invalidEmail": "อีเมลไม่ถูกต้อง",
+      "invalidPhone": "หมายเลขโทรศัพท์ไม่ถูกต้อง",
+      "invalidZipCode": "รหัสไปรษณีย์ไม่ถูกต้อง",
+      "invalidPostCode": "รหัสไปรษณีย์ไม่ถูกต้อง",
+      "maxLength": "ความยาวสูงสุดคือ 30 ตัวอักษร",
+      "serverSide": "อุ๊ย! มีบางอย่างผิดพลาดขณะประมวลผลการส่งข้อมูลของเรา โปรดลองอีกครั้งในอีกสักครู่"
+    },
+    "BatAddon": {
+      "dateRequired": "This value is required.",
+      "timeRequired": "This value is required.",
+      "noTimeSlots": "Select a date to view available time slots.",
+      "slotConflict": "Dang! Somebody else snatched up that time slot. Please select another time to come in."
+    }
+  },
+  "buttons": {
+    "locationSearch": {
+      "selectGym": "เลือกยิม",
+      "gymDetails": "GYM DETAILS",
+      "freeTrialPass": "FREE TRIAL PASS",
+      "joinOnline": "JOIN ONLINE",
+      "joinInGym": "JOIN IN GYM",
+      "enquireNow": "ENQUIRE NOW",
+      "bookATour": "BOOK A TOUR",
+      "claimOffer": "รับข้อเสนอนี้"
+    },
+    "userForm": {
+      "submit": "ส่ง",
+      "membershipInquirySubmit": "ส่ง",
+      "getStarted": "GET STARTED"
+    },
+    "localGymPage": {
+      "membershipInquiryBtn": "MEMBERSHIP INQUIRY",
+      "contactUsBtn": "Contact Us"
+    },
+    "seeYouSoonPage": {
+      "sendTrialPass": "SEND INVITATION"
+    }
+  },
+  "labels": {
+    "locationSearch": {
+      "searchBoxPlaceholder": {
+        "cityOrZipCode": "ค้นหาตามเมือง หรือรหัสไปรษณีย์",
+        "cityStateOrZipCode": "ค้นหาตามเมืองและรัฐ หรือรหัสไปรษณีย์"
+      }
+    },
+    "userForm": {
+      "firstName": "ชื่อ",
+      "lastName": "นามสกุล",
+      "email": "อีเมล",
+      "phone": "โทรศัพท์มือถือ",
+      "zipCode": "รหัสไปรษณีย์",
+      "termsAndConditions": "ข้อกำหนดและเงื่อนไข",
+      "privacyNotice": "นโยบายความเป็นส่วนตัว",
+      "textMessagingTerms": "ข้อกำหนดการส่งข้อความ"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+---
+description: Write files into this project's existing layout
+alwaysApply: true
+---
+
+# Write files into this project's existing layout
+
+List the tree first. Put new page objects, specs, features, steps, and fixtures in the folders this project already uses (for example pages/, page-objects/, tests/, features/, step-definitions/, fixtures/). Do not create a new top-level e2e/ or src/tests/ tree beside the one that already exists.

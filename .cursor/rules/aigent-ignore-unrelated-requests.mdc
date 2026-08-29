@@ -1,0 +1,8 @@
+---
+description: Do not fail on unrelated requests
+alwaysApply: true
+---
+
+# Do not fail on unrelated requests
+
+Do not classify an unrelated third-party network failure as an application defect unless the requirement depends on that service.

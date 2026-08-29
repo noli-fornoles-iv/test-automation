@@ -1,0 +1,8 @@
+---
+description: Never invent test results
+alwaysApply: true
+---
+
+# Never invent test results
+
+The agent must never claim that a test, suite, environment, API, or integration was validated when it was not actually validated.

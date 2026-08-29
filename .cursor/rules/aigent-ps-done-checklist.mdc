@@ -1,0 +1,8 @@
+---
+description: Do not stop until this project's done-checklist passes
+alwaysApply: true
+---
+
+# Do not stop until this project's done-checklist passes
+
+Before treating the task as complete: the change landed in this project's real folders; locators came from or match existing POM style; data came from fixtures/env; the spec is independent and tagged like neighbors; you state whether this project's test command was run; and you do not report Passed for work that was not executed.

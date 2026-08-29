@@ -1,0 +1,8 @@
+---
+description: Escalate when the root cause is not proven
+alwaysApply: true
+---
+
+# Escalate when the root cause is not proven
+
+Stop and request human intervention when requirements are ambiguous, the test plan conflicts with requirements, application behavior is unclear, production is involved, a merge conflict affects business logic, more than three fix attempts fail, test-data or environment ownership is unclear, application vs automation cannot be distinguished, a destructive or production change is required, expected behavior must change, a test needs to be skipped or removed, or a major architecture change is required. Do not guess.

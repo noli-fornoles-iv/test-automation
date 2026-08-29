@@ -1,0 +1,443 @@
+{
+  "version": 7,
+  "createdAt": "2026-08-25T07:26:29.374Z",
+  "projectPath": "C:\\Users\\NOLI\\Documents\\Github\\Test Purposes\\af-automation-test",
+  "source": "existing",
+  "existingMode": "local",
+  "framework": "playwright",
+  "integrations": [],
+  "rules": {
+    "master-principle": true,
+    "ticket-lifecycle": true,
+    "failing-test-is-a-signal": true,
+    "analyze-target": true,
+    "understand-requirements": true,
+    "create-test-plan": true,
+    "preserve-manual-testplan": true,
+    "inspect-existing-automation": true,
+    "identify-coverage-gaps": false,
+    "never-assume-behavior": true,
+    "no-code-until-reviewed": false,
+    "document-assumptions": false,
+    "selector-gap-report": false,
+    "follow-architecture": true,
+    "pom-required": true,
+    "reuse-before-creating": true,
+    "no-duplicate-logic": true,
+    "keep-tests-focused": true,
+    "no-unnecessary-refactoring": false,
+    "no-second-framework": true,
+    "stable-locator-strategy": true,
+    "no-brittle-selectors": true,
+    "business-focused-assertions": true,
+    "meaningful-assertions": true,
+    "validate-complete-outcomes": false,
+    "never-weaken-assertions": true,
+    "no-force-or-hidden-clicks": true,
+    "happy-validation-negative": true,
+    "boundary-edge-coverage": false,
+    "independent-tests": true,
+    "deterministic-tests": true,
+    "avoid-hard-waits": true,
+    "avoid-false-positives": true,
+    "descriptive-scenario-names": false,
+    "no-skip-without-reason": true,
+    "no-debug-leftovers": true,
+    "no-hardcoded-urls": true,
+    "environment-aware": true,
+    "execute-run-safety": true,
+    "no-hardcoded-test-data": true,
+    "ignore-unrelated-requests": true,
+    "distinguish-ui-api-failures": false,
+    "investigate-before-fixing": true,
+    "classify-every-failure": true,
+    "never-fix-to-pass": true,
+    "minimum-safe-fix": true,
+    "no-compensate-env-or-data": true,
+    "jenkins-not-auto-automation": true,
+    "max-three-fix-attempts": true,
+    "revalidate-after-fix": true,
+    "escalate-unknown-failures": true,
+    "controlled-self-healing": false,
+    "controlled-retries": false,
+    "detect-flaky-tests": false,
+    "quarantine-with-reason": false,
+    "preserve-failure-evidence": true,
+    "failure-resolution-report": false,
+    "never-expose-credentials": true,
+    "approved-secret-management": true,
+    "protect-sensitive-data": true,
+    "no-unauthorized-production": true,
+    "never-bypass-security": true,
+    "no-disable-browser-security": true,
+    "no-live-payments": true,
+    "inspect-git-state": false,
+    "never-overwrite-user-changes": true,
+    "keep-changes-scoped": true,
+    "review-changes": false,
+    "no-generated-artifacts": false,
+    "no-unrelated-deps": false,
+    "requirement-traceability": false,
+    "report-expected-vs-actual": true,
+    "report-coverage-status": false,
+    "never-claim-unexecuted": true,
+    "separate-failure-types": true,
+    "document-significant-changes": false,
+    "continuous-improvement": false,
+    "ps-use-repo-runner": true,
+    "ps-write-into-existing-layout": true,
+    "ps-match-local-conventions": true,
+    "ps-extend-existing-pom": true,
+    "ps-use-existing-tags": true,
+    "ps-place-in-requested-slice": true,
+    "ps-search-before-new-spec": true,
+    "ps-load-from-fixtures": true,
+    "ps-unique-worker-data": true,
+    "ps-use-repo-cleanup": true,
+    "ps-brand-from-config": false,
+    "ps-locale-from-config": false,
+    "ps-only-configured-locales": false,
+    "ps-assert-locale-from-fixtures": false,
+    "ps-call-existing-api-client": true,
+    "ps-integrations-via-existing-helpers": true,
+    "ps-urls-from-env": true,
+    "ps-honor-ci-shape": true,
+    "ps-ticket-pattern": true,
+    "ps-done-checklist": true,
+    "ps-no-second-config": true,
+    "ps-no-invented-identities": true,
+    "ps-no-invented-pipeline": true,
+    "ps-no-parallel-pom": true,
+    "never-remove-failing-test": true,
+    "never-remove-assertion": true,
+    "never-change-requirements": true,
+    "never-hide-failures": true,
+    "never-invent-results": true,
+    "never-silent-unrelated": true,
+    "never-prioritize-pass-rate": true
+  },
+  "projectRules": [],
+  "workflows": [
+    {
+      "id": "automate-ticket",
+      "catalogId": "automate-ticket",
+      "title": "Automating a ticket",
+      "summary": "Controlled QA automation lifecycle: analyze → discover → Testpad approval → feature branch → implement → PR to SIT → Execute Run (Local / Jenkins / Both) → human UAT/PROD promotion. Never skip a human approval gate.",
+      "enabled": true,
+      "steps": [
+        {
+          "id": "entry-gate",
+          "title": "Ticket entry gate",
+          "instruction": "Confirm the ticket is labeled qa_automation_required (or the next valid lifecycle label). Inspect title, description, acceptance criteria, business and technical requirements, existing coverage, related tickets, dependencies, test data, environments, locales, API/backend, analytics, existing automation, blockers, and feasibility. Do not begin coding. Keep ticket labels, Git promotion (feature/SIT/UAT/PROD), and execution (NOT_RUN/PASSED/FAILED) as independent states — do not encode Git or execution into Jira labels."
+        },
+        {
+          "id": "start",
+          "title": "Start automation",
+          "instruction": "When you begin active work, Aigent moves qa_automation_required → qa_automation_in_progress on the Jira ticket. Confirm the label is qa_automation_in_progress. Record ticket ID, automation scope, requirements identified, dependencies, resources, risks, initial blockers, and existing automation discovered. Do not try to edit Jira labels yourself unless Aigent failed to update them."
+        },
+        {
+          "id": "analyze",
+          "title": "Analyze the ticket",
+          "instruction": "Restate in-scope vs out-of-scope from the full ticket briefing: description, subtasks, linked work items, comments, attachments, images, and pages opened from links in the ticket. First understand the injected project knowledge for this coverage — documented pages, fields, labels, events, test data, and constraints — then map the ticket onto those facts. Do not start implementation from this analysis alone. Missing BASE_URL, environment, live experiment pages, or which later events to assert are NOT blockers for writing a Testpad plan — record them as AMBIGUOUS on the plan. Stop and ask only if the ticket has no observable expected result at all.\n\nKnowledge-base check is required. Do not rely on the Jira ticket or flow name alone, and do not invent process from memory.\nAigent already loaded project knowledge into this message (INDEX.md and Data Resources / Guru / Docs / Sheets that were synced). Treat that block as the product source of truth for this coverage. Do not pretend you opened sources that are not present in the text.\n\nDo this BEFORE restating scope or writing any scenario:\n1. Identify which injected files/tabs actually describe this ticket or named flow (page, feature, form, event, constraint).\n2. Understand that coverage fully: every listed entry URL/path, user role, fields and labels, buttons/CTAs, validation, success and error states, downstream events, property names/values, test data, locales, and documented exclusions. Enumerate all of them — do not sample two of four surfaces.\n3. Extract verbatim facts testers will assert: copy, labels, URLs/paths, event names, thank-you text, error messages, property names and documented values. Quoted or backticked names are exact.\n4. Map the request onto those facts. The plan must test the documented product behaviour — not a restated Jira summary.\n5. Record: knowledge sources used, what they confirmed, and any conflict with the ticket.\n\nIf knowledge contradicts the ticket, stop and ask — do not pick a side silently. Put the conflict in ambiguous.\nIf a required fact is missing from both the ticket and the injected knowledge, say so. Do not invent URLs, copy, events, or test data.\nUnderstand the requirement in that product context (business rule, environment, locale, test data, existing automation constraints) before discovery or test-plan writing."
+        },
+        {
+          "id": "discover",
+          "title": "Automation discovery",
+          "instruction": "Inspect the repository before creating a test plan: existing test cases, page objects, components, fixtures, utilities, API/network helpers, test data, locators, assertions, localization tests, regression tests, similar features, CI/CD configuration, and Jenkins jobs. Produce: Existing Coverage, Reusable Components, Existing Test Data, Missing Coverage, Files Expected to Change, Potential Risks. Reuse existing automation before creating new files."
+        },
+        {
+          "id": "blockers",
+          "title": "Evaluate blockers continuously",
+          "instruction": "If a blocker prevents later execution (missing test data, location, test_location_id, locale config, environment, feature not deployed, API, credentials, Jenkins, test gym, incomplete dependency, infrastructure), record it — do not invent fake cases. Missing BASE_URL or live experiment pages does not stop Testpad plan generation; put those as AMBIGUOUS. Only pause the whole ticket (qa_automation_blocked) when no TESTABLE requirement can be planned."
+        },
+        {
+          "id": "testplan",
+          "title": "Generate the Testpad plan",
+          "instruction": "Only after analysis, discovery, and no open blocker: Aigent moves qa_automation_in_progress → qa_automation_testplan_generation when this step starts. Return TicketPlanner JSON: nested Testpad sections with Verify checks (not Gherkin). Ground every check in knowledge. Aigent writes the Testpad script. Never create a second script and never duplicate the regression template.\n\nYou are writing a Testpad script for Outliant QA (manual now, automation later).\nRead the injected knowledge first. Use documented URLs, labels, fields, events, messages, and test data verbatim.\nWrite every TESTABLE case listed in the ticket, linked tickets, comments, knowledge, and existing QA Testpad. Do not sample a subset of surfaces.\nEvery checkable row must be automatable later: named page/URL, named control, exact expected copy/event/property. No 'as expected', 'relevant page', 'not blank', or restated Jira summary.\nOutput a Testpad checklist, not Gherkin. Do not write Feature:, Scenario:, Given, When, or Then.\nShape:\n- Top-level section = product surface or flow (e.g. Local Offers, Group Offers, Member Offers, Events Promo).\n- Nested group = variant (Desktop/Mobile, locale, event name, Scenario 1 / Scenario 2) when the ticket or knowledge lists them.\n- setup rows = how to reach the state (URL, cookies, capture). Not pass/fail by themselves.\n- checks = checkable leaves. Prefer 'Verify …' with exact quoted copy, event name, property = value, or URL.\n- Nest related assertions under a parent (payload fields under the event; invalid inputs under the error-message scenario).\n- Separate top-level sections with an empty row.\nCoverage completeness (do not sample):\n- Enumerate EVERY distinct URL/path, offer type, form, locale, device, search method, cookie state, event, and property named in the ticket, linked work, comments, knowledge, or existing Testpad slice.\n- One top-level section per distinct product surface. If four offer URLs are listed (local, group, member, events/promo), write four sections — never two of four.\n- For each named analytics event, include the trigger AND a nested Verify for EACH named property. Write the documented value (offer_type = group_offer, form_id = local_offer_general). If the value is CMS/dynamic, write 'matches Webflow CMS for this offer' — never 'not blank', 'populated', or 'non-empty'.\n- Include sibling events on the same flows when the parent ticket or existing QA plan lists them with this ticket (e.g. Form Started and Lead Captured alongside Location Searched / Location Selected).\n- Preconditions once in setup: cookies, RudderStack/dataplane capture, environment (SIT vs UAT from comments).\n- Completeness over brevity. Ticket plans often need 4–12 sections and up to ~120 check rows when multiple surfaces are listed.\n- Existing Testpad is a coverage inventory for THIS ticket's slice. Expand every flow in that slice. Do not copy unrelated sibling tickets (e.g. Button Clicked, UTM, cookies-disabled) into a client-change plan.\nRegression packs: cover open, required fields, submit, success, and stated validation for every named flow — not a sample of one happy path.\nQuality gate: only write checks whose expected result is in the ticket, knowledge, or existing QA Testpad. Linked tickets are in scope when they state an observable result.\nIf the title is 'Automate tests for X', plan X — the product behaviour.\nDo not duplicate a regression template. Do not write automation code.\nambiguous/excluded/blocked: at most 2 short items total, and only if they block a whole TESTABLE area. Prefer writing the cases you can.\nOutput ONLY this JSON:\n{ \"feature\": \"short product title\", \"sections\": [{ \"title\": \"surface or flow\", \"setup\": [\"On https://… with …\"], \"checks\": [\"Verify …\"], \"children\": [{ \"title\": \"nested group\", \"setup\": [], \"checks\": [\"Verify …\"], \"children\": [] }] }], \"ambiguous\": [], \"excluded\": [], \"blocked\": [] }"
+        },
+        {
+          "id": "review-gate",
+          "title": "Pause for human test-plan review and approval",
+          "instruction": "After generating the plan, stop. The user may add, remove, or edit cases, expected results, priorities, data, and automation scope, and may mark manual-only tests. Preserve those changes. Do not implement until they click Approve Testplan. If asked to Recreate Test Plan, show proposed changes, and wait for confirmation before replacing the plan.",
+          "gate": true
+        },
+        {
+          "id": "reanalyze",
+          "title": "Re-read the approved test plan",
+          "instruction": "When the user clicks Approve Testplan (qa_automation_testplan_approved), do not start coding yet. Re-read the latest approved Testpad plan, including manual QA edits. Re-check Data Resources, project knowledge, Guru if connected, and the ticket briefing for new requirements. Identify added/removed scenarios, modified expectations, automation scope, and manual-only cases. If coverage is incomplete vs new requirements, stop and list gaps. Implementation begins only after this confirmation."
+        },
+        {
+          "id": "feature-branch",
+          "title": "Create the feature branch",
+          "instruction": "After Automate confirmation, create or use qa/<TICKET-ID>-<short-description> (example qa/AF-3914-test-location-validation). Never develop directly on sit, uat, or main. Never bypass branch protection or force-push protected branches."
+        },
+        {
+          "id": "implement",
+          "title": "Implement from the approved plan",
+          "instruction": "The approved test plan is the source of truth. Follow this project's architecture, POM, fixtures, utilities, naming, locators, assertions, waits, isolation, tags, test data, reporting, and environment configuration. Do not invent extra business behavior. If a requirement is ambiguous, pause and ask. Prefer role, label, and test IDs. Do not hardcode environment URLs."
+        },
+        {
+          "id": "validate",
+          "title": "Validate the automation",
+          "instruction": "Run code validation (types, lint, formatting, static/import checks) and test validation (individual, feature, related regression, required locales). Check locator stability, proper waits, meaningful assertions, no unnecessary sleeps, no duplicated or unrelated changes, isolation, and flakiness. Report Passed only if tests actually ran and passed."
+        },
+        {
+          "id": "failures",
+          "title": "Investigate failures before changing code",
+          "instruction": "Investigate failures using the Fixing automation errors workflow. Never assume Test Failed = Automation Bug. Collect evidence, reproduce, then classify: APPLICATION_BUG, AUTOMATION_BUG, TEST_DATA_ISSUE, ENVIRONMENT_ISSUE, INFRASTRUCTURE_ISSUE, CONFIGURATION_ISSUE, THIRD_PARTY_ISSUE, EXPECTED_PRODUCT_CHANGE, FLAKY_TEST, UNKNOWN. Fix automation only after AUTOMATION_BUG is confirmed. Preserve tests that catch real product bugs. Max 3 automated fix attempts. A Jenkins failure is not automatically an automation defect."
+        },
+        {
+          "id": "sit-pr",
+          "title": "Commit, push, and open a SIT PR",
+          "instruction": "Before commit: git status and git diff. Verify only intended files changed; no credentials, API keys, secrets, debug code, temp files, unrelated changes, or generated artifacts. Commit with the ticket in the message (example: AF-3914 Add test location validation automation). Push the feature branch and create/update a PR targeting sit. PR body: Summary, Ticket, Test plan, Automation implemented, Files changed, Validation performed, Test results, Known issues, Risk. The agent may assist SIT review but must not treat SIT merge as automatic if repository policy requires a human. If merge conflicts appear, analyze functional impact — never blindly choose ours or theirs. Pause for a human if business logic is ambiguous."
+        },
+        {
+          "id": "ready",
+          "title": "Mark ready to execute after SIT validation",
+          "instruction": "When implementation is validated and the SIT PR path is in place, Aigent moves qa_automation_testplan_approved → qa_automation_ready_to_execute. Do not start Execute Run until the user chooses it. Do not promote to UAT or PROD yet.",
+          "gate": true
+        },
+        {
+          "id": "execute",
+          "title": "Execute Run — Local, Jenkins, or Both",
+          "instruction": "Follow the Executing tests for tickets workflow. Do not start Execute Run until the user chooses it. Do not promote to UAT or PROD from this step."
+        },
+        {
+          "id": "promote",
+          "title": "Human-controlled UAT and PROD promotion",
+          "instruction": "The agent never automatically merges into uat or main and never pushes to main. After SIT validation, the agent may create sit → uat and must stop for the user to review and merge. Before presenting UAT promotion, show readiness: SIT CI/CD, SIT tests, approved plan, validated automation, open blockers, critical failures, PR sit → uat. After the user merges UAT, run UAT execution if they ask. For PROD, the agent may prepare uat → main and must stop for explicit human approval. Before presenting PROD: UAT CI/CD, UAT tests, open blockers, critical defects, required reviews, PR uat → main. Never auto-promote to PROD.",
+          "gate": true
+        },
+        {
+          "id": "complete",
+          "title": "Complete and report",
+          "instruction": "Only mark qa_automation_done when the required lifecycle is complete: test plan approved, automation implemented, validation complete, Git PRs merged according to the required workflow, required environments executed, failures resolved or documented, no blockers, production promoted if required. Final report: Automation Status, ticket, test plan, case counts (total / automated / manual), feature branch, SIT/UAT/PROD results, execution mode (Local / Jenkins / Both) with local vs Jenkins counts, PR, application bugs, automation issues. Keep ticket ↔ test plan ↔ code ↔ commit ↔ PR ↔ execution ↔ defects traceable."
+        }
+      ]
+    },
+    {
+      "id": "fix-automation-errors",
+      "catalogId": "fix-automation-errors",
+      "title": "Fixing automation errors",
+      "summary": "A failing test is a signal to investigate, not an instruction to change automation. Diagnose, classify, and prove AUTOMATION_BUG before modifying code.",
+      "enabled": true,
+      "steps": [
+        {
+          "id": "evidence",
+          "title": "Collect evidence — do not edit yet",
+          "instruction": "When a test fails, collect evidence before any code change: test name, test case ID, ticket ID, environment, locale, browser, branch, execution mode, execution ID, timestamp, error, stack, screenshot, trace, video if available, console logs, network/API logs, request/response, expected result, actual result. For Jenkins also collect job, build number, worker/node, build logs, artifacts, and environment variables. Internal state: INVESTIGATING. Do not change locators, assertions, waits, or skip the test."
+        },
+        {
+          "id": "reproduce",
+          "title": "Reproduce with the same conditions",
+          "instruction": "Re-run the failed test on the same branch, environment, locale, browser, test data, and configuration. If the retry PASSes, do not conclude the automation is fixed — investigate timing, races, network, data contamination, environment instability, or third-party failures. Build a reproduction matrix when useful: original vs retry, Local vs Jenkins, different browser, different locale. Example: Local PASS + Jenkins FAIL + Jenkins retry FAIL → likely CI/environment; AUTOMATION_BUG not confirmed."
+        },
+        {
+          "id": "analyze",
+          "title": "Analyze root cause outside-in",
+          "instruction": "Investigate in this order and do not jump to locators: (1) application behavior vs approved test plan, (2) test data, (3) environment/deployment, (4) network/API, (5) timing/synchronization, (6) locator, (7) assertion, (8) setup/teardown, (9) framework/utilities, (10) infrastructure. Compare expected vs actual application behavior. Locator failures: check UI change, iframe, visibility, enabled, timing, wrong page, duplicates, then prefer data-testid → role/name → stable ID → semantic attribute → text → CSS → XPath. Assertion failures: verify expected value, actual value, and their sources against the approved plan before changing anything."
+        },
+        {
+          "id": "classify",
+          "title": "Classify and determine ownership",
+          "instruction": "Assign exactly one: AUTOMATION_BUG — application is correct, test implementation is wrong (locator, selector, assertion, wait, page object, payload, env var, setup/cleanup); fix automation. APPLICATION_BUG — app does not match approved plan; preserve the test, capture evidence, document expected vs actual, recommend a defect ticket; never weaken the assertion. TEST_DATA_ISSUE — missing/invalid data (test_location_id, gym, locale); fix data, do not switch to live locations. ENVIRONMENT_ISSUE — feature not deployed or env unavailable; do not change automation. INFRASTRUCTURE_ISSUE — Jenkins worker, browser, network; retry/investigate. CONFIGURATION_ISSUE — wrong project/env config. THIRD_PARTY_ISSUE — escalate. FLAKY_TEST — only with nondeterministic evidence; stabilize the cause, do not just add retries. EXPECTED_PRODUCT_CHANGE — update requirements/test plan first. UNKNOWN — escalate, do not guess."
+        },
+        {
+          "id": "repair",
+          "title": "Fix only confirmed AUTOMATION_BUG with minimum safe change",
+          "instruction": "Modify automation only after AUTOMATION_BUG is confirmed. Identify root cause, explain the proposed fix, change the minimum required code, preserve approved test intent, and avoid unrelated refactoring. Prefer one locator update over rewriting a page object. Prefer waits for element, state, URL, API, or network — never waitForTimeout/sleep to hide a race. Do not raise timeouts indefinitely, skip tests, remove assertions, change expected to match a broken app, disable validation, or ignore failures. Max 3 automated fix attempts (analyze → fix → validate each time). After 3, HUMAN_INTERVENTION_REQUIRED. Internal states: AUTOMATION_BUG_CONFIRMED → FIX_IN_PROGRESS → FIX_VALIDATING. Jira may stay qa_automation_in_progress or qa_automation_fix."
+        },
+        {
+          "id": "revalidate",
+          "title": "Re-run affected tests and scoped regression",
+          "instruction": "Do not declare success from one passing retry. Re-run the affected test. If it passes, run related tests then regression: small locator change → affected + related; page object change → feature tests using that POM; shared utility → all tests using it; framework/config → relevant full suite. Explain why that scope was chosen. Check for new failures. State REGRESSION_VALIDATING then RESOLVED only if evidence supports it."
+        },
+        {
+          "id": "git",
+          "title": "Review diff, commit, and update the existing PR",
+          "instruction": "On the feature branch: review git diff, commit only the intended fix (example: AF-3914 Fix location search automation selector), push, and update the existing PR — do not open a duplicate PR. Never commit secrets. Never develop on sit, uat, or main."
+        },
+        {
+          "id": "report",
+          "title": "Write the failure resolution report or escalate",
+          "instruction": "Produce: Ticket, Test, Environment, Execution, Initial Result, Classification, Root Cause, Evidence, Fix (if any), Validation (affected / feature / regression), Fix Attempts (n/3), Final Status RESOLVED or HUMAN_REVIEW_REQUIRED. Stop and ask a human when requirements are ambiguous, the plan conflicts with requirements, application vs automation cannot be distinguished, production or destructive action is involved, test-data/environment ownership is unclear, expected behavior must change, a test must be skipped or removed, or a major architecture change is required.",
+          "gate": true
+        }
+      ]
+    },
+    {
+      "id": "ticket-testplan",
+      "catalogId": "ticket-testplan",
+      "title": "Generating a ticket-based testplan",
+      "summary": "Create a client-change Testpad plan from a Jira ticket after analysis and discovery, then pause for human review. The plan is Gherkin Feature / Scenario / Given-When-Then for manual testers first. Never copy a regression template. Never implement automation until qa_automation_testplan_approved. Never silently overwrite a reviewed plan.",
+      "enabled": true,
+      "steps": [
+        {
+          "id": "read",
+          "title": "Read the ticket before writing cases",
+          "instruction": "Pull the ticket title, description, labels, acceptance criteria, subtasks, linked work items, comments, attachments, images, and details from links inside the ticket. Understand the injected project knowledge for this specific coverage before writing cases. If the label is qa_automation_testplan_only, produce a plan only — do not implement automation. Do not begin coding. Do not stop the plan to ask for BASE_URL, environment, or live test pages — those go in AMBIGUOUS or later Execute Run. If nothing on the ticket is TESTABLE, record AMBIGUOUS items instead of inventing assertions.\n\nKnowledge-base check is required. Do not rely on the Jira ticket or flow name alone, and do not invent process from memory.\nAigent already loaded project knowledge into this message (INDEX.md and Data Resources / Guru / Docs / Sheets that were synced). Treat that block as the product source of truth for this coverage. Do not pretend you opened sources that are not present in the text.\n\nDo this BEFORE restating scope or writing any scenario:\n1. Identify which injected files/tabs actually describe this ticket or named flow (page, feature, form, event, constraint).\n2. Understand that coverage fully: every listed entry URL/path, user role, fields and labels, buttons/CTAs, validation, success and error states, downstream events, property names/values, test data, locales, and documented exclusions. Enumerate all of them — do not sample two of four surfaces.\n3. Extract verbatim facts testers will assert: copy, labels, URLs/paths, event names, thank-you text, error messages, property names and documented values. Quoted or backticked names are exact.\n4. Map the request onto those facts. The plan must test the documented product behaviour — not a restated Jira summary.\n5. Record: knowledge sources used, what they confirmed, and any conflict with the ticket.\n\nIf knowledge contradicts the ticket, stop and ask — do not pick a side silently. Put the conflict in ambiguous.\nIf a required fact is missing from both the ticket and the injected knowledge, say so. Do not invent URLs, copy, events, or test data.\nUnderstand the requirement in that product context (business rule, environment, locale, test data, existing automation constraints) before discovery or test-plan writing."
+        },
+        {
+          "id": "discover",
+          "title": "Discover existing automation before planning",
+          "instruction": "Inspect existing test cases, page objects, components, fixtures, utilities, API/network helpers, test data, locators, localization tests, regression tests, similar features, CI/CD, and Jenkins jobs. Produce: Existing Coverage, Reusable Components, Existing Test Data, Missing Coverage, Files Expected to Change, Potential Risks. Reuse existing automation. This is a client-change / ticket-based plan — do not duplicate the full regression suite."
+        },
+        {
+          "id": "blockers",
+          "title": "Stop if blocked",
+          "instruction": "If required data would make later execution impossible, note it on the plan as AMBIGUOUS or EXCLUDED. Do not refuse to generate the Testpad plan for missing BASE_URL, environment, Jenkins, or live experiment pages. Only label qa_automation_blocked when there is no TESTABLE requirement at all."
+        },
+        {
+          "id": "generate",
+          "title": "Generate the Testpad plan",
+          "instruction": "When analysis and discovery are complete and there is no blocker: keep qa_automation_testplan_generation (or testplan_only). Return TicketPlanner JSON: nested Testpad sections and Verify checks with product-specific names from knowledge. Aigent writes the Testpad script. Never create a second script or copy the regression template.\n\nYou are writing a Testpad script for Outliant QA (manual now, automation later).\nRead the injected knowledge first. Use documented URLs, labels, fields, events, messages, and test data verbatim.\nWrite every TESTABLE case listed in the ticket, linked tickets, comments, knowledge, and existing QA Testpad. Do not sample a subset of surfaces.\nEvery checkable row must be automatable later: named page/URL, named control, exact expected copy/event/property. No 'as expected', 'relevant page', 'not blank', or restated Jira summary.\nOutput a Testpad checklist, not Gherkin. Do not write Feature:, Scenario:, Given, When, or Then.\nShape:\n- Top-level section = product surface or flow (e.g. Local Offers, Group Offers, Member Offers, Events Promo).\n- Nested group = variant (Desktop/Mobile, locale, event name, Scenario 1 / Scenario 2) when the ticket or knowledge lists them.\n- setup rows = how to reach the state (URL, cookies, capture). Not pass/fail by themselves.\n- checks = checkable leaves. Prefer 'Verify …' with exact quoted copy, event name, property = value, or URL.\n- Nest related assertions under a parent (payload fields under the event; invalid inputs under the error-message scenario).\n- Separate top-level sections with an empty row.\nCoverage completeness (do not sample):\n- Enumerate EVERY distinct URL/path, offer type, form, locale, device, search method, cookie state, event, and property named in the ticket, linked work, comments, knowledge, or existing Testpad slice.\n- One top-level section per distinct product surface. If four offer URLs are listed (local, group, member, events/promo), write four sections — never two of four.\n- For each named analytics event, include the trigger AND a nested Verify for EACH named property. Write the documented value (offer_type = group_offer, form_id = local_offer_general). If the value is CMS/dynamic, write 'matches Webflow CMS for this offer' — never 'not blank', 'populated', or 'non-empty'.\n- Include sibling events on the same flows when the parent ticket or existing QA plan lists them with this ticket (e.g. Form Started and Lead Captured alongside Location Searched / Location Selected).\n- Preconditions once in setup: cookies, RudderStack/dataplane capture, environment (SIT vs UAT from comments).\n- Completeness over brevity. Ticket plans often need 4–12 sections and up to ~120 check rows when multiple surfaces are listed.\n- Existing Testpad is a coverage inventory for THIS ticket's slice. Expand every flow in that slice. Do not copy unrelated sibling tickets (e.g. Button Clicked, UTM, cookies-disabled) into a client-change plan.\nRegression packs: cover open, required fields, submit, success, and stated validation for every named flow — not a sample of one happy path.\nQuality gate: only write checks whose expected result is in the ticket, knowledge, or existing QA Testpad. Linked tickets are in scope when they state an observable result.\nIf the title is 'Automate tests for X', plan X — the product behaviour.\nDo not duplicate a regression template. Do not write automation code.\nambiguous/excluded/blocked: at most 2 short items total, and only if they block a whole TESTABLE area. Prefer writing the cases you can.\nOutput ONLY this JSON:\n{ \"feature\": \"short product title\", \"sections\": [{ \"title\": \"surface or flow\", \"setup\": [\"On https://… with …\"], \"checks\": [\"Verify …\"], \"children\": [{ \"title\": \"nested group\", \"setup\": [], \"checks\": [\"Verify …\"], \"children\": [] }] }], \"ambiguous\": [], \"excluded\": [], \"blocked\": [] }"
+        },
+        {
+          "id": "recreate",
+          "title": "Recreate only with proposed changes and confirmation",
+          "instruction": "If the user selects Recreate Test Plan, do not duplicate or silently replace the existing plan. Perform a second analysis for missing scenarios, negative/edge cases, regression, API, analytics, localization, duplicates, incorrect expected results, uncovered requirements, and cases that cannot be automated. Show proposed additions, removals, and edits. Wait for user confirmation, then regenerate. Preserve prior manual edits unless the user explicitly confirms they should be replaced.",
+          "gate": true
+        },
+        {
+          "id": "review-gate",
+          "title": "Pause for human review — preserve edits",
+          "instruction": "After generation, stop. The user may add, remove, or edit cases, expected results, priorities, test data, requirements, automation scope, and manual-only marks. Preserve those changes. Do not overwrite them. Do not start implementation, create a feature branch, or write Playwright/Selenium code until they click Approve Testplan.",
+          "gate": true
+        },
+        {
+          "id": "handoff",
+          "title": "Handoff until Approve Testplan",
+          "instruction": "Leave a usable plan: ticket link, named after the ticket key, in-scope vs out-of-scope, automation candidates vs manual-only. Wait for Approve Testplan. That click re-reads the latest Testpad plan (including manual QA edits), re-checks Data Resources and project knowledge for new requirements, then labels qa_automation_testplan_approved and continues Automating a ticket. If this ticket is test-plan only, stop here."
+        }
+      ]
+    },
+    {
+      "id": "execute-ticket",
+      "catalogId": "execute-ticket",
+      "title": "Executing tests for tickets",
+      "summary": "Run approved ticket automation with Execute Run: collect environment and Local / Jenkins / Both, pass safety gates, execute, analyze results without changing tests to go green. Keep execution state separate from Jira labels and Git promotion.",
+      "enabled": true,
+      "steps": [
+        {
+          "id": "confirm-ready",
+          "title": "Confirm the ticket is ready to execute",
+          "instruction": "This workflow starts at qa_automation_ready_to_execute. Confirm the Testpad plan is approved, automation is implemented and validated, and there is no open blocker. Keep three independent states: ticket label, Git promotion (feature/SIT/UAT/PROD), and execution (NOT_RUN → QUEUED → RUNNING → PASSED / FAILED). Do not encode execution into Jira labels. Do not implement new coverage here — that is Automating a ticket."
+        },
+        {
+          "id": "parameters",
+          "title": "Collect run parameters from the user",
+          "instruction": "Ask for and confirm before running: Environment (only those the project allows: SIT, UAT, Staging, Production, Local), Execution mode (Local / Jenkins / Both), Locale(s), Browser, Test suite, Tags, Branch (usually the feature branch qa/<TICKET>-...). Do not assume Production. Do not start until the user has chosen environment and mode.",
+          "gate": true
+        },
+        {
+          "id": "pre-checks",
+          "title": "Run pre-execution safety checks",
+          "instruction": "Verify: Test Plan approved, Automation implemented and validated, Code validated, Branch available, Test data available, Environment available, Blockers none. If a required dependency is missing, block execution and report Reason, Required, Status, Action — example: test_location_id not configured for the selected locale. Do not proceed, and do not change automation to work around missing data."
+        },
+        {
+          "id": "env-safety",
+          "title": "Environment and production safety",
+          "instruction": "Compare current branch, current environment, feature deployment, and target environment. If the feature may not be deployed to the selected environment, warn and wait for Cancel or Continue. Production requires an extra explicit confirmation: test location, test data, no live customer data, no uncontrolled production submissions/leads/forms, no destructive tests, production execution approved. Never bypass production safety checks.",
+          "gate": true
+        },
+        {
+          "id": "run",
+          "title": "Execute Local, Jenkins, or Both",
+          "instruction": "Set execution state QUEUED then RUNNING. Local: run this project's Playwright/test command locally and collect tests, passed, failed, skipped, duration, environment, locale, browser, branch. Jenkins: prepare TICKET_ID, ENVIRONMENT, LOCALE, BROWSER, TEST_SUITE, TAGS, BRANCH; trigger the job; monitor the build; collect results and artifacts. Both: run local and Jenkins, then compare pass/fail, duration, browser, environment, locale, branch, API/network, console, screenshots, and traces. Report Passed only if tests actually ran and passed. Never invent results."
+        },
+        {
+          "id": "analyze",
+          "title": "Analyze results — do not change automation yet",
+          "instruction": "Classify failures before any code change. A Jenkins failure is not automatically AUTOMATION_BUG. If Local PASS and Jenkins FAIL (or the reverse), OVERALL is INVESTIGATION_REQUIRED — follow the Fixing automation errors workflow. Classify APPLICATION_BUG, AUTOMATION_BUG, TEST_DATA_ISSUE, ENVIRONMENT_ISSUE, INFRASTRUCTURE_ISSUE, CONFIGURATION_ISSUE, THIRD_PARTY_ISSUE, FLAKY_TEST, EXPECTED_PRODUCT_CHANGE, or UNKNOWN. Do not immediately modify locators or assertions because Local and Jenkins differ."
+        },
+        {
+          "id": "report",
+          "title": "Report execution and stop at human promotion gates",
+          "instruction": "Deliver: Ticket, Environment, Mode (Local / Jenkins / Both), Branch, Locale, Browser, Suite/Tags, Execution state (PASSED/FAILED/INVESTIGATION_REQUIRED), counts, duration, Local vs Jenkins comparison when Both, classifications, evidence links. Do not automatically merge into uat or main. The agent may prepare sit→uat or uat→main PRs only if the user asks, then wait. Do not mark qa_automation_done until required environments have been executed and promotion is complete per the Automating a ticket workflow. If a confirmed AUTOMATION_BUG needs a code change, switch to Fixing automation errors."
+        }
+      ]
+    },
+    {
+      "id": "regression-testplan",
+      "catalogId": "regression-testplan",
+      "title": "Generating a regression testplan",
+      "summary": "Create a named regression pack in Testpad from the flows the user names. Route it to the Regression Test Template by default. Pause for human review. Do not duplicate the whole template blindly, and do not implement automation.",
+      "enabled": true,
+      "steps": [
+        {
+          "id": "read",
+          "title": "Read the named flows before writing cases",
+          "instruction": "Aigent loads project knowledge for the named flows and prefers files that match those names.\nRead and understand\n- Named flows you entered\n- Synced Data Resources / .aigent/knowledge tab folders that describe those flows (pages, fields, labels, events, test data, success/error states)\nDo not\n- Search Guru or the whole repository in this step\n- Stop because a sheet was not opened\n- Write cases before the coverage in knowledge is understood"
+        },
+        {
+          "id": "discover",
+          "title": "Discover existing regression coverage",
+          "instruction": "List existing test files whose names match the flows. Do not copy the Regression Test Template.\nReport\n- Matching spec/test file paths, if any\nDo not\n- Open or summarise the whole repository\n- Spawn a second agent to invent coverage"
+        },
+        {
+          "id": "generate",
+          "title": "Generate the regression Testpad plan",
+          "instruction": "Return TicketPlanner JSON for the named flows only. Aigent writes the Testpad script.\nRead the injected knowledge first. Use documented URLs, labels, fields, events, messages, and test data verbatim.\nWrite every TESTABLE case listed in the ticket, linked tickets, comments, knowledge, and existing QA Testpad. Do not sample a subset of surfaces.\nEvery checkable row must be automatable later: named page/URL, named control, exact expected copy/event/property. No 'as expected', 'relevant page', 'not blank', or restated Jira summary.\nCover\n- Nested Testpad sections (surface → variant → Verify rows) for every TESTABLE behaviour of the named flows\n- Documented critical path in depth: open, required fields, submit, success, and stated validation/negatives\n- Cover every named flow in depth (not one happy path) — sized to the named flows, not the entire product\n- Name the script after the flows\n- Write into the folder you chose (default: Regression Test Template)\nDo not\n- Add AMBIGUOUS / EXCLUDED / BLOCKED review rows — omit unknown edges instead\n- Copy every script in the Regression Test Template\n- Invent unrelated product areas or vague steps ('the relevant page', 'as expected')\n- POST a Testpad script yourself, or start implementation"
+        },
+        {
+          "id": "review-gate",
+          "title": "Pause for human review — preserve edits",
+          "instruction": "After generation, stop so you can review and edit the plan in Testpad.\nThen\n- Add, remove, or edit cases as needed\n- Those edits are preserved\n- This workflow does not implement automation",
+          "gate": true
+        }
+      ]
+    }
+  ],
+  "rulesUpdatedAt": "2026-08-25T07:26:29.374Z",
+  "testpadStructure": {
+    "preset": "env-deployment",
+    "folderPattern": "{environment} / {dateUS} {environment} Deployment",
+    "regressionNamePattern": "{dateUS} {environment} Regression Test",
+    "extraFolders": [
+      "{dateUS} {environment} Client Changes | Bug Fixes"
+    ],
+    "dateFormat": "us"
+  },
+  "jira": {
+    "site": "purposebrands.atlassian.net",
+    "projectKey": "AFW",
+    "label": "qa_automation_required, qa_automation_in_progress, qa_automation_blocked, qa_automation_testplan_generation, qa_automation_testplan_needs_review, qa_automation_testplan_approved, qa_automation_ready_to_execute, qa_automation_done, qa_automation_fix, qa_automation_testplan_only"
+  },
+  "dataResources": {
+    "spreadsheetId": "1mkPsCYbvpbDochHHD1pJK2H6_oiMRVW41bkP7OUrePA",
+    "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/1mkPsCYbvpbDochHHD1pJK2H6_oiMRVW41bkP7OUrePA/edit?ouid=111837187019928065825",
+    "title": "af-automation-test-Automation Reference Automation Sheet",
+    "folderId": "1H9oB005dVpdd18P7yYckCGnRx3XY_C1t",
+    "tabNames": [
+      "Overview",
+      "Test Data Configurations",
+      "Coverage",
+      "Resources",
+      "Regression Testplans",
+      "Tickets"
+    ],
+    "regressionFlows": [],
+    "customTabs": [],
+    "includeTestplans": true,
+    "boundAt": "2026-08-25T07:28:34.142Z",
+    "source": "generated"
+  },
+  "upgradedAt": "2026-08-29T12:12:40.755Z",
+  "testpadTicketPlacement": {
+    "environment": "SIT",
+    "folderId": "f120",
+    "folderPath": "QA / SIT / 08/26/2026 SIT Deployment / 08/26/2026 SIT Client Changes | Bug Fixes",
+    "folderName": "08/26/2026 SIT Client Changes | Bug Fixes",
+    "locked": true
+  },
+  "remote": {
+    "owner": "noli-fornoles-iv",
+    "repo": "test-automation",
+    "fullName": "noli-fornoles-iv/test-automation",
+    "private": false,
+    "defaultBranch": "main",
+    "cloneUrl": "https://github.com/noli-fornoles-iv/test-automation.git",
+    "htmlUrl": "https://github.com/noli-fornoles-iv/test-automation",
+    "description": null
+  }
+}

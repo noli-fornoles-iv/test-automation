@@ -1,0 +1,8 @@
+---
+description: Match this project's naming and test IDs
+alwaysApply: true
+---
+
+# Match this project's naming and test IDs
+
+Copy naming, imports, typing, and locator attributes from three nearby files. If this project uses data-testid, data-test, or getByRole patterns, use that same pattern. Do not introduce a new test-id attribute or a new file-name scheme.

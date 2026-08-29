@@ -1,0 +1,8 @@
+---
+description: A Jenkins failure is not automatically an automation defect
+alwaysApply: true
+---
+
+# A Jenkins failure is not automatically an automation defect
+
+Compare original vs retry, Local vs Jenkins, browser, and locale when available. If Local PASS and Jenkins FAIL, do not immediately change automation. Classify infrastructure, environment, data, or configuration first. When Both mode differs, treat OVERALL as INVESTIGATION_REQUIRED until the difference is explained.

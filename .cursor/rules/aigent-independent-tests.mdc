@@ -1,0 +1,8 @@
+---
+description: Tests must be independent
+alwaysApply: true
+---
+
+# Tests must be independent
+
+Each test must be independently executable and must not depend on another test's execution order or state.

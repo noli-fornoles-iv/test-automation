@@ -1,0 +1,147 @@
+{
+  "texts": {
+    "consent": {
+      "washingtonConsentBanner": "Online tracking technologies, such as cookies, are important for the correct functioning of our website. Based on regulatory changes in the state of Washington, we are excluding the use of nonessential third party cookies on webforms directed to residents within the state of Washington. You can see more information by clicking on the \"Cookie Settings\" link.Washington Privacy Notice",
+      "californiaConsentBanner": "Online tracking technologies, such as cookies, are important for the correct functioning of our website. By clicking \"Allow All\" you are also directing us to use the tracking technologies of other organizations. You can configure your preferences, and see a list of other organization's technologies, by clicking on the \"Cookie Settings\" link.California Privacy Notice",
+      "washingtonEmailConsent": "I consent to receive marketing texts and other communications by email from Anytime Fitness Franchisor LLC (“Anytime”). I further agree that Anytime may share my email information but not my phone or text information with its affiliates, franchisees and/or their authorized designees. I can withdraw my consent at any time.",
+      "washingtonTextConsent": "I'd like to receive promotional offers by text from Anytime, its affiliates, and/or franchisees and their authorized designees, which may be sent by an automated dialing system. Consent is not a condition of purchase. Message and data rates apply.",
+      "privacyNotice": "بالنقر على زر \"إرسال\" أدناه، أوافق على تلقي الرسائل التسويقية وغيرها من الاتصالات، والتي قد تكون آلية و/أو تتم باستخدام صوت اصطناعي، سواء من قبل شركة Anytime Fitness المانحة للامتياز ذات المسؤولية المحدودة («Anytime») و/أو أصحاب الامتياز التابعين لعلامة Anytime Fitness، وذلك حتى في حال كان رقم هاتفي مسجّلًا في قوائم عدم الاتصال على مستوى الولاية أو الدولة. لن تقوم شركة Anytime بمشاركة رقم هاتفي أو معلومات الرسائل النصية الخاصة بي مع أي جهات تابعة أخرى. كما أقرّ بأنه بالنقر على زر \"إرسال\"، أوافق على الشروط والأحكام وإشعار الخصوصية وشروط الرسائل النصية، وأؤكد أن عمري 18 عامًا أو أكثر. إن موافقتي على تلقي الاتصالات ليست شرطًا لإجراء أي عملية شراء، ويمكنني سحب موافقتي في أي وقت. قد تكون الرسائل متكررة. قد تُطبق رسوم الرسائل والبيانات. لإيقاف الرسائل، أرسل كلمة \"إيقاف\".",
+      "contactUsPrivacyNotice": "Please review if you are a California resident: For information regarding the categories of personal information collected about you, and the purposes for which your information will be used, please visit Anytime Fitness, LLC's Privacy Notice for California Residents."
+    },
+    "bookingConfirmation": {
+      "tryUsFree": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "appleFitnessPlusFreeTrial": "Your tour has been scheduled, and your Apple Fitness+ trial subscription is ready. Check your email or redeem below. See you on the Anytime Fitness app and in the gym!",
+      "appleFitnessPlusSubscriber": "Your tour is scheduled and we're looking forward to showing you around your new workout home away from home.",
+      "bookATourStandalone": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "inviteAFriend": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "membershipInquiry": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFreeTrialPass": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsTrainForYourLife": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsPromo": "Your visit has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "localOffer": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsFindYourFitphoria": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "eventsBookATour": "Your tour has been scheduled. We're excited to show you around the gym and help you get started on your way to reaching your fitness goals.",
+      "thankYouPage": "لقد تلقينا استفسارك. سيتواصل معك أحد أعضاء فريقنا قريباً.",
+      "corporateMembership": "Someone from our team will contact you to discuss next steps."
+    },
+    "headings": {
+      "locationSearch": {
+        "membershipInquiry": {
+          "mainHeading": "العضوية الاستفسار",
+          "findGymText": "اعثر على ناديك الرياضي",
+          "letsGetYouToTheRightPlace": "دعنا نوصلك إلى المكان الصحيح.",
+          "useCurrentLocation": "استخدم موقعي الحالي",
+          "connectWithUs": "تواصل معنا",
+          "listTab": "قائمة",
+          "mapTab": "خريطة"
+        },
+        "appleFitnessOffer": {
+          "mainHeading": "TRY US FOR FREE",
+          "description": "اعثر على أقرب موقع لـAnytime Fitness لتبدأ.",
+          "findGymText": "FIND YOUR GYM"
+        },
+        "tryUsFree": {
+          "bannerTitle": "احصل على تذكرة مجانية ليوم واحد.",
+          "mainHeading": "جرّبنا مجانًا",
+          "description": "اعثر على أقرب موقع لـAnytime Fitness لتبدأ.",
+          "findGymText": "اعثر على ناديك الرياضي",
+          "getStartedToday": "ابدأ اليوم"
+        },
+        "bookATourStandalone": {
+          "bannerTitle": "BOOK A TOUR.",
+          "findGymText": "FIND YOUR GYM",
+          "bannerSubTitle": "Take your first step on our purple turf. We'll show you around, tour the equipment, amenities, and everything else you need to get started."
+        },
+        "contactUs": {
+          "mainHeading": "أولاً، ابحث عن ناديك الرياضي",
+          "findGymText": "اعثر على ناديك الرياضي",
+          "letsGetYouToTheRightPlace": "دعنا نوصلك إلى المكان الصحيح.",
+          "useCurrentLocation": "استخدم موقعي الحالي",
+          "formHeading": "أرسل لنا رسالة",
+          "listTab": "قائمة",
+          "mapTab": "خريطة"
+        },
+        "appleFitnessSubscriber": {
+          "mainHeading": "CLAIM YOUR FREE ACCESS",
+          "description": "اعثر على أقرب موقع لـAnytime Fitness لتبدأ.",
+          "findGymText": "FIND YOUR GYM"
+        },
+        "unitOfMeasurement": "km"
+      },
+      "thankYouPage": "شكراً لك"
+    }
+  },
+  "errors": {
+    "locationSearch": {
+      "noGymsNearby": "لا توجد نوادي رياضية قريبة.",
+      "noGymsNearbyDescription": "يبدو أننا لسنا في تلك المنطقة بعد. أدخل بحثًا مختلفًا أعلاه لاستكشاف الخيارات في مدينة قريبة، أو اعرض جميع المواقع.",
+      "invalidLocation": "Invalid search. Please enter a valid zip code, city, country, or province/state. Ensure your input is correctly formatted and try again!",
+      "noNearbyLocations": "No locations found within 80 km of ${location}. Please try searching a different city.",
+      "serverSide": "Whoops! Something went wrong processing the submission on our end. Please try again in a moment.",
+      "noLocation": "No locations found within",
+      "noGymsNearbyHeading": "لا توجد نوادي رياضية قريبة."
+    },
+    "userForm": {
+      "requiredField": {
+        "firstName": "هذا الحقل مطلوب",
+        "lastName": "هذا الحقل مطلوب",
+        "email": "هذا الحقل مطلوب",
+        "phone": "هذا الحقل مطلوب",
+        "zipCode": "هذا الحقل مطلوب",
+        "localResident": "هذا الحقل مطلوب",
+        "generic": "هذا الحقل مطلوب"
+      },
+      "alphaOnly": "يُسمح بالأحرف الأبجدية فقط",
+      "invalidEmail": "البريد الإلكتروني غير صالح",
+      "invalidPhone": "رقم الهاتف غير صالح",
+      "invalidZipCode": "Invalid Zip code",
+      "invalidPostCode": "Invalid Zip code",
+      "maxLength": "الحد الأقصى للطول هو 30 حرفًا",
+      "serverSide": "Whoops! Something went wrong processing the submission on our end. Please try again in a moment."
+    },
+    "BatAddon": {
+      "dateRequired": "This value is required.",
+      "timeRequired": "This value is required.",
+      "noTimeSlots": "Select a date to view available time slots.",
+      "slotConflict": "Dang! Somebody else snatched up that time slot. Please select another time to come in."
+    }
+  },
+  "buttons": {
+    "locationSearch": {
+      "selectGym": "اختر ناديًا",
+      "gymDetails": "تفاصيل النادي الرياضي",
+      "freeTrialPass": "تذكرة التجربة المجانية",
+      "joinOnline": "JOIN ONLINE",
+      "joinInGym": "JOIN IN GYM"
+    },
+    "userForm": {
+      "submit": "إرسال",
+      "getStarted": "GET STARTED"
+    },
+    "localGymPage": {
+      "membershipInquiryBtn": "استفسار عن العضوية",
+      "contactUsBtn": "تواصل معنا"
+    },
+    "seeYouSoonPage": {
+      "sendTrialPass": "SEND TRIAL PASS"
+    }
+  },
+  "labels": {
+    "locationSearch": {
+      "searchBoxPlaceholder": {
+        "cityOrZipCode": "ابحث حسب المدينة والمحافظة أو الرمز البريدي",
+        "cityStateOrZipCode": "ابحث حسب المدينة والمحافظة أو الرمز البريدي"
+      }
+    },
+    "userForm": {
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "zipCode": "Zip Code",
+      "termsAndConditions": "الشروط والأحكام",
+      "privacyNotice": "إشعار الخصوصية",
+      "textMessagingTerms": "شروط الرسائل النصية"
+    }
+  }
+}

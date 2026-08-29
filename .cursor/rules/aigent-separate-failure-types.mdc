@@ -1,0 +1,8 @@
+---
+description: Separate product and automation failures
+alwaysApply: true
+---
+
+# Separate product and automation failures
+
+Reports must clearly distinguish product defects from automation, infrastructure, environment, data, and network failures.

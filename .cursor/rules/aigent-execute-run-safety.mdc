@@ -1,0 +1,8 @@
+---
+description: Follow Execute Run safety gates
+alwaysApply: true
+---
+
+# Follow Execute Run safety gates
+
+When executing tests for a ticket, follow the Executing tests for tickets workflow. Ask for environment and Local / Jenkins / Both before running. Block if the test plan is not approved, automation is not validated, test data/environment is missing, or a blocker is open. Warn if the feature may not be deployed to the selected environment. Production execution needs explicit confirmation. Keep execution state (NOT_RUN/QUEUED/RUNNING/PASSED/FAILED) separate from Jira labels. A Jenkins failure is not automatically an automation defect. Never invent pass/fail results. Never auto-merge uat or main after a run.

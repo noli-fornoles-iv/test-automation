@@ -1,0 +1,8 @@
+---
+description: Classify every failure before changing code
+alwaysApply: true
+---
+
+# Classify every failure before changing code
+
+Classify every failure as AUTOMATION_BUG (fix automation), APPLICATION_BUG (preserve test, report defect), TEST_DATA_ISSUE (fix data/config, do not use live data to pass), ENVIRONMENT_ISSUE (do not change automation), INFRASTRUCTURE_ISSUE (retry/investigate CI), CONFIGURATION_ISSUE (fix configuration), THIRD_PARTY_ISSUE (investigate/escalate), FLAKY_TEST (stabilize the cause, do not just add retries), EXPECTED_PRODUCT_CHANGE (update requirements/test plan first), or UNKNOWN (escalate). Track an internal agent state such as INVESTIGATING / AUTOMATION_BUG_CONFIRMED / FIX_VALIDATING / HUMAN_REVIEW_REQUIRED even if Jira stays qa_automation_in_progress.

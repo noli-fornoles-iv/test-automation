@@ -1,0 +1,51 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Winnipeg",
+      "default1": "Winnipeg"
+    },
+    "gyms": {
+      "default": "Winnipeg",
+      "default1": "Winnipeg"
+    },
+    "clubId": "9993995",
+    "preSaleClubId": "9993995",
+    "secondaryClubId": "9993995",
+    "localGym": "winnipeg-manitoba-9993995"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "M5V 3L9",
+      "secondary": "T2P 1J9"
+    },
+    "invalid": {
+      "alpha": "Z1Z 1Z1",
+      "short": "M5V3L",
+      "long": "M5V33L9"
+    }
+  },
+    "phoneNumber": {
+      "valid": {
+        "default": "14165550187",
+        "secondary": "13802669012",
+        "member": "14165550187",
+        "nonMember": "N/A",
+        "localFormat": "14165551234"
+      },
+      "invalid": "0165551234",
+      "countryCode": "1"
+    },
+  "ownAGym": {
+    "investmentRange": "N/A",
+    "heardAboutUs": "Website",
+    "desiredMarket": "Winnipeg",
+    "address": "Winnipeg",
+    "city": "Winnipeg",
+    "state": "Manitoba",
+    "country": "Canada",
+    "zip": "M5V 3L9"
+  }
+}

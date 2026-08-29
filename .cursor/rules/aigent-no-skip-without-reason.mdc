@@ -1,0 +1,8 @@
+---
+description: Do not skip tests without a recorded reason
+alwaysApply: true
+---
+
+# Do not skip tests without a recorded reason
+
+Do not skip, fixme, or comment out a test to make the suite green. If a test must be quarantined, record the reason, owner, and tracking ticket, and keep the failure visible.

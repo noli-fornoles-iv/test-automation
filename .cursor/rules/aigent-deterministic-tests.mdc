@@ -1,0 +1,8 @@
+---
+description: Tests must be deterministic
+alwaysApply: true
+---
+
+# Tests must be deterministic
+
+Avoid implementation patterns that introduce unnecessary randomness, timing dependencies, shared state, or environment assumptions.

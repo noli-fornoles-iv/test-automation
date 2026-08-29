@@ -1,0 +1,8 @@
+---
+description: Avoid hard waits
+alwaysApply: true
+---
+
+# Avoid hard waits
+
+Do not use arbitrary sleep or fixed delays (sleep, waitForTimeout with a magic number, Thread.sleep). Use the runner's auto-waiting, explicit conditions, assertions, network idle, or application-state checks already used in this suite.

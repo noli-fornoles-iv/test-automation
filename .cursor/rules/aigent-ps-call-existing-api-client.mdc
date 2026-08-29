@@ -1,0 +1,8 @@
+---
+description: Call this project's API client, not ad-hoc HTTP
+alwaysApply: true
+---
+
+# Call this project's API client, not ad-hoc HTTP
+
+Use the API client, service class, request builder, and auth helper this project already defines. Do not add axios/fetch/supertest wrappers beside an existing client.

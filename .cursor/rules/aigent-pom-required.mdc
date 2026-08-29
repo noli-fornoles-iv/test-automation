@@ -1,0 +1,9 @@
+---
+description: Page Object Model required
+globs: **/*.{ts,js,feature}
+alwaysApply: false
+---
+
+# Page Object Model required
+
+Use the existing Page Object Model or equivalent abstraction when the project architecture supports it. Do not place reusable page interaction logic directly inside tests.

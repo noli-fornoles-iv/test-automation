@@ -1,0 +1,8 @@
+---
+description: Protect sensitive test data
+alwaysApply: true
+---
+
+# Protect sensitive test data
+
+Never use or expose real customer or production-sensitive information unless explicitly authorized and appropriately protected.

@@ -1,0 +1,8 @@
+---
+description: Never overwrite user changes
+alwaysApply: true
+---
+
+# Never overwrite user changes
+
+Do not reset, revert, delete, or overwrite existing user changes without explicit approval.

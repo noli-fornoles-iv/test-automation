@@ -1,0 +1,44 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "ASDF",
+      "default1": "ASDF"
+    },
+    "gyms": {
+      "default": "ASDF",
+      "default1": "ASDF"
+    },
+    "clubId": "DE-0004",
+    "secondaryClubId": "DE-0004",
+    "localGym": "asdf-berlin-de-0004"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "10115",
+      "secondary": "80331"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+4915112345678",
+      "secondary": "+4915112345678",
+      "member": "+4915112345678",
+      "nonMember": "+4917012345678"
+    },
+    "invalid": "+1651",
+    "countryCode": "+49"
+  },
+  "ownAGym": {
+    "investmentRange": "Under €200k",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Berlin"
+  }
+}

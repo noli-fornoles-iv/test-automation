@@ -1,0 +1,8 @@
+---
+description: Never weaken assertions
+alwaysApply: true
+---
+
+# Never weaken assertions
+
+Never remove, loosen, skip, or change an assertion simply to make an automation test pass. If expected is "Book a Tour" and the UI shows "Schedule a Tour", determine whether the product changed intentionally, the test plan is outdated, or an APPLICATION_BUG exists — only then may the assertion change, and only with an updated approved plan or explicit human confirmation.

@@ -1,0 +1,44 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkkk",
+      "noNearbyLocation": "ikkkkkkk",
+      "default": "Wels",
+      "default1": "Wels"
+    },
+    "gyms": {
+      "default": "Wels",
+      "default1": "Wels"
+    },
+    "clubId": "AT-0003",
+    "secondaryClubId": "AT-0003",
+    "localGym": "vocklabruck-vocklabruck-at-0003"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "1010",
+      "secondary": "5020"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+436601234567",
+      "secondary": "+43316123456",
+      "member": "+436601234567",
+      "nonMember": "+43316123456"
+    },
+    "invalid": "+1651",
+    "countryCode": "+43"
+  },
+  "ownAGym": {
+    "investmentRange": "100.000€ - 249.999€",
+    "heardAboutUs": "LinkedIn",
+    "desiredMarket": "Oberösterreich"
+  }
+}

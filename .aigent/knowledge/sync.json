@@ -1,0 +1,774 @@
+{
+  "syncedAt": "2026-08-29T13:40:36.308Z",
+  "resources": {
+    "tab:overview": {
+      "name": "Overview",
+      "url": "tab:overview",
+      "kind": "sheet",
+      "fingerprint": "7bc4a76a6a66cdf6",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "overview/overview.md",
+      "tab": "Overview"
+    },
+    "tab:test data configurations": {
+      "name": "Test Data Configurations",
+      "url": "tab:test data configurations",
+      "kind": "sheet",
+      "fingerprint": "d3ded7a00639db1b",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "test-data-configurations/test-data-configurations.md",
+      "tab": "Test Data Configurations"
+    },
+    "tab:coverage": {
+      "name": "Coverage",
+      "url": "tab:coverage",
+      "kind": "sheet",
+      "fingerprint": "3aeabf991b42a66c",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "coverage/coverage.md",
+      "tab": "Coverage"
+    },
+    "tab:resources": {
+      "name": "Resources",
+      "url": "tab:resources",
+      "kind": "sheet",
+      "fingerprint": "cbba0eb8c4e555cc",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/resources.md",
+      "tab": "Resources"
+    },
+    "https://github.com/noli-fornoles-iv/af-website-resources": {
+      "name": "Github (AF Resources)",
+      "url": "https://github.com/noli-fornoles-iv/af-website-resources",
+      "kind": "web",
+      "fingerprint": "status:404",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/github-af-resources-aHR0cHM6Ly9n.md",
+      "tab": "Resources"
+    },
+    "https://docs.google.com/spreadsheets/d/1dD0vnEOuEgnuPKcrKkbUzpGv1j7VZchX/edit?usp=sharing&ouid=111837187019928065825&rtpof=true&sd=true": {
+      "name": "Local Status & Flows",
+      "url": "https://docs.google.com/spreadsheets/d/1dD0vnEOuEgnuPKcrKkbUzpGv1j7VZchX/edit?usp=sharing&ouid=111837187019928065825&rtpof=true&sd=true",
+      "kind": "web",
+      "fingerprint": "status:200",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/local-status-flows-aHR0cHM6Ly9k.md",
+      "tab": "Resources"
+    },
+    "https://docs.google.com/spreadsheets/d/1XbuWQqf5vnOhIznBNX4d8nn8XCDsmsMg/edit?usp=sharing&ouid=111837187019928065825&rtpof=true&sd=true": {
+      "name": "Test Gyms",
+      "url": "https://docs.google.com/spreadsheets/d/1XbuWQqf5vnOhIznBNX4d8nn8XCDsmsMg/edit?usp=sharing&ouid=111837187019928065825&rtpof=true&sd=true",
+      "kind": "web",
+      "fingerprint": "status:200",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/test-gyms-aHR0cHM6Ly9k.md",
+      "tab": "Resources"
+    },
+    "https://docs.google.com/spreadsheets/d/1oAwlZzcxypQHWgYukxgAJV-ks0MgMlCWoySbE_LRtL0/edit?usp=sharing": {
+      "name": "Phone Number Teast Data",
+      "url": "https://docs.google.com/spreadsheets/d/1oAwlZzcxypQHWgYukxgAJV-ks0MgMlCWoySbE_LRtL0/edit?usp=sharing",
+      "kind": "web",
+      "fingerprint": "status:200",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/phone-number-teast-data-aHR0cHM6Ly9k.md",
+      "tab": "Resources"
+    },
+    "https://docs.google.com/spreadsheets/d/1uUfK7vMlnPJOSMK1VKPw0V_yJrfKA2pX/edit?usp=sharing&ouid=111837187019928065825&rtpof=true&sd=true": {
+      "name": "AF Pixel Catalog",
+      "url": "https://docs.google.com/spreadsheets/d/1uUfK7vMlnPJOSMK1VKPw0V_yJrfKA2pX/edit?usp=sharing&ouid=111837187019928065825&rtpof=true&sd=true",
+      "kind": "web",
+      "fingerprint": "status:200",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/af-pixel-catalog-aHR0cHM6Ly9k.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/TpaGM9zc/testing?activeCard=5c220b4a-5d1a-4f6c-8192-648bfc3c6cc2": {
+      "name": "Onboarding a New Locale — Automation Framework & CI",
+      "url": "https://app.getguru.com/folders/TpaGM9zc/testing?activeCard=5c220b4a-5d1a-4f6c-8192-648bfc3c6cc2",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T15:56:11.470Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/onboarding-a-new-locale-automation-framework-ci-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/TpaGM9zc/testing?activeCard=9bfcf6d9-5248-4ef7-8b0f-3829697c3663": {
+      "name": "Webflow Country Onboarding Guide",
+      "url": "https://app.getguru.com/folders/TpaGM9zc/testing?activeCard=9bfcf6d9-5248-4ef7-8b0f-3829697c3663",
+      "kind": "guru",
+      "fingerprint": "v18",
+      "remoteModifiedAt": "2026-08-28T09:20:00.043Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-country-onboarding-guide-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/TpaGM9zc/testing?activeCard=3d9c9ae8-4eb3-4670-8041-0f4388c4e5f2": {
+      "name": "[Webflow / AWS / React] New locale go live checklist",
+      "url": "https://app.getguru.com/folders/TpaGM9zc/testing?activeCard=3d9c9ae8-4eb3-4670-8041-0f4388c4e5f2",
+      "kind": "guru",
+      "fingerprint": "v5",
+      "remoteModifiedAt": "2026-06-08T18:21:44.459Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-aws-react-new-locale-go-live-checklist-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=ad391b9f-f41d-4ad7-9a6b-9ed206c66603": {
+      "name": "How to Check the React Props Passed from Webflow",
+      "url": "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=ad391b9f-f41d-4ad7-9a6b-9ed206c66603",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-07-16T10:51:30.714Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/how-to-check-the-react-props-passed-from-webflow-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=dde34852-fd07-4280-a78b-8b5c0075990a": {
+      "name": "New Locale – QA Testing Guidelines",
+      "url": "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=dde34852-fd07-4280-a78b-8b5c0075990a",
+      "kind": "guru",
+      "fingerprint": "v5",
+      "remoteModifiedAt": "2026-08-03T12:56:05.506Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/new-locale-qa-testing-guidelines-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=c25afdf8-16df-40e9-8235-b9774bbb9840": {
+      "name": "URL Query Parameters for QA Testing",
+      "url": "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=c25afdf8-16df-40e9-8235-b9774bbb9840",
+      "kind": "guru",
+      "fingerprint": "v4",
+      "remoteModifiedAt": "2026-07-22T12:35:35.545Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/url-query-parameters-for-qa-testing-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=645ea985-8771-440f-a358-82d7f7a83924": {
+      "name": "Test Strategy for Gym Locator Page",
+      "url": "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=645ea985-8771-440f-a358-82d7f7a83924",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T14:49:02.053Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/test-strategy-for-gym-locator-page-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=527c0401-f5bb-4e19-b66a-eb8d6ddea4b5": {
+      "name": "Test Strategy for Blog Page",
+      "url": "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=527c0401-f5bb-4e19-b66a-eb8d6ddea4b5",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T15:25:51.189Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/test-strategy-for-blog-page-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=e46dcd83-72be-4d29-8321-c9934009a0b4": {
+      "name": "AF Locales and their business rules",
+      "url": "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=e46dcd83-72be-4d29-8321-c9934009a0b4",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-02-26T16:38:40.914Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/af-locales-and-their-business-rules-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=52678bbf-d51d-478b-ad9b-1c05354ecd66": {
+      "name": "PostMan collection and API inventory",
+      "url": "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=52678bbf-d51d-478b-ad9b-1c05354ecd66",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T16:43:03.235Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/postman-collection-and-api-inventory-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=59500985-9057-4641-a2f8-caa916c1274c": {
+      "name": "Rudderstack Training and documentation",
+      "url": "https://app.getguru.com/folders/cn7dnb8i/QA?activeCard=59500985-9057-4641-a2f8-caa916c1274c",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-06-30T09:48:33.677Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/rudderstack-training-and-documentation-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=419d83f8-4919-482a-a235-a29241310e9e": {
+      "name": "Local Offer Page Setup",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=419d83f8-4919-482a-a235-a29241310e9e",
+      "kind": "guru",
+      "fingerprint": "v5",
+      "remoteModifiedAt": "2026-07-17T14:19:18.087Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/local-offer-page-setup-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=f4f417e1-42a0-408d-b839-34aef1b01e48": {
+      "name": "Find Gym Country Dropdown Localization & API Sync Exceptions",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=f4f417e1-42a0-408d-b839-34aef1b01e48",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-06-05T07:36:23.379Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/find-gym-country-dropdown-localization-api-sync-exceptions-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=c4685a09-9a89-45a9-862b-eb1ad09dcc1d": {
+      "name": "Webflow ↔ Crowdin Sync",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=c4685a09-9a89-45a9-862b-eb1ad09dcc1d",
+      "kind": "guru",
+      "fingerprint": "v13",
+      "remoteModifiedAt": "2026-07-14T18:56:01.589Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-crowdin-sync-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=9bfcf6d9-5248-4ef7-8b0f-3829697c3663": {
+      "name": "Webflow Country Onboarding Guide",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=9bfcf6d9-5248-4ef7-8b0f-3829697c3663",
+      "kind": "guru",
+      "fingerprint": "v18",
+      "remoteModifiedAt": "2026-08-28T09:20:00.043Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-country-onboarding-guide-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=d6f62d94-7488-4532-9f13-62d2a1482c28": {
+      "name": "Webflow RTL support",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=d6f62d94-7488-4532-9f13-62d2a1482c28",
+      "kind": "guru",
+      "fingerprint": "v3",
+      "remoteModifiedAt": "2026-05-11T03:05:16.252Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-rtl-support-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=227db0be-574b-467d-a36d-2f39f48eb3a2": {
+      "name": "Local Gym Page",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=227db0be-574b-467d-a36d-2f39f48eb3a2",
+      "kind": "guru",
+      "fingerprint": "v5",
+      "remoteModifiedAt": "2026-05-14T18:59:19.703Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/local-gym-page-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=3705b207-a939-489b-8f07-12106712a2bd": {
+      "name": "All Locations Filter Page",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=3705b207-a939-489b-8f07-12106712a2bd",
+      "kind": "guru",
+      "fingerprint": "v3",
+      "remoteModifiedAt": "2026-05-06T20:55:20.581Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/all-locations-filter-page-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=091ea71e-6da2-4c23-8ea5-2833f0033c5f": {
+      "name": "Webflow Components",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=091ea71e-6da2-4c23-8ea5-2833f0033c5f",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-05-05T13:38:34.875Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-components-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=2dda01a1-f5c0-4526-a7d6-921ab86d10c2": {
+      "name": "Home",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=2dda01a1-f5c0-4526-a7d6-921ab86d10c2",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-04T13:46:46.790Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/home-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=cd7b8575-ca9c-4322-9e15-194eceed41a0": {
+      "name": "Navigation and Footer",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=cd7b8575-ca9c-4322-9e15-194eceed41a0",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-05-04T10:33:47.780Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/navigation-and-footer-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=2fa02ec6-6e23-49a0-a434-3c3b3aba94f6": {
+      "name": "Blog Search",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=2fa02ec6-6e23-49a0-a434-3c3b3aba94f6",
+      "kind": "guru",
+      "fingerprint": "v3",
+      "remoteModifiedAt": "2026-05-13T05:55:40.826Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/blog-search-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=75873cde-c506-4fbf-b246-6347ed14ed00": {
+      "name": "Modal",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=75873cde-c506-4fbf-b246-6347ed14ed00",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-04T13:53:07.252Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/modal-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=f3dfc07a-2ed6-4e25-8d5f-410523f645f8": {
+      "name": "Events",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=f3dfc07a-2ed6-4e25-8d5f-410523f645f8",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-04T13:35:46.456Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/events-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=cc2b617e-fe4b-4851-b04b-44136d234a0f": {
+      "name": "Buttons and Badges ",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=cc2b617e-fe4b-4851-b04b-44136d234a0f",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-04T13:25:33.730Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/buttons-and-badges-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=8be82d95-ec8a-4181-8cd9-97f48aab3195": {
+      "name": "Blog Components",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=8be82d95-ec8a-4181-8cd9-97f48aab3195",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-04T10:27:19.701Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/blog-components-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=6c336b0c-c86d-4264-957d-4d436c34fe6e": {
+      "name": "Technical Guide: Updating Submit Cancellation Link",
+      "url": "https://app.getguru.com/folders/c57G5aoi/Webflow?activeCard=6c336b0c-c86d-4264-957d-4d436c34fe6e",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-05-06T20:57:34.675Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/technical-guide-updating-submit-cancellation-link-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=349332e1-daa0-4b59-9432-97bb1f755cef": {
+      "name": "Search Bar Only Experience",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=349332e1-daa0-4b59-9432-97bb1f755cef",
+      "kind": "guru",
+      "fingerprint": "v5",
+      "remoteModifiedAt": "2026-07-03T12:28:44.076Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/search-bar-only-experience-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=c2f6e6ff-bd9e-43a9-b131-bc9fad8880fa": {
+      "name": "Membership & Training Pages",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=c2f6e6ff-bd9e-43a9-b131-bc9fad8880fa",
+      "kind": "guru",
+      "fingerprint": "v4",
+      "remoteModifiedAt": "2026-07-03T08:11:05.470Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/membership-training-pages-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=3643dca7-a16e-4e3f-8329-a75e25285ae2": {
+      "name": "Membership Cancellation | iFrame",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=3643dca7-a16e-4e3f-8329-a75e25285ae2",
+      "kind": "guru",
+      "fingerprint": "v6",
+      "remoteModifiedAt": "2026-07-21T12:47:13.322Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/membership-cancellation-iframe-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=0c4c2157-0120-4c69-bb8e-db90cf8093d1": {
+      "name": "RudderStack Event Documentation ",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=0c4c2157-0120-4c69-bb8e-db90cf8093d1",
+      "kind": "guru",
+      "fingerprint": "v5",
+      "remoteModifiedAt": "2026-08-07T11:32:34.115Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/rudderstack-event-documentation-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=3b376c63-a9b3-4819-85b1-9afb66c8f5e0": {
+      "name": "Submit Form - Lead Form",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=3b376c63-a9b3-4819-85b1-9afb66c8f5e0",
+      "kind": "guru",
+      "fingerprint": "v3",
+      "remoteModifiedAt": "2026-06-29T11:37:00.175Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/submit-form-lead-form-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=6cdd40fa-f217-49d0-a327-09c980335462": {
+      "name": "Lead form iframe integration",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=6cdd40fa-f217-49d0-a327-09c980335462",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-05-09T10:38:46.310Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/lead-form-iframe-integration-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=0b3b1ee3-8059-4133-902d-ca9075100d64": {
+      "name": "Membership Inquiry | iFrame",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=0b3b1ee3-8059-4133-902d-ca9075100d64",
+      "kind": "guru",
+      "fingerprint": "v7",
+      "remoteModifiedAt": "2026-07-21T09:42:11.763Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/membership-inquiry-iframe-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=f268081d-15cc-43d2-8c84-7476a73c4ef9": {
+      "name": "Phone Number Integration",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=f268081d-15cc-43d2-8c84-7476a73c4ef9",
+      "kind": "guru",
+      "fingerprint": "v13",
+      "remoteModifiedAt": "2026-07-14T06:26:52.864Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/phone-number-integration-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=45d52045-9341-4478-9537-fa95fe644206": {
+      "name": "Location Search 2.0",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=45d52045-9341-4478-9537-fa95fe644206",
+      "kind": "guru",
+      "fingerprint": "v12",
+      "remoteModifiedAt": "2026-05-21T13:37:32.626Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/location-search-2-0-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=a1275d82-c3a8-4534-941b-865a1c54a311": {
+      "name": "Locale Based Translation Resolution Flow [Next JS] – Anytime Fitness",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=a1275d82-c3a8-4534-941b-865a1c54a311",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-05T07:42:13.592Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/locale-based-translation-resolution-flow-next-js-anytime-fit-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=d92c10bc-2eb8-441a-bfee-28789fc38a57": {
+      "name": "Locale-Based Font Onboarding Guide [Next JS] - Anytime Fitness",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=d92c10bc-2eb8-441a-bfee-28789fc38a57",
+      "kind": "guru",
+      "fingerprint": "v3",
+      "remoteModifiedAt": "2026-08-24T16:39:27.893Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/locale-based-font-onboarding-guide-next-js-anytime-fitness-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=4add9562-34eb-49fb-ae52-c385c5ed15e1": {
+      "name": "Folder structure + conventions",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=4add9562-34eb-49fb-ae52-c385c5ed15e1",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-05T07:40:46.619Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/folder-structure-conventions-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=4948db78-9872-403e-b293-51cd3ace6f59": {
+      "name": "Webflow Pages X Next.js iframes",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=4948db78-9872-403e-b293-51cd3ace6f59",
+      "kind": "guru",
+      "fingerprint": "v9",
+      "remoteModifiedAt": "2026-08-28T10:43:54.497Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-pages-x-next-js-iframes-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=4d8b40d2-4ae3-4dd4-a500-8406269f0bd0": {
+      "name": "New Country Onboarding Guide [React]",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=4d8b40d2-4ae3-4dd4-a500-8406269f0bd0",
+      "kind": "guru",
+      "fingerprint": "v13",
+      "remoteModifiedAt": "2026-07-31T12:12:49.213Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/new-country-onboarding-guide-react-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=cfe979a5-4e6a-4d7a-9aaf-38e221bb7bb9": {
+      "name": "MCO Offer",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=cfe979a5-4e6a-4d7a-9aaf-38e221bb7bb9",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-05-09T10:39:55.410Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/mco-offer-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=c3cd5a90-8460-4ad8-bc1c-91f01d85e3da": {
+      "name": "Local Offer",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=c3cd5a90-8460-4ad8-bc1c-91f01d85e3da",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-05-09T10:49:33.415Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/local-offer-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=a0b8749f-4d68-4fd3-bf6f-79b5154e99d7": {
+      "name": "Contact Us",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=a0b8749f-4d68-4fd3-bf6f-79b5154e99d7",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-05T07:31:14.707Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/contact-us-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=264b5511-4427-419e-b40b-4ff7f3322ef3": {
+      "name": "Invitee",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=264b5511-4427-419e-b40b-4ff7f3322ef3",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-05T07:30:39.683Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/invitee-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=aae683ee-b1f1-492c-a12d-62b7132458af": {
+      "name": "Referrer",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=aae683ee-b1f1-492c-a12d-62b7132458af",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-05T07:29:41.637Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/referrer-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=5f79d735-3d54-40e4-b141-956e1c82fdfc": {
+      "name": "Try Us Free",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=5f79d735-3d54-40e4-b141-956e1c82fdfc",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-05T07:29:09.798Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/try-us-free-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=38f8b4b9-a083-4228-a5a2-5b490233eba8": {
+      "name": "Book a Tour",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=38f8b4b9-a083-4228-a5a2-5b490233eba8",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-05T07:28:15.514Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/book-a-tour-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=a69b24c1-348f-45ba-bed3-3d99ea912a03": {
+      "name": "Gym Finder",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=a69b24c1-348f-45ba-bed3-3d99ea912a03",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-05T07:27:08.870Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/gym-finder-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=548cd752-fa87-4001-8249-acd0c6cdde93": {
+      "name": "Events 2.0",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=548cd752-fa87-4001-8249-acd0c6cdde93",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-05-09T10:46:51.631Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/events-2-0-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=9efe86ce-49c9-40b1-9bb0-25a231a274d7": {
+      "name": "Corporate Membership | iFrame",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=9efe86ce-49c9-40b1-9bb0-25a231a274d7",
+      "kind": "guru",
+      "fingerprint": "v4",
+      "remoteModifiedAt": "2026-08-13T14:12:09.074Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/corporate-membership-iframe-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=6c8eb4aa-0a47-41e7-a092-7d9735974a15": {
+      "name": "Google Translate Feature",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=6c8eb4aa-0a47-41e7-a092-7d9735974a15",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-05-04T08:50:43.475Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/google-translate-feature-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=3a806dda-8649-4f84-9521-54d74c8962a9": {
+      "name": "Franchise Leads | iFrame",
+      "url": "https://app.getguru.com/folders/ca7zqAXi/React-Components?activeCard=3a806dda-8649-4f84-9521-54d74c8962a9",
+      "kind": "guru",
+      "fingerprint": "v17",
+      "remoteModifiedAt": "2026-08-13T12:27:45.659Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/franchise-leads-iframe-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/TBKzdz7c/AF-Automation-?activeCard=4a40f1fd-2843-499b-9ab7-a5a7ff02d620": {
+      "name": "Framework Overview",
+      "url": "https://app.getguru.com/folders/TBKzdz7c/AF-Automation-?activeCard=4a40f1fd-2843-499b-9ab7-a5a7ff02d620",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-04-08T16:21:39.224Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/framework-overview-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/TBKzdz7c/AF-Automation-?activeCard=d348f489-cc15-49bd-a51d-9adcd915a6a8": {
+      "name": "Repo Local Setup & Running Tests",
+      "url": "https://app.getguru.com/folders/TBKzdz7c/AF-Automation-?activeCard=d348f489-cc15-49bd-a51d-9adcd915a6a8",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T15:55:12.422Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/repo-local-setup-running-tests-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/TBKzdz7c/AF-Automation-?activeCard=5c220b4a-5d1a-4f6c-8192-648bfc3c6cc2": {
+      "name": "Onboarding a New Locale — Automation Framework & CI",
+      "url": "https://app.getguru.com/folders/TBKzdz7c/AF-Automation-?activeCard=5c220b4a-5d1a-4f6c-8192-648bfc3c6cc2",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T15:56:11.470Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/onboarding-a-new-locale-automation-framework-ci-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/TBKzdz7c/AF-Automation-?activeCard=e3b3a076-79f1-4449-917f-8bd4fe3b7598": {
+      "name": "Jenkins",
+      "url": "https://app.getguru.com/folders/TBKzdz7c/AF-Automation-?activeCard=e3b3a076-79f1-4449-917f-8bd4fe3b7598",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T16:01:58.275Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/jenkins-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=dc900252-9301-4e11-a232-9c0dbf49fb19": {
+      "name": "[Webflow] Publishing Standards",
+      "url": "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=dc900252-9301-4e11-a232-9c0dbf49fb19",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-06-12T19:21:11.764Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-publishing-standards-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=3ac9de52-a945-4a02-ae9c-9090d2a941bd": {
+      "name": "[Webflow/React] PROD Release Rollback Steps",
+      "url": "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=3ac9de52-a945-4a02-ae9c-9090d2a941bd",
+      "kind": "guru",
+      "fingerprint": "v2",
+      "remoteModifiedAt": "2026-05-18T09:13:30.242Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-react-prod-release-rollback-steps-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=3d9c9ae8-4eb3-4670-8041-0f4388c4e5f2": {
+      "name": "[Webflow / AWS / React] New locale go live checklist",
+      "url": "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=3d9c9ae8-4eb3-4670-8041-0f4388c4e5f2",
+      "kind": "guru",
+      "fingerprint": "v5",
+      "remoteModifiedAt": "2026-06-08T18:21:44.459Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-aws-react-new-locale-go-live-checklist-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=c50dcbfb-d5c0-42ad-8d49-113a705466f5": {
+      "name": "RCA Document Creation Process",
+      "url": "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=c50dcbfb-d5c0-42ad-8d49-113a705466f5",
+      "kind": "guru",
+      "fingerprint": "v10",
+      "remoteModifiedAt": "2026-05-13T13:11:34.691Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/rca-document-creation-process-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=863829d3-8081-4f5f-9ba6-2900b9785b2a": {
+      "name": "[Webflow] Cohort Release ProcessProcess",
+      "url": "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=863829d3-8081-4f5f-9ba6-2900b9785b2a",
+      "kind": "guru",
+      "fingerprint": "v9",
+      "remoteModifiedAt": "2026-07-02T16:55:52.052Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/webflow-cohort-release-processprocess-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=7d654fd8-2e75-401b-bd29-1427d181a042": {
+      "name": "Deployment Process",
+      "url": "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=7d654fd8-2e75-401b-bd29-1427d181a042",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T15:23:49.949Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/deployment-process-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=8bf91525-f868-42ef-9998-5e02e90cd576": {
+      "name": "QA process",
+      "url": "https://app.getguru.com/folders/izaB7xAT/Processes?activeCard=8bf91525-f868-42ef-9998-5e02e90cd576",
+      "kind": "guru",
+      "fingerprint": "v3",
+      "remoteModifiedAt": "2026-06-29T23:59:38.780Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/qa-process-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/folders/iGjErE5T/Tools-and-Softwares?activeCard=35da4339-e336-461f-8b15-e849d13bc72f": {
+      "name": "GTM + Pixel Tracking Testing Guide",
+      "url": "https://app.getguru.com/folders/iGjErE5T/Tools-and-Softwares?activeCard=35da4339-e336-461f-8b15-e849d13bc72f",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-02-26T15:43:47.093Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/gtm-pixel-tracking-testing-guide-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/card/Tgq6nyac/Membership-Cancellation-iFrame": {
+      "name": "Membership Cancellation | iFrame",
+      "url": "https://app.getguru.com/card/Tgq6nyac/Membership-Cancellation-iFrame",
+      "kind": "guru",
+      "fingerprint": "v6",
+      "remoteModifiedAt": "2026-07-21T12:47:13.322Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/membership-cancellation-iframe-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "https://app.getguru.com/card/iGoq8yxT/GA4-dataLayer-events-QAs-focused": {
+      "name": "GA4 / dataLayer events - QAs focused",
+      "url": "https://app.getguru.com/card/iGoq8yxT/GA4-dataLayer-events-QAs-focused",
+      "kind": "guru",
+      "fingerprint": "v1",
+      "remoteModifiedAt": "2026-08-06T10:20:43.525Z",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "resources/ga4-datalayer-events-qas-focused-aHR0cHM6Ly9h.md",
+      "tab": "Resources"
+    },
+    "tab:regression testplans": {
+      "name": "Regression Testplans",
+      "url": "tab:regression testplans",
+      "kind": "sheet",
+      "fingerprint": "6f69ac84139bd83e",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "regression-testplans/regression-testplans.md",
+      "tab": "Regression Testplans"
+    },
+    "tab:tickets": {
+      "name": "Tickets",
+      "url": "tab:tickets",
+      "kind": "sheet",
+      "fingerprint": "af7a5790bb083fb3",
+      "syncedAt": "2026-08-29T13:40:36.308Z",
+      "file": "tickets/tickets.md",
+      "tab": "Tickets"
+    }
+  }
+}

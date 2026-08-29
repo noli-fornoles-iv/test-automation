@@ -1,0 +1,8 @@
+---
+description: Never invent tags or jobs this CI does not run
+alwaysApply: true
+---
+
+# Never invent tags or jobs this CI does not run
+
+Do not introduce a tagging scheme, Playwright project, or workflow job that this projectsitory's pipeline will not select.

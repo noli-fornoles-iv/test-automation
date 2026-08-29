@@ -1,0 +1,8 @@
+---
+description: Every test requires meaningful assertions
+alwaysApply: true
+---
+
+# Every test requires meaningful assertions
+
+Do not generate tests without explicit validation of the expected result.

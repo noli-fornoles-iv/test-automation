@@ -1,0 +1,8 @@
+---
+description: Keep changes scoped
+alwaysApply: true
+---
+
+# Keep changes scoped
+
+Only modify files and code required for the requested automation task unless additional changes are necessary and clearly explained.

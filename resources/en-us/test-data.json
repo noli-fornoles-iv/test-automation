@@ -1,0 +1,45 @@
+{
+  "locations": {
+    "search": {
+      "invalid": "ikkkkkkk",
+      "noNearby": "ikkkkkk",
+      "noNearbyLocation": "99723",
+      "california": "WOODBURY! (TEST2)",
+      "washington": "WOODBURY! (TEST2)",
+      "default": "WOODBURY! (TEST2)",
+      "default1": "WOODBURY! (TEST2)"
+    },
+    "gyms": {
+      "california": "WOODBURY! (TEST2)",
+      "washington": "WOODBURY! (TEST2)",
+      "default": "WOODBURY! (TEST2)",
+      "default1": "WOODBURY! (TEST2)"
+    },
+    "clubId": "9993999",
+    "preSaleClubId": "9993999",
+    "secondaryClubId": "9991402",
+    "localGym": "woodbury-minnesota-9993999"
+  },
+  "zipCodes": {
+    "valid": {
+      "default": "55128",
+      "secondary": "55125",
+      "osuDisabled": "52641"
+    },
+    "invalid": {
+      "alpha": "AB123",
+      "short": "124",
+      "long": "12345-99999"
+    }
+  },
+  "phoneNumber": {
+    "valid": {
+      "default": "+13052010770",
+      "secondary": "+14165551234",
+      "member": "+13052010770",
+      "nonMember": "+12125550143"
+    },
+    "invalid": "+61436399721",
+    "countryCode": "+1"
+  }
+}
