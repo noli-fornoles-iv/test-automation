@@ -40,6 +40,7 @@ export class UserFormPage extends BasePage {
   readonly newGymAddressLine2: Locator;
   readonly selectedGymName: Locator;
   readonly selectedGymNameForLocalOffer: Locator;
+  readonly changeLocationButton: Locator;
   readonly errorMessage: Locator;
   readonly consentCheckbox: Locator;
   readonly localResidentDisclaimerText: Locator;
@@ -209,6 +210,7 @@ export class UserFormPage extends BasePage {
       this.iframe,
       '[data-testid="location-name"]',
     );
+    this.changeLocationButton = this.iframe.getByRole('button', { name: /change/i }).first();
     this.consentCheckbox = this.locateElementInsideIframe(this.iframe, '#termsAccepted');
     this.localResidentDisclaimerText = this.locateElementInsideIframe(
       this.iframe,
@@ -1578,6 +1580,16 @@ export class UserFormPage extends BasePage {
       .catch(async () => (await locator.textContent({ timeout })) ?? '');
 
     return Helpers.normalizeText(text);
+  }
+
+  /** Local / Member unified offers: reopen location search from the lead form. */
+  async clickChangeLocationButton(): Promise<void> {
+    await this.waitForFormReady().catch(() => {});
+    await this.changeLocationButton.waitFor({ state: 'visible', timeout: TIMEOUTS.MEDIUM });
+    await this.changeLocationButton.click();
+    await this.changeLocationButton
+      .waitFor({ state: 'hidden', timeout: TIMEOUTS.LONG })
+      .catch(() => {});
   }
 
   async getGymAddressLines(): Promise<{ line1: string; line2: string }> {

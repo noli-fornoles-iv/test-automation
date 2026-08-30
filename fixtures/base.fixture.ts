@@ -116,6 +116,8 @@ export type ScenarioContext = {
   isCookieAccepted?: boolean;
   rudderstackTestEnable?: boolean;
   rudderstackCapturedRequests?: RudderStackRequest[];
+  /** AFW-4104 — hard-require CMS offer_name + offer_type on Location Searched/Selected. */
+  afw4104RequireCmsOfferFields?: boolean;
   bookAppointmentRequestBody?: BookAppointmentRequest;
   localOfferTicket?: string;
   localOfferCmsExpected?: LocalOfferTicketExpected;

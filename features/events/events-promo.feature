@@ -583,6 +583,51 @@ Feature: Events Promo
       | Website-Event-ABC 123         | Website-Event-ABC123_DC         |
       | Website-Event-ABC@123         | Website-Event-ABC123_DC         |
 
+  # --- AFW-4104: Location Searched / Location Selected CMS offer_name + offer_type (US Rudderstack) ---
+  # JIRA: https://purposebrands.atlassian.net/browse/AFW-4104
+  # Run: $env:FEATURE="EventsPromo"; $env:TAG="AFW-4104"; $env:NODE_ENV="SIT"; $env:LOCALE="EN-US"; npm run test:multi-locale:feature
+
+  @AFW-4104 @EventsPromo @US @desktop @Regression
+  Scenario: Verify Location Searched includes CMS offer fields on Events Promo
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Events Promo
+    When The user searches for the "Locale Based" location in the Events page location search
+    Then The Location Searched Rudderstack event is triggered for "Events Promo" with CMS offer fields and search success "true"
+
+  @AFW-4104 @EventsPromo @US @desktop @Regression
+  Scenario: Verify Location Selected includes CMS offer fields on Events Promo
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Events Promo
+    When The user searches for the "Locale Based" location in the Events page location search
+    And The user selects the CLAIM OFFER option for the "Locale Based" gym from the Events page search results
+    Then The Location Selected Rudderstack event is triggered for "Events Promo" with CMS offer fields
+
+  @AFW-4104 @EventsPromo @US @desktop @Regression
+  Scenario: Verify Form Started and Lead Captured include CMS offer fields on Events Promo CLAIM OFFER path
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Events Promo
+    When The user searches for the "Locale Based" location in the Events page location search
+    And The user selects the CLAIM OFFER option for the "Locale Based" gym from the Events page search results
+    When The user interacts with the lead form in the Events Promo page
+    Then The Form Started Rudderstack event is triggered in Events Promo
+    When The user submits the Events page form with valid data
+    Then The Lead Captured and Identity Rudderstack events are verified in Events Promo
+
+  @AFW-4104 @EventsPromo @US @android @Regression
+  Scenario: Verify Location Searched includes CMS offer fields on Events Promo mobile viewport
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Events Promo
+    When The user searches for the "Locale Based" location in the Events page location search
+    Then The Location Searched Rudderstack event is triggered for "Events Promo" with CMS offer fields and search success "true"
+
+  @AFW-4104 @EventsPromo @US @android @Regression
+  Scenario: Verify Location Selected includes CMS offer fields on Events Promo mobile viewport
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Events Promo
+    When The user searches for the "Locale Based" location in the Events page location search
+    And The user selects the CLAIM OFFER option for the "Locale Based" gym from the Events page search results
+    Then The Location Selected Rudderstack event is triggered for "Events Promo" with CMS offer fields
+
   # Untranslated-text scan (CLD3 ? lexicon ? optional Cursor AI). Same pipeline as Contact Us.
   # Non-English only. Soft-fails by default; set UNTRANSLATED_TEXT_FAIL=1 to hard-fail.
   # Run: $env:FEATURE="UntranslatedTextScan"; $env:TAG="TH"; $env:LOCALE="TH-TH"; npm run test:multi-locale:feature

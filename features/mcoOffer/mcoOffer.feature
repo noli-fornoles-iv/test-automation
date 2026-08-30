@@ -652,6 +652,76 @@ Feature: MCO Offer
     When The user selects a date and time in the schedule picker for MCO Offer
     Then The booking confirmation message and appointment details are displayed for MCO Offer
 
+  # --- AFW-4104: Location Searched / Location Selected CMS offer_name + offer_type (US Rudderstack) ---
+  # JIRA: https://purposebrands.atlassian.net/browse/AFW-4104
+  # Run: $env:FEATURE="MCOOffer"; $env:TAG="AFW-4104"; $env:NODE_ENV="SIT"; $env:LOCALE="EN-US"; npm run test:multi-locale:feature
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Location Searched includes CMS offer fields on MCO Offer
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for MCO Offer
+    And The user opens the "<OfferKey>" MCO Offer for "open" gym
+    When The user searches an valid location in the MCO Offer location search
+    Then The Location Searched Rudderstack event is triggered for "MCO Offer" with CMS offer fields and search success "true"
+
+    Examples:
+      | OfferKey                  |
+      | join_for_one_dollar_offer |
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Location Selected includes CMS offer fields on MCO Offer
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for MCO Offer
+    And The user opens the "<OfferKey>" MCO Offer for "open" gym
+    When The user searches an valid location in the MCO Offer location search
+    And The user clicks on the Select Gym button
+    Then The Location Selected Rudderstack event is triggered for "MCO Offer" with CMS offer fields
+
+    Examples:
+      | OfferKey                  |
+      | join_for_one_dollar_offer |
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Form Started and Lead Captured include CMS offer fields after MCO location search
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for MCO Offer
+    And The user opens the "<OfferKey>" MCO Offer for "open" gym
+    When The user searches an valid location in the MCO Offer location search
+    And The user clicks on the Select Gym button
+    When The user interacts with the lead form on the MCO Offer
+    Then The Form Started Rudderstack event is triggered on the MCO Offer
+    When The user submits the MCO Offer form with valid data
+    Then The Lead Captured and Identity Rudderstack events are verified on the MCO Offer
+
+    Examples:
+      | OfferKey                  |
+      | join_for_one_dollar_offer |
+
+  @AFW-4104 @US @android @Regression
+  Scenario Outline: Verify Location Searched includes CMS offer fields on MCO Offer mobile viewport
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for MCO Offer
+    And The user opens the "<OfferKey>" MCO Offer for "open" gym
+    When The user searches an valid location in the MCO Offer location search
+    Then The Location Searched Rudderstack event is triggered for "MCO Offer" with CMS offer fields and search success "true"
+
+    Examples:
+      | OfferKey                  |
+      | join_for_one_dollar_offer |
+
+  @AFW-4104 @US @android @Regression
+  Scenario Outline: Verify Location Selected includes CMS offer fields on MCO Offer mobile viewport
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for MCO Offer
+    And The user opens the "<OfferKey>" MCO Offer for "open" gym
+    When The user searches an valid location in the MCO Offer location search
+    And The user clicks on the Select Gym button
+    Then The Location Selected Rudderstack event is triggered for "MCO Offer" with CMS offer fields
+
+    Examples:
+      | OfferKey                  |
+      | join_for_one_dollar_offer |
+
   # AFW-3440 — MCO (group) Offer lead source normalization on submit (Tickets: US; Coverage MCO = US only).
   # Matrix: https://docs.google.com/spreadsheets/d/1FoKzz7bJ4hZ4yQgJFU46hPciaShXCuoMmqckvgr2edo
   # Run: FEATURE=AFW-3440 TAG=US LOCALE=EN-US NODE_ENV=SIT npm run test:multi-locale:feature

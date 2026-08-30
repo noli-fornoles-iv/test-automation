@@ -69,6 +69,49 @@ Given(
   },
 );
 
+Given(
+  /^The user opens the "(.*)" Member Offer with location search$/,
+  async ({ page, memberOfferPage, oneTrustPage, scenarioContext }, offerKey: string) => {
+    scenarioContext.pageName = 'member offer';
+    scenarioContext.offerKey = offerKey;
+    scenarioContext.offerGymType = 'open';
+    const normalizedKey = offerKey.toLowerCase() as keyof typeof MEMBER_OFFER_ROUTES.OPEN;
+    const path = MEMBER_OFFER_ROUTES.OPEN[normalizedKey];
+    if (!path) {
+      throw new Error(`No Member Offer route found for key: "${offerKey}"`);
+    }
+    memberOfferPage.bindLocationSearchExpectedPath(path, 'local-offer-iframe');
+    const baseUrl = environmentManager.get('BASE_URL');
+    const locationId = d(TestDataKeys.Locations.ClubId);
+    scenarioContext.selectedGymClubId = locationId;
+    const url = `${baseUrl}${path}?disable_captcha=true`;
+    await page.goto(url);
+    await oneTrustPage.bannerAllowAllBtn.click({ timeout: 5000 }).catch(() => {
+      logger.info('Member Offer OneTrust banner not present; continuing');
+    });
+    await memberOfferPage.userForm.iframeElement
+      .waitFor({ state: 'attached', timeout: TIMEOUTS.LONG })
+      .catch(() => {});
+    if (scenarioContext.rudderstackTestEnable && !scenarioContext.rudderstackCapturedRequests) {
+      scenarioContext.rudderstackCapturedRequests = await rudderstackRequests(page);
+    }
+    if (page.url().includes('/locations/')) {
+      throw new Error(`Member Offer location search landing redirected to locations: ${page.url()}`);
+    }
+    const searchVisible = await memberOfferPage.locationSearch.locationSearchControl
+      .isVisible()
+      .catch(() => false);
+    if (searchVisible) {
+      await memberOfferPage.locationSearch.waitForLocationSearchReady();
+      return;
+    }
+    logger.info('Member Offer location search not on landing — opening from lead form Change');
+    await memberOfferPage.userForm.waitForFormReady();
+    await memberOfferPage.userForm.clickChangeLocationButton();
+    await memberOfferPage.locationSearch.waitForLocationSearchReady();
+  },
+);
+
 When(
   /^The user submits the Member Offer form( with empty fields)?$/,
   async ({ memberOfferPage, page }) => {
@@ -392,6 +435,63 @@ When(
   /^The user opens the Local Resident pop-up modal on the Member Offer form$/,
   async ({ memberOfferPage }) => {
     await memberOfferPage.userForm.openLocalResidentModal();
+  },
+);
+
+When(/^The user opens location search on the Member Offer$/, async ({ memberOfferPage, scenarioContext }) => {
+  const normalizedKey = String(scenarioContext.offerKey || 'join_transformation_challenge').toLowerCase() as keyof typeof MEMBER_OFFER_ROUTES.OPEN;
+  const path = MEMBER_OFFER_ROUTES.OPEN[normalizedKey];
+  if (path) {
+    memberOfferPage.bindLocationSearchExpectedPath(path, 'local-offer-iframe');
+  }
+  const searchReady = await memberOfferPage.locationSearch.locationSearchControl
+    .isVisible()
+    .catch(() => false);
+  if (searchReady) {
+    await memberOfferPage.locationSearch.waitForLocationSearchReady();
+    return;
+  }
+  await memberOfferPage.userForm.waitForFormReady();
+  await memberOfferPage.userForm.clickChangeLocationButton();
+  await memberOfferPage.locationSearch.locationSearchControl.waitFor({
+    state: 'visible',
+    timeout: TIMEOUTS.LONG,
+  });
+  await memberOfferPage.locationSearch.waitForLocationSearchReady();
+});
+
+When(
+  /^The user searches a valid location in the Member Offer location search$/,
+  async ({ memberOfferPage, scenarioContext }) => {
+    const normalizedKey = String(scenarioContext.offerKey || 'join_transformation_challenge').toLowerCase() as keyof typeof MEMBER_OFFER_ROUTES.OPEN;
+    const path = MEMBER_OFFER_ROUTES.OPEN[normalizedKey];
+    if (!path) {
+      throw new Error(`No Member Offer route found for key: "${scenarioContext.offerKey}"`);
+    }
+    memberOfferPage.bindLocationSearchExpectedPath(path, 'local-offer-iframe');
+    const searchVisible = await memberOfferPage.locationSearch.locationSearchControl
+      .isVisible()
+      .catch(() => false);
+    if (!searchVisible) {
+      await memberOfferPage.userForm.clickChangeLocationButton();
+      await memberOfferPage.locationSearch.waitForLocationSearchReady();
+    }
+    const validLocation = d(TestDataKeys.Locations.Search.Default);
+    await memberOfferPage.locationSearch.searchLocation(validLocation);
+  },
+);
+
+When(
+  /^The user selects a gym from the Member Offer location search results$/,
+  async ({ memberOfferPage, scenarioContext }) => {
+    const gymName = d(TestDataKeys.Locations.Gyms.Default);
+    const clubId = d(TestDataKeys.Locations.ClubId);
+    scenarioContext.selectedGymClubId = clubId;
+    scenarioContext.selectedGymName = gymName;
+    await memberOfferPage.locationSearch.clickSelectGymAvoidingLocationsRedirect(gymName);
+    await memberOfferPage.userForm.ensureDisableCaptchaPersisted().catch(() => {});
+    await memberOfferPage.userForm.overrideLocationAndDisableCaptcha(clubId).catch(() => {});
+    await memberOfferPage.userForm.waitForGymSelectionDisplayed();
   },
 );
 

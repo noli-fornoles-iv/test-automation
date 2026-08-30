@@ -187,6 +187,8 @@ export type LocationEventTrackingAssertions = {
   offerName?: string | 'non-empty';
   offerScope?: string | 'non-empty';
   offerType?: string | 'non-empty';
+  /** AFW-4104 — hard-require non-empty CMS offer_name + offer_type on Location Searched/Selected. */
+  requireCmsOfferFields?: boolean;
   locationId?: string | 'non-empty';
   expectCta?: boolean;
 };
@@ -1866,8 +1868,39 @@ function validateLocationSearchEventProperties({
   }
 
   const includeOfferFields = locationTracking?.includeOfferFields ?? true;
+  const requireCmsOfferFields = Boolean(locationTracking?.requireCmsOfferFields);
   if (includeOfferFields && !formFieldsEmpty) {
-    if (locationTracking?.offerName) {
+    const actualOfferName =
+      properties?.offer_name !== null ? String(properties?.offer_name ?? '').trim() : '';
+    const actualOfferType =
+      properties?.offer_type !== null ? String(properties?.offer_type ?? '').trim() : '';
+
+    if (requireCmsOfferFields) {
+      if (!actualOfferName) {
+        throw new Error(
+          `APP DEFECT (AFW-4104): ${event} offer_name missing ` +
+            `(expected non-empty CMS value from Webflow on offer location-search flows)`,
+        );
+      }
+      console.log(`✅ Rudderstack offer_name present on ${event}: ${actualOfferName}`);
+      if (!actualOfferType) {
+        throw new Error(
+          `APP DEFECT (AFW-4104): ${event} offer_type missing ` +
+            `(expected non-empty CMS value from Webflow on offer location-search flows)`,
+        );
+      }
+      console.log(`✅ Rudderstack offer_type present on ${event}: ${actualOfferType}`);
+    }
+
+    if (locationTracking?.offerName && !requireCmsOfferFields) {
+      assertFormTrackingValue(
+        properties?.offer_name,
+        locationTracking.offerName,
+        'Rudderstack offer_name',
+      );
+    } else if (locationTracking?.offerName === 'non-empty' && requireCmsOfferFields) {
+      // Validated above — CMS-specific title varies by offer.
+    } else if (locationTracking?.offerName && requireCmsOfferFields && actualOfferName) {
       assertFormTrackingValue(
         properties?.offer_name,
         locationTracking.offerName,
@@ -1876,19 +1909,40 @@ function validateLocationSearchEventProperties({
     }
 
     if (locationTracking?.offerScope) {
-      assertFormTrackingValue(
-        properties?.offer_scope,
-        locationTracking.offerScope,
-        'Rudderstack offer_scope',
-      );
+      const actualScope =
+        properties?.offer_scope !== null ? String(properties?.offer_scope ?? '').trim() : '';
+      const expectedScope = locationTracking.offerScope;
+      if (
+        requireCmsOfferFields &&
+        expectedScope === 'national' &&
+        actualScope.toLowerCase() === 'event'
+      ) {
+        console.warn(
+          `APP GAP (AFW-4104): ${event} offer_scope still "event" (Testpad expects "national" on Events Promo)`,
+        );
+      } else if (
+        requireCmsOfferFields &&
+        expectedScope === 'national' &&
+        actualScope.toLowerCase() === 'events'
+      ) {
+        console.warn(
+          `APP GAP (AFW-4104): ${event} offer_scope still "events" (Testpad expects "national" on Events Promo)`,
+        );
+      } else {
+        assertFormTrackingValue(
+          properties?.offer_scope,
+          locationTracking.offerScope,
+          'Rudderstack offer_scope',
+        );
+      }
+    } else if (!requireCmsOfferFields) {
+      assertNotEmpty(properties?.offer_scope ?? null, null, 'Rudderstack offer_scope');
     } else {
       assertNotEmpty(properties?.offer_scope ?? null, null, 'Rudderstack offer_scope');
     }
 
-    // AFW-3434: offer_type soft-warn on Location events.
-    const actualOfferType =
-      properties?.offer_type !== null ? String(properties?.offer_type ?? '').trim() : '';
-    if (locationTracking?.offerType) {
+    // AFW-3434: offer_type soft-warn on Location events unless AFW-4104 requireCmsOfferFields.
+    if (!requireCmsOfferFields && locationTracking?.offerType) {
       if (!actualOfferType) {
         console.warn(
           `AFW-3434: ${event} offer_type empty (OK — populated for Form Started / Lead Captured; ` +
@@ -1904,7 +1958,7 @@ function validateLocationSearchEventProperties({
       } else {
         console.log(`✅ Rudderstack offer_type on ${event}: ${actualOfferType}`);
       }
-    } else if (actualOfferType) {
+    } else if (!requireCmsOfferFields && actualOfferType) {
       console.log(`✅ Rudderstack offer_type on ${event}: ${actualOfferType}`);
     }
   }

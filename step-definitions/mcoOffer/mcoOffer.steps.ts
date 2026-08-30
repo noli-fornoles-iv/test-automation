@@ -244,8 +244,11 @@ async function selectMcoGymWithoutLocationsRedirect(
   await mcoOfferPage.userForm.waitForGymSelectionDisplayed();
 }
 
-Given(/^Rudderstack validation is enabled for MCO Offer$/, async ({ scenarioContext }) => {
+Given(/^Rudderstack validation is enabled for MCO Offer$/, async ({ page, scenarioContext }) => {
   scenarioContext.rudderstackTestEnable = true;
+  if (!scenarioContext.rudderstackCapturedRequests) {
+    scenarioContext.rudderstackCapturedRequests = await rudderstackRequests(page);
+  }
 });
 
 Given(

@@ -131,7 +131,7 @@ export class LocationSearchPage extends BasePage {
     // react-select instance ids can remount as 2/3/N after iframe reload — use flexible matchers.
     this.locationSearchInput = this.iframe
       .locator(
-        'input[aria-autocomplete="list"], #react-select-2-input, #react-select-3-input, [id^="react-select-"][id$="-input"]',
+        '#react-select-2-input, #react-select-3-input, [id^="react-select-"][id$="-input"], input[aria-autocomplete="list"]:not(.iti__search-input):not([id^="iti-"])',
       )
       .first();
     this.locationSearchControl = this.iframe
@@ -487,7 +487,13 @@ export class LocationSearchPage extends BasePage {
     const next = new URL(`${baseUrl}${hostPath}`);
     const current = new URL(this.page.url());
 
-    for (const key of ['test_location_id', 'use_prod_api', 'disable_captcha'] as const) {
+    for (const key of [
+      'location_id',
+      'test_location_id',
+      'use_prod_api',
+      'disable_captcha',
+      'bypass_promotions_api',
+    ] as const) {
       const fromExtra = extraParams?.[key];
       const value =
         fromExtra !== undefined && fromExtra !== null && fromExtra !== ''
@@ -553,7 +559,14 @@ export class LocationSearchPage extends BasePage {
     // ensureTestLocationIdQueryParam gotos are not racing with a stripped URL.
     const locale = environmentManager.get('LOCALE').toUpperCase();
     const clubId = testStudio[locale] || d(TestDataKeys.Locations.ClubId);
-    await this.page.goto(this.buildLocaleAwareHostUrl({ test_location_id: clubId }), {
+    const current = new URL(this.page.url());
+    const recoveryParams: Record<string, string | null | undefined> = {};
+    if (current.searchParams.has('location_id') && this.expectedPagePath?.includes('/offer/')) {
+      recoveryParams.location_id = current.searchParams.get('location_id') ?? clubId;
+    } else if (this.shouldAttachTestLocationOverlay()) {
+      recoveryParams.test_location_id = clubId;
+    }
+    await this.page.goto(this.buildLocaleAwareHostUrl(recoveryParams), {
       waitUntil: 'domcontentloaded',
     });
     // WebKit MI/invite SPAs often never reach `load` (analytics/widgets) — do not hang here.
@@ -606,7 +619,20 @@ export class LocationSearchPage extends BasePage {
    * remounts onto location_id=HK-0011.
    */
   private shouldAttachTestLocationOverlay(): boolean {
-    return environmentManager.get('LOCALE').toLowerCase() !== 'zh-hk';
+    if (environmentManager.get('LOCALE').toLowerCase() === 'zh-hk') {
+      return false;
+    }
+    // Local / Member offers deep-linked with location_id — overlay swaps to test_location_id
+    // and can redirect to /locations; preserve location_id for AFW-4104 location-search flows.
+    try {
+      const current = new URL(this.page.url());
+      if (current.searchParams.has('location_id') && this.expectedPagePath?.includes('/offer/')) {
+        return false;
+      }
+    } catch {
+      /* ignore malformed URL */
+    }
+    return true;
   }
 
   /**
@@ -648,7 +674,7 @@ export class LocationSearchPage extends BasePage {
       await this.page.waitForLoadState('domcontentloaded').catch(() => {});
       const afterRace = new URL(this.page.url());
       if (afterRace.searchParams.get('test_location_id') !== clubId) {
-        await this.page.goto(target, { waitUntil: 'domcontentloaded' });
+        await this.page.goto(target, { waitUntil: 'domcontentloaded' }).catch(() => {});
       }
     }
     await this.page.waitForLoadState('load').catch(() => {});
@@ -773,8 +799,12 @@ export class LocationSearchPage extends BasePage {
     // BAT / Contact Us / MI: replace fixed sleeps after goto with iframe + input readiness.
     await this.ensureIframeInViewport().catch(() => {});
     await this.waitForIframeContentLoaded().catch(() => {});
+    const inputTimeout =
+      this.expectedPagePath?.includes('/offer/') || this.expectedPagePath?.includes('/events/')
+        ? TIMEOUTS.LONG
+        : TIMEOUTS.MEDIUM;
     await this.locationSearchInput
-      .waitFor({ state: 'visible', timeout: TIMEOUTS.MEDIUM })
+      .waitFor({ state: 'visible', timeout: inputTimeout })
       .catch(() => {});
   }
 
@@ -2385,17 +2415,21 @@ export class LocationSearchPage extends BasePage {
             // Prefer locale-aware re-navigation over reload: SPA/search drift can leave
             // the browser on the locale homepage, and reload would stick there.
             if (this.expectedPagePath) {
-              const locale = environmentManager.get('LOCALE').toUpperCase();
-              const clubId = testStudio[locale] || d(TestDataKeys.Locations.ClubId);
+              const current = new URL(this.page.url());
+              const retryParams: Record<string, string | null | undefined> = {};
+              // Local/Member offers deep-link with location_id — do not swap in test_location_id on retry.
+              if (
+                !current.searchParams.has('location_id') &&
+                this.shouldAttachTestLocationOverlay()
+              ) {
+                const locale = environmentManager.get('LOCALE').toUpperCase();
+                const clubId = testStudio[locale] || d(TestDataKeys.Locations.ClubId);
+                retryParams.test_location_id = clubId;
+              }
               await this.page
-                .goto(
-                  this.buildLocaleAwareHostUrl(
-                    this.shouldAttachTestLocationOverlay() ? { test_location_id: clubId } : {},
-                  ),
-                  {
-                    waitUntil: 'domcontentloaded',
-                  },
-                )
+                .goto(this.buildLocaleAwareHostUrl(retryParams), {
+                  waitUntil: 'domcontentloaded',
+                })
                 .catch(() => {});
             } else {
               await this.page.reload({ waitUntil: 'domcontentloaded' }).catch(() => {});
