@@ -384,3 +384,51 @@ Feature: Member Offer
     Given The user opens the "join_transformation_challenge" Member Offer for "presale" gym
     When The user submits the Member Offer form with valid data
     Then The thank-you screen is displayed
+
+  # --- AFW-4104: Location Searched / Location Selected CMS offer_name + offer_type (US Rudderstack) ---
+  # JIRA: https://purposebrands.atlassian.net/browse/AFW-4104
+  # Run: $env:FEATURE="MemberOffer"; $env:TAG="AFW-4104"; $env:NODE_ENV="SIT"; $env:LOCALE="EN-US"; npm run test:multi-locale:feature
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Location Searched includes CMS offer fields on Member Offer
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Member Offer
+    And The user opens the "<OfferKey>" Member Offer for "open" gym
+    When The user opens location search on the Member Offer
+    And The user searches a valid location in the Member Offer location search
+    Then The Location Searched Rudderstack event is triggered for "Member Offer" with CMS offer fields and search success "true"
+
+    Examples:
+      | OfferKey                      |
+      | join_transformation_challenge |
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Location Selected includes CMS offer fields on Member Offer
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Member Offer
+    And The user opens the "<OfferKey>" Member Offer for "open" gym
+    When The user opens location search on the Member Offer
+    And The user searches a valid location in the Member Offer location search
+    And The user selects a gym from the Member Offer location search results
+    Then The Location Selected Rudderstack event is triggered for "Member Offer" with CMS offer fields
+
+    Examples:
+      | OfferKey                      |
+      | join_transformation_challenge |
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Form Started and Lead Captured include CMS offer fields after Member Offer location search
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Member Offer
+    And The user opens the "<OfferKey>" Member Offer for "open" gym
+    When The user opens location search on the Member Offer
+    And The user searches a valid location in the Member Offer location search
+    And The user selects a gym from the Member Offer location search results
+    When The user interacts with the lead form on the Member Offer
+    Then The Form Started Rudderstack event is triggered on the Member Offer
+    When The user submits the Member Offer form with valid data
+    Then The Lead Captured and Identity Rudderstack events are verified on the Member Offer
+
+    Examples:
+      | OfferKey                      |
+      | join_transformation_challenge |

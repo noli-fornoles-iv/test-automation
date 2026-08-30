@@ -1,6 +1,7 @@
 import { expect, Page, Locator, test } from '@playwright/test';
 import { BookATourPage } from '@pages/common/BookATourPage';
 import { ConfirmationScreenPage } from '@pages/common/ConfirmationScreenPage';
+import { LocationSearchPage } from '@pages/common/LocationSearchPage';
 import { UserFormPage } from '@pages/common/UserFormPage';
 import { resolveLocalOfferRoute, TIMEOUTS } from '@utils/constants/index';
 import { logger } from '@utils/logger';
@@ -23,6 +24,7 @@ export type LocalOfferCmsSharedData = {
 
 export class LocalOfferPage {
   readonly page: Page;
+  locationSearch: LocationSearchPage;
   readonly userForm: UserFormPage;
   /**
    * Schedule picker in the Local Offer lead SPA (`#local-offer-iframe`).
@@ -52,6 +54,7 @@ export class LocalOfferPage {
 
   constructor(page: Page) {
     this.page = page;
+    this.locationSearch = new LocationSearchPage(page, 'local-offer-iframe');
     this.userForm = new UserFormPage(page, 'local-offer-iframe');
     this.formSchedule = new BookATourPage(page, 'local-offer-iframe');
     this.batSchedule = new BookATourPage(page, 'book-a-tour-iframe');
@@ -75,6 +78,14 @@ export class LocalOfferPage {
       .or(this.userForm.iframe.getByRole('link', { name: /join online/i }))
       .or(this.userForm.iframe.getByText(/join online to get started/i))
       .first();
+  }
+
+  /** Re-bind location search with host path so search retries stay on the offer page. */
+  bindLocationSearchExpectedPath(
+    offerPath: string,
+    iframeId: 'local-offer-iframe' | 'find-gym-iframe' = 'local-offer-iframe',
+  ): void {
+    this.locationSearch = new LocationSearchPage(this.page, iframeId, offerPath);
   }
 
   /**

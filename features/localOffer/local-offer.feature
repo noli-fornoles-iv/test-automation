@@ -1661,3 +1661,51 @@ Feature: Local Offer
       | welcome_pack | Website-Event-ABC123     | Website-Local-ABC123 |
       | welcome_pack | Website-Local-ABC123_DC | Website-Local-ABC123 |
       | welcome_pack | Website-Test-ABC123      | Website-Test-ABC123  |
+
+  # --- AFW-4104: Location Searched / Location Selected CMS offer_name + offer_type (US Rudderstack) ---
+  # JIRA: https://purposebrands.atlassian.net/browse/AFW-4104
+  # Run: $env:FEATURE="LocalOffer"; $env:TAG="AFW-4104"; $env:NODE_ENV="SIT"; $env:LOCALE="EN-US"; npm run test:multi-locale:feature
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Location Searched includes CMS offer fields on Local Offer
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Local Offer
+    And The user opens the "<OfferKey>" Local Offer for "open" gym
+    When The user opens location search on the Local Offer
+    And The user searches a valid location in the Local Offer location search
+    Then The Location Searched Rudderstack event is triggered for "Local Offer" with CMS offer fields and search success "true"
+
+    Examples:
+      | OfferKey     |
+      | one_day_pass |
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Location Selected includes CMS offer fields on Local Offer
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Local Offer
+    And The user opens the "<OfferKey>" Local Offer for "open" gym
+    When The user opens location search on the Local Offer
+    And The user searches a valid location in the Local Offer location search
+    And The user selects a gym from the Local Offer location search results
+    Then The Location Selected Rudderstack event is triggered for "Local Offer" with CMS offer fields
+
+    Examples:
+      | OfferKey     |
+      | one_day_pass |
+
+  @AFW-4104 @US @desktop @Regression
+  Scenario Outline: Verify Form Started and Lead Captured include CMS offer fields after Local Offer location search
+    Given Rudderstack validation is enabled for AFW-4104
+    And Rudderstack validation is enabled for Local Offer
+    And The user opens the "<OfferKey>" Local Offer for "open" gym
+    When The user opens location search on the Local Offer
+    And The user searches a valid location in the Local Offer location search
+    And The user selects a gym from the Local Offer location search results
+    When The user interacts with the lead form on the Local Offer
+    Then The Form Started Rudderstack event is triggered on the Local Offer
+    When The user submits the Local Offer form with valid data
+    Then The Lead Captured and Identity Rudderstack events are verified on the Local Offer
+
+    Examples:
+      | OfferKey     |
+      | one_day_pass |

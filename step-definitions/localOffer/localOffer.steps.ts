@@ -107,9 +107,12 @@ function skipIfCanBookAppointment(scenarioContext: { canBookAppointment?: boolea
   }
 }
 
-Given(/^Rudderstack validation is enabled for Local Offer$/, async ({ scenarioContext }) => {
+Given(/^Rudderstack validation is enabled for Local Offer$/, async ({ page, scenarioContext }) => {
   // Cookie accept runs after the Local Offer page loads (banner is not on about:blank).
   scenarioContext.rudderstackTestEnable = true;
+  if (!scenarioContext.rudderstackCapturedRequests) {
+    scenarioContext.rudderstackCapturedRequests = await rudderstackRequests(page);
+  }
 });
 
 /** Ticket scenarios: report Local Offer unavailability as failure (no soft-skip). */
@@ -313,6 +316,55 @@ Given(
     logger.info(
       `Loaded Webflow CMS Local Offer for ${ticket}: name="${cms.name}", display="${cms.displayOfferTitle}", slug=${cms.slug}, locale=${cms.locale}`,
     );
+  },
+);
+
+Given(
+  /^The user opens the "(.*)" Local Offer with location search$/,
+  async (
+    { page, scenarioContext, localOfferPage, oneTrustPage },
+    offerKey: string,
+  ) => {
+    const locale = (environmentManager.get('LOCALE') || 'EN-US').toUpperCase();
+    const locationId = d(TestDataKeys.Locations.ClubId);
+    scenarioContext.pageName = 'local offer';
+    scenarioContext.offerKey = offerKey;
+    scenarioContext.selectedGymClubId = locationId;
+    const normalizedKey = String(offerKey).toLowerCase();
+    const baseUrl = resolveLocalOfferBaseUrl(locale);
+    const path = resolveLocalOfferRoute(normalizedKey, locale);
+    localOfferPage.bindLocationSearchExpectedPath(path, 'local-offer-iframe');
+    // No location_id — land on location search step; test gym is injected during search via
+    // ensureTestLocationIdQueryParam (same as MCO / Events Promo location-search flows).
+    const url = `${baseUrl}${path}?disable_captcha=true&bypass_promotions_api=true`;
+    logger.info(
+      `Opening Local Offer for location search: ${url} (locale=${locale}, offerKey=${offerKey})`,
+    );
+    await navigateToUrl(url, page, locale, { includeTestLocationId: false });
+    await hideLocalOfferGeoBanners(page);
+    await oneTrustPage.bannerAllowAllBtn.click({ timeout: 5000 }).catch(() => {
+      logger.info('Local Offer OneTrust banner not present; continuing');
+    });
+    await localOfferPage.userForm.iframeElement
+      .waitFor({ state: 'attached', timeout: TIMEOUTS.LONG })
+      .catch(() => {});
+    if (scenarioContext.rudderstackTestEnable && !scenarioContext.rudderstackCapturedRequests) {
+      scenarioContext.rudderstackCapturedRequests = await rudderstackRequests(page);
+    }
+    if (page.url().includes('/locations/')) {
+      throw new Error(`Local Offer location search landing redirected to locations: ${page.url()}`);
+    }
+    const searchVisible = await localOfferPage.locationSearch.locationSearchControl
+      .isVisible()
+      .catch(() => false);
+    if (searchVisible) {
+      await localOfferPage.locationSearch.waitForLocationSearchReady();
+      return;
+    }
+    logger.info('Local Offer location search not on landing — opening from lead form Change');
+    await localOfferPage.userForm.waitForFormReady();
+    await localOfferPage.userForm.clickChangeLocationButton();
+    await localOfferPage.locationSearch.waitForLocationSearchReady();
   },
 );
 
@@ -1722,6 +1774,62 @@ When(
     }
     const locale = environmentManager.get('LOCALE');
     await verifyUseProdApiQueryParam(locale, page);
+  },
+);
+
+When(/^The user opens location search on the Local Offer$/, async ({ localOfferPage, scenarioContext }) => {
+  const locale = (environmentManager.get('LOCALE') || 'EN-US').toUpperCase();
+  const offerKey = String(scenarioContext.offerKey || 'one_day_pass').toLowerCase();
+  localOfferPage.bindLocationSearchExpectedPath(
+    resolveLocalOfferRoute(offerKey, locale),
+    'local-offer-iframe',
+  );
+  const searchReady = await localOfferPage.locationSearch.locationSearchControl
+    .isVisible()
+    .catch(() => false);
+  if (searchReady) {
+    await localOfferPage.locationSearch.waitForLocationSearchReady();
+    return;
+  }
+  await localOfferPage.userForm.waitForFormReady();
+  await localOfferPage.userForm.clickChangeLocationButton();
+  await localOfferPage.locationSearch.locationSearchControl.waitFor({
+    state: 'visible',
+    timeout: TIMEOUTS.LONG,
+  });
+  await localOfferPage.locationSearch.waitForLocationSearchReady();
+});
+
+When(
+  /^The user searches a valid location in the Local Offer location search$/,
+  async ({ localOfferPage, scenarioContext }) => {
+    const locale = (environmentManager.get('LOCALE') || 'EN-US').toUpperCase();
+    const offerKey = String(scenarioContext.offerKey || 'one_day_pass').toLowerCase();
+    const path = resolveLocalOfferRoute(offerKey, locale);
+    localOfferPage.bindLocationSearchExpectedPath(path, 'local-offer-iframe');
+    const searchVisible = await localOfferPage.locationSearch.locationSearchControl
+      .isVisible()
+      .catch(() => false);
+    if (!searchVisible) {
+      await localOfferPage.userForm.clickChangeLocationButton();
+      await localOfferPage.locationSearch.waitForLocationSearchReady();
+    }
+    const validLocation = d(TestDataKeys.Locations.Search.Default);
+    await localOfferPage.locationSearch.searchLocation(validLocation);
+  },
+);
+
+When(
+  /^The user selects a gym from the Local Offer location search results$/,
+  async ({ localOfferPage, scenarioContext }) => {
+    const gymName = d(TestDataKeys.Locations.Gyms.Default);
+    const clubId = d(TestDataKeys.Locations.ClubId);
+    scenarioContext.selectedGymClubId = clubId;
+    scenarioContext.selectedGymName = gymName;
+    await localOfferPage.locationSearch.clickSelectGymAvoidingLocationsRedirect(gymName);
+    await localOfferPage.userForm.ensureDisableCaptchaPersisted().catch(() => {});
+    await localOfferPage.userForm.overrideLocationAndDisableCaptcha(clubId).catch(() => {});
+    await localOfferPage.userForm.waitForGymSelectionDisplayed();
   },
 );
 
