@@ -102,6 +102,14 @@
           "getStartedNow": "GET STARTED NOW.",
           "tellUsAboutYou": "TELL US ABOUT YOU"
         },
+        "eventsLocationSearch20": {
+          "findGymText": "Find your gym",
+          "tellUsAboutYou": "Tell Us About You",
+          "selectedGym": "Selected gym",
+          "allFieldsRequired": "All fields are required",
+          "submitCta": "Submit",
+          "searchBoxPlaceholder": "Search by city & state or zip code"
+        },
         "unitOfMeasurement": "km"
       },
       "thankYouPage": "thank you"
@@ -164,7 +172,9 @@
       "joinInGym": "JOIN IN GYM",
       "enquireNow": "ENQUIRE NOW",
       "bookATour": "BOOK YOUR VISIT",
-      "claimOffer": "CLAIM OFFER"
+      "claimOffer": "CLAIM OFFER",
+      "joinNow": "Join Now",
+      "gymDetailsTitleCase": "Gym Details"
     },
     "userForm": {
       "submit": "SUBMIT",

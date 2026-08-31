@@ -242,7 +242,8 @@ export class LocationSearchPage extends BasePage {
           name: new RegExp(`^(${gymDetailsEsc}|GYM DETAILS|D[ÉE]TAILS DU (CLUB|GYM))$`, 'i'),
         }),
       )
-      .or(this.iframe.getByRole('button', { name: gymDetailsNameRe }));
+      .or(this.iframe.getByRole('button', { name: gymDetailsNameRe }))
+      .or(this.iframe.getByRole('button', { name: /^Gym Details$/i }));
 
     this.joinNowBtn = this.isHsaFsaPage
       ? this.iframe
@@ -250,9 +251,10 @@ export class LocationSearchPage extends BasePage {
           .or(this.iframe.getByRole('button', { name: /^JOIN NOW$/i }))
       : this.iframe
           .locator(
-            '#list-panel div.bg-white button[aria-label="JOIN NOW"], #list-panel button[aria-label="JOIN NOW"], li[role="option"] button[aria-label="JOIN NOW"]',
+            '#list-panel div.bg-white button[aria-label="JOIN NOW"], #list-panel button[aria-label="JOIN NOW"], li[role="option"] button[aria-label="JOIN NOW"], #list-panel div.bg-white button[aria-label="Join Now"], #list-panel button[aria-label="Join Now"]',
           )
-          .or(this.iframe.getByRole('button', { name: /^JOIN NOW$/i }));
+          .or(this.iframe.getByRole('button', { name: /^JOIN NOW$/i }))
+          .or(this.iframe.getByRole('button', { name: /^Join Now$/i }));
 
     // HSA SIT finder dropped `#list-panel` — CTAs sit on the gym card outside that container.
     if (this.isHsaFsaPage) {
@@ -2477,8 +2479,37 @@ export class LocationSearchPage extends BasePage {
       return '';
     }
 
-    await this.waitForVisible(this.errorMessage, TIMEOUTS.LONG);
-    await this.scrollIntoView(this.errorMessage);
+    await Promise.race([
+      this.errorMessage.waitFor({ state: 'visible', timeout: TIMEOUTS.MEDIUM }),
+      this.errorMessage2_0.title.waitFor({ state: 'visible', timeout: TIMEOUTS.MEDIUM }),
+      this.errorMessage2_0.description.waitFor({ state: 'visible', timeout: TIMEOUTS.MEDIUM }),
+      this.iframe.getByText(/Invalid search/i).first().waitFor({
+        state: 'visible',
+        timeout: TIMEOUTS.MEDIUM,
+      }),
+    ]).catch(() => {});
+
+    const candidates = [
+      this.errorMessage,
+      this.errorMessage2_0.title,
+      this.errorMessage2_0.description,
+      this.iframe.getByText(/Invalid search/i).first(),
+      this.iframe.locator('[data-testid="location-search-error"]').first(),
+    ];
+
+    for (const locator of candidates) {
+      const text = ((await locator.textContent().catch(() => '')) ?? '').trim();
+      if (text && /invalid|error|valid zip|valid postcode|no gym|no location/i.test(text)) {
+        await this.scrollIntoView(locator).catch(() => {});
+        return text;
+      }
+      if (text) {
+        return text;
+      }
+    }
+
+    await this.waitForVisible(this.errorMessage, TIMEOUTS.LONG).catch(() => {});
+    await this.scrollIntoView(this.errorMessage).catch(() => {});
     return (await this.errorMessage.textContent()) ?? '';
   }
 
@@ -3074,12 +3105,20 @@ export class LocationSearchPage extends BasePage {
         .or(gymCard.getByRole('button', { name: claimOfferPattern }))
         .or(gymCard.locator('button').filter({ hasText: claimOfferPattern }));
     }
-    // Gym Details: EN + FR-CA DÉTAILS DU CLUB / GYM
+    // Gym Details: EN + FR-CA DÉTAILS DU CLUB / GYM + Events LS 2.0 title case
     if (/gym details|d[ée]tails du (club|gym)|fitnessstudio/i.test(buttonText)) {
-      const gymDetailsPattern = /GYM DETAILS|D[ÉE]TAILS DU (CLUB|GYM)|FITNESSSTUDIO-DETAILS/i;
+      const gymDetailsPattern =
+        /GYM DETAILS|Gym Details|D[ÉE]TAILS DU (CLUB|GYM)|FITNESSSTUDIO-DETAILS/i;
       button = button
         .or(gymCard.getByRole('button', { name: gymDetailsPattern }))
         .or(gymCard.locator('button').filter({ hasText: gymDetailsPattern }));
+    }
+    // Join Now: Events Location Search 2.0 title case + legacy uppercase
+    if (/join now|jetzt beitreten|iscriviti ora|เข้าร่วมเลย|rejoindre/i.test(buttonText)) {
+      const joinNowPattern = /JOIN NOW|Join Now|JETZT BEITRETEN|ISCRIVITI ORA|เข้าร่วมเลย|REJOINDRE/i;
+      button = button
+        .or(gymCard.getByRole('button', { name: joinNowPattern }))
+        .or(gymCard.locator('button').filter({ hasText: joinNowPattern }));
     }
     return button;
   }

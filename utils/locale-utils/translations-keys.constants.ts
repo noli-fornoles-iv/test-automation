@@ -45,6 +45,8 @@ export const TranslationKeys = {
       JoinInGym: 'buttons.locationSearch.joinInGym',
       EnquireNow: 'buttons.locationSearch.enquireNow',
       BookATour: 'buttons.locationSearch.bookATour',
+      JoinNow: 'buttons.locationSearch.joinNow',
+      GymDetailsTitleCase: 'buttons.locationSearch.gymDetailsTitleCase',
     },
     UserForm: {
       Submit: 'buttons.userForm.submit',
@@ -249,6 +251,16 @@ export const TranslationKeys = {
           MainHeading: 'texts.headings.locationSearch.appleFitnessSubscriber.mainHeading',
           Description: 'texts.headings.locationSearch.appleFitnessSubscriber.description',
           FindGymText: 'texts.headings.locationSearch.appleFitnessSubscriber.findGymText',
+        },
+        EventsLocationSearch20: {
+          FindGymText: 'texts.headings.locationSearch.eventsLocationSearch20.findGymText',
+          TellUsAboutYou: 'texts.headings.locationSearch.eventsLocationSearch20.tellUsAboutYou',
+          SelectedGym: 'texts.headings.locationSearch.eventsLocationSearch20.selectedGym',
+          AllFieldsRequired:
+            'texts.headings.locationSearch.eventsLocationSearch20.allFieldsRequired',
+          SubmitCta: 'texts.headings.locationSearch.eventsLocationSearch20.submitCta',
+          SearchBoxPlaceholder:
+            'texts.headings.locationSearch.eventsLocationSearch20.searchBoxPlaceholder',
         },
         UnitOfMeasurement: 'texts.headings.locationSearch.unitOfMeasurement',
       },

@@ -146,6 +146,19 @@ class LocaleManager {
       return this.getMessage(this.getSearchBoxPlaceholderKey());
     }
   }
+
+  /**
+   * Events Location Search 2.0 placeholder (title-case chrome). Falls back to the shared
+   * Location Search placeholder when a locale-specific override is not defined.
+   */
+  getEventsLocationSearch20Placeholder(): string {
+    const ls20Key = 'texts.headings.locationSearch.eventsLocationSearch20.searchBoxPlaceholder';
+    try {
+      return this.getMessage(ls20Key);
+    } catch {
+      return this.getMessage(this.getSearchBoxPlaceholderKey());
+    }
+  }
 }
 
 export const t = LocaleManager.getInstance().getMessage.bind(LocaleManager.getInstance());
@@ -155,4 +168,8 @@ export const searchBoxPlaceholderKey = LocaleManager.getInstance().getSearchBoxP
 );
 export const eventsSearchBoxPlaceholder =
   LocaleManager.getInstance().getEventsSearchBoxPlaceholder.bind(LocaleManager.getInstance());
+export const eventsLocationSearch20Placeholder =
+  LocaleManager.getInstance().getEventsLocationSearch20Placeholder.bind(
+    LocaleManager.getInstance(),
+  );
 export default LocaleManager.getInstance();

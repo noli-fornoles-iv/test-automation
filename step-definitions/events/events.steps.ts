@@ -42,7 +42,7 @@ import {
 import { toFormStartedFormTracking } from '@utils/tracking/form-started-rs-tracking';
 
 const { Given, When, Then } = createBdd(test, {
-  tags: '@EventsFreeTrialPass or @EventsTrainForYourLife or @EventsJoinOnline or @EventsFindYourFitphoria or @EventsBookATour or @EventsPromo',
+  tags: '@EventsFreeTrialPass or @EventsTrainForYourLife or @EventsJoinOnline or @EventsFindYourFitphoria or @EventsBookATour or @EventsPromo or @EventsLocationSearch20',
 });
 
 /** Skip schedule/booking steps when lead capture says appointment is not bookable. */
