@@ -116,6 +116,17 @@ export type ScenarioContext = {
   isCookieAccepted?: boolean;
   rudderstackTestEnable?: boolean;
   rudderstackCapturedRequests?: RudderStackRequest[];
+  /** AFW-3951 — Button Clicked lead form for edit location / offer flows. */
+  afw3951UserForm?: import('@pages/common/UserFormPage').UserFormPage;
+  /** AFW-3951 — Book A Tour schedule / thank-you page for BAT flows. */
+  afw3951SchedulePage?: import('@pages/common/BookATourPage').BookATourPage;
+  afw3951BaselineCount?: number;
+  afw3951Inventory?: import('@utils/tracking/button-clicked-rs-tracking').ButtonClickedInventory;
+  afw3951FirstDate?: import('@playwright/test').Locator;
+  afw3951FirstTime?: import('@playwright/test').Locator;
+  afw3951TimeBaselineCount?: number;
+  afw3951CalendarBaseline?: number;
+  buttonClickedCalendarReference?: import('@utils/tracking/button-clicked-rs-tracking').ButtonClickedPayloadExpectations;
   bookAppointmentRequestBody?: BookAppointmentRequest;
   localOfferTicket?: string;
   localOfferCmsExpected?: LocalOfferTicketExpected;
