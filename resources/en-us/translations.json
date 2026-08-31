@@ -145,6 +145,14 @@
           "description": "Find your nearest Anytime Fitness location to get started.",
           "findGymText": "FIND YOUR GYM"
         },
+        "eventsLocationSearch20": {
+          "findGymText": "Find your gym",
+          "tellUsAboutYou": "Tell Us About You",
+          "selectedGym": "Selected gym",
+          "allFieldsRequired": "All fields are required",
+          "submitCta": "Submit",
+          "searchBoxPlaceholder": "Search by city & state or zip code"
+        },
         "unitOfMeasurement": "miles"
       },
       "thankYouPage": "thank you"
@@ -193,7 +201,9 @@
       "joinOnline": "JOIN ONLINE",
       "joinInGym": "JOIN IN GYM",
       "claimOffer": "CLAIM OFFER",
-      "bookATour": "BOOK YOUR VISIT"
+      "bookATour": "BOOK YOUR VISIT",
+      "joinNow": "Join Now",
+      "gymDetailsTitleCase": "Gym Details"
     },
     "userForm": {
       "submit": "SUBMIT",
