@@ -81,6 +81,10 @@ type RudderStackProperties = {
   form_id?: string;
   /** AFW-3952 Location Searched / Location Selected */
   step?: string | number;
+  /** AFW-3951 Button Clicked */
+  element_id?: string;
+  placement?: string;
+  text?: string;
   search_success?: string | boolean;
   results_count?: string | number;
   search_term?: string;
