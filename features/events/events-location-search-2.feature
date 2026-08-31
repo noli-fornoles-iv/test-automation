@@ -3,7 +3,7 @@ Feature: Events Location Search 2.0
 
   # Approved Testpad script 28435 — AFW-2968
   # Reference parity: AFW-2683 Location Search 2.0 (Testpad script 24273)
-  # Run: $env:FEATURE="EventsLocationSearch20"; $env:TAG="US"; npm run test:multi-locale:feature
+  # Run: $env:FEATURE="EventsLocationSearch20"; $env:TAG="US"; $env:NODE_ENV="SIT"; $env:LOCALE="EN-US"; npm run test:multi-locale:feature
 
   # --- Events Free Trial Pass (en-us) — Location Search 2.0 UI ---
 

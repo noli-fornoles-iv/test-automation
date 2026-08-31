@@ -16,8 +16,21 @@ class EnvironmentManager {
     return EnvironmentManager.instance;
   }
 
+  /** Maps NODE_ENV to a supported .env.<env> file (sit, uat, prod). */
+  private resolveEnvironmentFile(): Environment {
+    const raw = (process.env.NODE_ENV || 'sit').toLowerCase();
+    const aliases: Record<string, Environment> = {
+      sit: 'sit',
+      uat: 'uat',
+      prod: 'prod',
+      production: 'prod',
+    };
+    // bddgen/playwright may set NODE_ENV=development|test; default to SIT like the repo docs.
+    return aliases[raw] ?? 'sit';
+  }
+
   load(): void {
-    const env = (process.env.NODE_ENV || 'sit').toLowerCase() as Environment;
+    const env = this.resolveEnvironmentFile();
     const envPath = path.resolve(`.env.${env}`);
     dotenv.config({ path: envPath, override: true });
 
